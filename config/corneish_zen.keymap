@@ -42,10 +42,10 @@ behaviors {
         bindings = <&kp EXCL>;
         layers = <0 1 2>;
     };
-    combo_bslh {
+    combo_tilde {
         timeout-ms = <50>;
         key-positions = <3 4>;
-        bindings = <&kp BSLH>;
+        bindings = <&kp TILDE>;
         layers = <0 1 2>;
     };
 
@@ -244,18 +244,6 @@ behaviors {
         layers = <0 1 2>;
     };
     
-    combo_rbrc {
-        timeout-ms = <50>;
-        key-positions = <26 17>;
-        bindings = <&kp RBRC>;
-        layers = <0 1 2>;
-    };
-    combo_lbrc {
-        timeout-ms = <50>;
-        key-positions = <26 18>;
-        bindings = <&kp LBRC>;
-        layers = <0 1 2>;
-    };
     combo_underscore {
         timeout-ms = <50>;
         key-positions = <26 19>;
@@ -275,10 +263,10 @@ behaviors {
         bindings = <&kp EQUAL>;
         layers = <0 1 2>;
     };
-    combo_tilde {
+    combo_bslh {
         timeout-ms = <50>;
         key-positions = <27 28>;
-        bindings = <&kp TILDE>;
+        bindings = <&kp BSLH>;
         layers = <0 1 2>;
     };
     combo_semi {
