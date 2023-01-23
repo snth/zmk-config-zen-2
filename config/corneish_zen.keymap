@@ -124,16 +124,16 @@ behaviors {
         bindings = <&kp TILDE>;
         layers = <0 1 2>;
     };
-    combo3_enter {
-        timeout-ms = <50>;
-        key-positions = <10 11 12>;
-        bindings = <&kp ENTER>;
-        layers = <0 1 2>;
-    };
     combo3_tab {
         timeout-ms = <50>;
-        key-positions = <11 12 13>;
+        key-positions = <10 11 12>;
         bindings = <&kp TAB>;
+        layers = <0 1 2>;
+    };
+    combo3_esc {
+        timeout-ms = <50>;
+        key-positions = <11 12 13>;
+        bindings = <&kp ESC>;
         layers = <0 1 2>;
     };
     combo3_pipe {
@@ -142,10 +142,10 @@ behaviors {
         bindings = <&kp PIPE>;
         layers = <0 1 2>;
     };
-    combo4_esc {
+    combo4_enter {
         timeout-ms = <50>;
         key-positions = <10 11 12 13>;
-        bindings = <&kp ESC>;
+        bindings = <&kp ENTER>;
         layers = <0 1 2>;
     };
     combo3_lt {
@@ -331,28 +331,28 @@ behaviors {
         bindings = <&kp DEL>;
         layers = <0 1 2>;
     }; 
-    combo3_bksp {
+    combo3_home {
         timeout-ms = <50>;
         key-positions = <16 17 18>;
-        bindings = <&kp BKSP>;
+        bindings = <&kp HOME>;
         layers = <0 1 2>;
-    };  
+    };
     combo3_end {
         timeout-ms = <50>;
         key-positions = <17 18 19>;
         bindings = <&kp END>;
         layers = <0 1 2>;
     };
-    combo4_home {
+    combo4_bksp {
         timeout-ms = <50>;
         key-positions = <16 17 18 19>;
-        bindings = <&kp HOME>;
+        bindings = <&kp BKSP>;
         layers = <0 1 2>;
-    };
+    };  
     combo3_minus {
         timeout-ms = <50>;
         key-positions = <25 26 27>;
-        bindings = <&kp EQUAL>;
+        bindings = <&kp MINUS>;
         layers = <0 1 2>;
     };
     combo3_equal {
@@ -361,16 +361,16 @@ behaviors {
         bindings = <&kp EQUAL>;
         layers = <0 1 2>;
     };
-    combo3_underscore {
+    combo3_semi {
         timeout-ms = <50>;
         key-positions = <27 28 29>;
-        bindings = <&kp UNDERSCORE>;
+        bindings = <&kp SEMI>;
         layers = <0 1 2>;
     };
-    combo4_semi {
+    combo4_underscore {
         timeout-ms = <50>;
         key-positions = <26 27 28 29>;
-        bindings = <&kp SEMI>;
+        bindings = <&kp UNDERSCORE>;
         layers = <0 1 2>;
     };
 
