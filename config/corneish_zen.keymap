@@ -417,7 +417,7 @@ behaviors {
    &kp Z      &kp W      &kp F       &kp P       &kp B   &kp J &kp L       &kp U        &kp Y       &kp Q
    &kp A      &kp R      &kp S       &kp T       &kp G   &kp M &kp N       &kp E        &kp I       &kp O
    &kp APOS   &kp X      &kp C       &kp D       &kp K   &kp V &kp H       &kp SLASH    &kp DOT     &kp COMMA
-              &sk LCTRL  &lt 3 SPACE &sl 1                     &lt 2 ENTER &sk RSHFT    &sk RALT
+              &sk LALT   &lt 3 SPACE &lt 1 TAB                 &lt 2 ENTER &sk RSHFT    &sk RCTRL
                         >;
                 };
 
