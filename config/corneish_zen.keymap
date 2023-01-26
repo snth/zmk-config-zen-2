@@ -355,16 +355,16 @@ behaviors {
         bindings = <&kp MINUS>;
         layers = <0 1 2>;
     };
-    combo3_equal {
+    combo3_plus {
         timeout-ms = <50>;
         key-positions = <26 27 28>;
-        bindings = <&kp EQUAL>;
+        bindings = <&kp PLUS>;
         layers = <0 1 2>;
     };
-    combo4_plus {
+    combo4_tilde {
         timeout-ms = <50>;
         key-positions = <26 27 28 29>;
-        bindings = <&kp PLUS>;
+        bindings = <&kp TILDE>;
         layers = <0 1 2>;
     };
     combo3_semi {
@@ -380,10 +380,10 @@ behaviors {
         bindings = <&kp MINUS>;
         layers = <0 1 2>;
     }; 
-    combo_plus {
+    combo_equal {
         timeout-ms = <50>;
         key-positions = <26 27>;
-        bindings = <&kp PLUS>;
+        bindings = <&kp EQUAL>;
         layers = <0 1 2>;
     };
     combo_bslh {
