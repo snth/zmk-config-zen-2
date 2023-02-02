@@ -100,10 +100,10 @@ behaviors {
     };
     
     // 3-key combos
-    combo3_ampersand {
+    combo3_lbrc {
         timeout-ms = <50>;
         key-positions = <0 1 2>;
-        bindings = <&kp AMPERSAND>;
+        bindings = <&kp LBRC>;
         layers = <0 1 2>;
     };
     combo4_percent {
@@ -112,10 +112,10 @@ behaviors {
         bindings = <&kp PERCENT>;
         layers = <0 1 2>;
     };
-    combo3_excl {
+    combo3_rbrc {
         timeout-ms = <50>;
         key-positions = <1 2 3>;
-        bindings = <&kp EXCL>;
+        bindings = <&kp RBRC>;
         layers = <0 1 2>;
     };
     combo3_tilde {
@@ -212,18 +212,6 @@ behaviors {
         bindings = <&kp RBKT>;
         layers = <0 1 2>;
     };
-    combo_lt {
-        timeout-ms = <50>;
-        key-positions = <21 13>;
-        bindings = <&kp LT>;
-        layers = <0 1 2>;
-    };
-    combo_gt {
-        timeout-ms = <50>;
-        key-positions = <22 13>;
-        bindings = <&kp GT>;
-        layers = <0 1 2>;
-    };
 
     combo_zero {
         timeout-ms = <50>;
@@ -300,6 +288,25 @@ behaviors {
         layers = <0 1 2>;
     };
 
+    combo_rbrc {
+        timeout-ms = <50>;
+        key-positions = <26 27>;
+        bindings = <&kp RBRC>;
+        layers = <0 1 2>;
+    };
+    combo_lbrc {
+        timeout-ms = <50>;
+        key-positions = <26 28>;
+        bindings = <&kp LBRC>;
+        layers = <0 1 2>;
+    };
+    combo_underscore2 {
+        timeout-ms = <50>;
+        key-positions = <26 29>;
+        bindings = <&kp UNDERSCORE>;
+        layers = <0 1 2>;
+    };
+
     // 3-key combos
     combo3_star {
         timeout-ms = <50>;
@@ -330,7 +337,7 @@ behaviors {
         key-positions = <15 16 17>;
         bindings = <&kp DEL>;
         layers = <0 1 2>;
-    }; 
+    };
     combo3_bksp {
         timeout-ms = <50>;
         key-positions = <16 17 18>;
