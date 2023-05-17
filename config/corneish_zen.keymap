@@ -102,10 +102,10 @@ behaviors {
         bindings = <&kp RBKT>;
         layers = <0 1 2>;
     };
-    combo3_tilde {
+    combo3_BSLH {
         timeout-ms = <50>;
         key-positions = <2 3 4>;
-        bindings = <&kp TILDE>;
+        bindings = <&kp BSLH>;
         layers = <0 1 2>;
     };
     
@@ -121,10 +121,10 @@ behaviors {
         bindings = <&kp RPAR>;
         layers = <0 1 2>;
     };
-    combo3_pipe {
+    combo3_semi {
         timeout-ms = <50>;
         key-positions = <12 13 14>;
-        bindings = <&kp PIPE>;
+        bindings = <&kp SEMI>;
         layers = <0 1 2>;
     };
     
@@ -251,16 +251,16 @@ behaviors {
         bindings = <&kp STAR>;
         layers = <0 1 2>;
     };
-    combo3_pgup {
+    combo3_dollar {
         timeout-ms = <50>;
         key-positions = <6 7 8>;
-        bindings = <&kp PGUP>;
+        bindings = <&kp DOLLAR>;
         layers = <0 1 2>;
     };
-    combo3_pgdn {
+    combo3_caret {
         timeout-ms = <50>;
         key-positions = <7 8 9>;
-        bindings = <&kp PGDN>;
+        bindings = <&kp CARET>;
         layers = <0 1 2>;
     };
     
@@ -295,24 +295,24 @@ behaviors {
         bindings = <&kp EQUAL>;
         layers = <0 1 2>;
     };
-    combo3_bslh {
+    combo3_tilde {
         timeout-ms = <50>;
         key-positions = <27 28 29>;
-        bindings = <&kp BSLH>;
+        bindings = <&kp TILDE>;
         layers = <0 1 2>;
     };
 
     // RHS 4-key combos
-    combo4_home {
+    combo4_pgup {
         timeout-ms = <50>;
         key-positions = <5 6 7 8>;
-        bindings = <&kp HOME>;
+        bindings = <&kp PGUP>;
         layers = <0 1 2>;
     };  
-    combo4_end {
+    combo4_pgdn {
         timeout-ms = <50>;
         key-positions = <6 7 8 9>;
-        bindings = <&kp END>;
+        bindings = <&kp PGDN>;
         layers = <0 1 2>;
     };
     
@@ -335,10 +335,10 @@ behaviors {
         bindings = <&kp SEMI>;
         layers = <0 1 2>;
     };
-    combo4_underscore {
+    combo4_pipe {
         timeout-ms = <50>;
         key-positions = <26 27 28 29>;
-        bindings = <&kp UNDERSCORE>;
+        bindings = <&kp PIPE>;
         layers = <0 1 2>;
     };
 
