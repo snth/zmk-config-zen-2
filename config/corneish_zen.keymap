@@ -264,10 +264,10 @@ behaviors {
         layers = <0 1 2>;
     };
     
-    combo3_bksp {
+    combo3_colon {
         timeout-ms = <50>;
         key-positions = <15 16 17>;
-        bindings = <&kp BKSP>;
+        bindings = <&kp COLON>;
         layers = <0 1 2>;
     };
     combo3_rbrc {
@@ -312,7 +312,7 @@ behaviors {
     combo4_end {
         timeout-ms = <50>;
         key-positions = <6 7 8 9>;
-        bindings = <&kp HOME>;
+        bindings = <&kp END>;
         layers = <0 1 2>;
     };
     
@@ -322,16 +322,16 @@ behaviors {
         bindings = <&kp DEL>;
         layers = <0 1 2>;
     };  
-    combo4_colon {
+    combo4_bksp {
         timeout-ms = <50>;
         key-positions = <16 17 18 19>;
-        bindings = <&kp COLON>;
+        bindings = <&kp BKSP>;
         layers = <0 1 2>;
     };  
 
     combo4_semi {
         timeout-ms = <50>;
-        key-positions = <26 27 28 29>;
+        key-positions = <25 26 27 28>;
         bindings = <&kp SEMI>;
         layers = <0 1 2>;
     };
