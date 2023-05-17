@@ -24,92 +24,87 @@ behaviors {
   combos {
     compatible = "zmk,combos";
       
-    combo_ampersand {
+    // LHS 2-key combos
+    combo2_ampersand {
         timeout-ms = <50>;
         key-positions = <0 1>;
         bindings = <&kp AMPERSAND>;
         layers = <0 1 2>;
     };
-    combo_hash {
+    combo2_hash {
         timeout-ms = <50>;
         key-positions = <1 2>;
         bindings = <&kp HASH>;
         layers = <0 1 2>;
     };
-    combo_excl {
+    combo2_excl {
         timeout-ms = <50>;
         key-positions = <2 3>;
         bindings = <&kp EXCL>;
         layers = <0 1 2>;
     };
-    combo_tilde {
+    combo2_tilde {
         timeout-ms = <50>;
         key-positions = <3 4>;
         bindings = <&kp TILDE>;
         layers = <0 1 2>;
     };
 
-    combo_ampersand2 {
+    combo2_ampersand2 {
         timeout-ms = <50>;
         key-positions = <0 13>;
         bindings = <&kp AMPERSAND>;
         layers = <0 1 2>;
     };
-    combo_percent {
+    combo2_percent {
         timeout-ms = <50>;
         key-positions = <1 13>;
         bindings = <&kp PERCENT>;
         layers = <0 1 2>;
     };
-    combo_hash2 {
+    combo2_hash2 {
         timeout-ms = <50>;
         key-positions = <2 13>;
         bindings = <&kp HASH>;
         layers = <0 1 2>;
     };
-    combo_one {
+    combo2_one {
         timeout-ms = <50>;
         key-positions = <12 3>;
         bindings = <&kp N1>;
         layers = <0 1 2>;
     };
     
-    combo_lpar {
+    combo2_lpar {
         timeout-ms = <50>;
         key-positions = <10 11>;
         bindings = <&kp LPAR>;
         layers = <0 1 2>;
     };
-    combo_dqt {
+    combo2_dqt {
         timeout-ms = <50>;
         key-positions = <11 12>;
         bindings = <&kp DQT>;
         layers = <0 1 2>;
     };
-    combo_rpar {
+    combo2_rpar {
         timeout-ms = <50>;
         key-positions = <12 13>;
         bindings = <&kp RPAR>;
         layers = <0 1 2>;
     };
-    combo_pipe {
+    combo2_pipe {
         timeout-ms = <50>;
         key-positions = <13 14>;
         bindings = <&kp PIPE>;
         layers = <0 1 2>;
     };
     
-    // 3-key combos
+    // LHS 3-key combos
     combo3_lbrc {
         timeout-ms = <50>;
         key-positions = <0 1 2>;
         bindings = <&kp LBRC>;
-        layers = <0 1 2>;
-    };
-    combo4_percent {
-        timeout-ms = <50>;
-        key-positions = <0 1 2 3>;
-        bindings = <&kp PERCENT>;
         layers = <0 1 2>;
     };
     combo3_rbrc {
@@ -130,12 +125,6 @@ behaviors {
         bindings = <&kp TAB>;
         layers = <0 1 2>;
     };
-    combo4_enter {
-        timeout-ms = <50>;
-        key-positions = <10 11 12 13>;
-        bindings = <&kp ENTER>;
-        layers = <0 1 2>;
-    };
     combo3_esc {
         timeout-ms = <50>;
         key-positions = <11 12 13>;
@@ -154,12 +143,6 @@ behaviors {
         bindings = <&kp LT>;
         layers = <0 1 2>;
     };
-    combo4_del {
-        timeout-ms = <50>;
-        key-positions = <20 21 22 23>;
-        bindings = <&kp DEL>;
-        layers = <0 1 2>;
-    };
     combo3_gt {
         timeout-ms = <50>;
         key-positions = <21 22 23>;
@@ -173,141 +156,162 @@ behaviors {
         layers = <0 1 2>;
     };
 
+    // LHS 4-key combos
+    combo4_percent {
+        timeout-ms = <50>;
+        key-positions = <0 1 2 3>;
+        bindings = <&kp PERCENT>;
+        layers = <0 1 2>;
+    };
+    combo4_enter {
+        timeout-ms = <50>;
+        key-positions = <10 11 12 13>;
+        bindings = <&kp ENTER>;
+        layers = <0 1 2>;
+    };
+    combo4_del {
+        timeout-ms = <50>;
+        key-positions = <20 21 22 23>;
+        bindings = <&kp DEL>;
+        layers = <0 1 2>;
+    };
+
     
-    combo_enter {
+    combo2_enter {
         timeout-ms = <50>;
         key-positions = <20 21>;
         bindings = <&kp ENTER>;
         layers = <0 1 2>;
 
     };
-    combo_tab {
+    combo2_tab {
         timeout-ms = <50>;
         key-positions = <21 22>;
         bindings = <&kp TAB>;
         layers = <0 1 2>;
     };
-    combo_esc {
+    combo2_esc {
         timeout-ms = <50>;
         key-positions = <22 23>;
         bindings = <&kp ESC>;
         layers = <0 1 2>;
     };
-    combo_grave {
+    combo2_grave {
         timeout-ms = <50>;
         key-positions = <23 24>;
         bindings = <&kp GRAVE>;
         layers = <0 1 2>;
     };
 
-    combo_lbkt {
+    combo2_lbkt {
         timeout-ms = <50>;
         key-positions = <11 23>;
         bindings = <&kp LBKT>;
         layers = <0 1 2>;
     };
-    combo_rbkt {
+    combo2_rbkt {
         timeout-ms = <50>;
         key-positions = <12 23>;
         bindings = <&kp RBKT>;
         layers = <0 1 2>;
     };
 
-    combo_zero {
+    // RHS 2-key combos
+    combo2_zero {
         timeout-ms = <50>;
         key-positions = <6 17>;
         bindings = <&kp N0>;
         layers = <0 1 2>;
     };
-    combo_at {
+    combo2_at {
         timeout-ms = <50>;
         key-positions = <16 7>;
         bindings = <&kp AT_SIGN>;
         layers = <0 1 2>;
     };
-    combo_dollar {
+    combo2_dollar {
         timeout-ms = <50>;
         key-positions = <16 8>;
         bindings = <&kp DOLLAR>;
         layers = <0 1 2>;
     };
-    combo_caret {
+    combo2_caret {
         timeout-ms = <50>;
         key-positions = <16 9>;
         bindings = <&kp CARET>;
         layers = <0 1 2>;
     };
     
-    combo_star {
+    combo2_star {
         timeout-ms = <50>;
         key-positions = <5 6>;
         bindings = <&kp STAR>;
         layers = <0 1 2>;
     };
-    combo_question {
+    combo2_question {
         timeout-ms = <50>;
         key-positions = <6 7>;
         bindings = <&kp QUESTION>;
         layers = <0 1 2>;
     };
-    combo_at {
+    combo2_at {
         timeout-ms = <50>;
         key-positions = <7 8>;
         bindings = <&kp AT_SIGN>;
         layers = <0 1 2>;
     };
-    combo_caret {
+    combo2_caret {
         timeout-ms = <50>;
         key-positions = <8 9>;
         bindings = <&kp CARET>;
         layers = <0 1 2>;
     };
 
-    combo_bksp {
+    combo2_bksp {
         timeout-ms = <50>;
         key-positions = <15 16>;
         bindings = <&kp BKSP>;
         layers = <0 1 2>;
     };
-    combo_colon {
+    combo2_colon {
         timeout-ms = <50>;
         key-positions = <16 17>;
         bindings = <&kp COLON>;
         layers = <0 1 2>;
     };
-    combo_minus {
+    combo2_minus {
         timeout-ms = <50>;
         key-positions = <17 18>;
         bindings = <&kp MINUS>;
         layers = <0 1 2>;
     };
-    combo_underscore {
+    combo2_underscore {
         timeout-ms = <50>;
         key-positions = <18 19>;
         bindings = <&kp UNDERSCORE>;
         layers = <0 1 2>;
     };
 
-    combo_rbrc {
+    combo2_rbrc {
         timeout-ms = <50>;
         key-positions = <26 17>;
         bindings = <&kp RBRC>;
         layers = <0 1 2>;
     };
-    combo_lbrc {
+    combo2_lbrc {
         timeout-ms = <50>;
         key-positions = <26 18>;
         bindings = <&kp LBRC>;
         layers = <0 1 2>;
     };
-    combo_underscore2 {
+    combo2_underscore2 {
         timeout-ms = <50>;
         key-positions = <26 19>;
         bindings = <&kp UNDERSCORE>;
         layers = <0 1 2>;
     };
 
-    // 3-key combos
+    // RHS 3-key combos
     combo3_star {
         timeout-ms = <50>;
         key-positions = <5 6 7>;
@@ -318,12 +322,6 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <6 7 8>;
         bindings = <&kp PGUP>;
-        layers = <0 1 2>;
-    };
-    combo4_dollar {
-        timeout-ms = <50>;
-        key-positions = <6 7 8 9>;
-        bindings = <&kp DOLLAR>;
         layers = <0 1 2>;
     };
     combo3_pgdn {
@@ -344,12 +342,6 @@ behaviors {
         bindings = <&kp BKSP>;
         layers = <0 1 2>;
     };
-    combo4_home {
-        timeout-ms = <50>;
-        key-positions = <16 17 18 19>;
-        bindings = <&kp HOME>;
-        layers = <0 1 2>;
-    };  
     combo3_end {
         timeout-ms = <50>;
         key-positions = <17 18 19>;
@@ -381,25 +373,39 @@ behaviors {
         layers = <0 1 2>;
     };
 
-    combo_minus2 {
+    // RHS 4-key combos
+    combo4_dollar {
+        timeout-ms = <50>;
+        key-positions = <6 7 8 9>;
+        bindings = <&kp DOLLAR>;
+        layers = <0 1 2>;
+    };
+    combo4_home {
+        timeout-ms = <50>;
+        key-positions = <16 17 18 19>;
+        bindings = <&kp HOME>;
+        layers = <0 1 2>;
+    };  
+
+    combo2_minus2 {
         timeout-ms = <50>;
         key-positions = <25 26>;
         bindings = <&kp MINUS>;
         layers = <0 1 2>;
     }; 
-    combo_equal {
+    combo2_equal {
         timeout-ms = <50>;
         key-positions = <26 27>;
         bindings = <&kp EQUAL>;
         layers = <0 1 2>;
     };
-    combo_bslh {
+    combo2_bslh {
         timeout-ms = <50>;
         key-positions = <27 28>;
         bindings = <&kp BSLH>;
         layers = <0 1 2>;
     };
-    combo_semi {
+    combo2_semi {
         timeout-ms = <50>;
         key-positions = <28 29>;
         bindings = <&kp SEMI>;
