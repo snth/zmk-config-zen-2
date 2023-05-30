@@ -379,12 +379,12 @@ behaviors {
 // -----------------------------------------------------------------------------------------
 // |  &  |  %  |  #  |  !  | PGUP|  *   | HOME | PGUP | PGDN | END  |
 // | DEL | RET | TAB | ESC | PGDN| BSPC | LEFT |  UP  | DOWN | RIGHT|
-// | UNDO| CUT | COPY|PASTE|CTL+K|  -   |  =   |      |      |      |
+// | UNDO| CUT | COPY|PASTE|CTL+K|  +   |  =   |      |      |      |
 //             |     |     |     |      |      |      |
                         bindings = <
    &kp AMPERSAND &kp PERCENT  &kp HASH      &kp EXCL       &kp PG_UP  &kp STAR  &kp HOME    &kp PG_UP       &kp PG_DN &kp END
    &hm LALT DEL  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC  &kp PG_DN  &kp BSPC  &kp LEFT    &kp UP          &kp DOWN  &kp RIGHT
-   &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)      &kp LC(K)  &kp MINUS &kp EQUAL   &trans          &trans    &trans
+   &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)      &kp LC(K)  &kp PLUS  &kp EQUAL   &trans          &trans    &trans
                  &trans       &trans        &kp TAB                             &lt 4 ENTER &mt RSHFT SPACE &trans
                         >;
                 };
