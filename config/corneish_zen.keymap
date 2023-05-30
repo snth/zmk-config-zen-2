@@ -43,35 +43,10 @@ behaviors {
         bindings = <&kp EXCL>;
         layers = <0 1 2>;
     };
-    combo2_tilde {
+    combo2_bslh2 {
         timeout-ms = <50>;
         key-positions = <3 4>;
-        bindings = <&kp TILDE>;
-        layers = <0 1 2>;
-    };
-
-    combo2_ampersand2 {
-        timeout-ms = <50>;
-        key-positions = <0 13>;
-        bindings = <&kp AMPERSAND>;
-        layers = <0 1 2>;
-    };
-    combo2_percent {
-        timeout-ms = <50>;
-        key-positions = <1 13>;
-        bindings = <&kp PERCENT>;
-        layers = <0 1 2>;
-    };
-    combo2_hash2 {
-        timeout-ms = <50>;
-        key-positions = <2 13>;
-        bindings = <&kp HASH>;
-        layers = <0 1 2>;
-    };
-    combo2_one {
-        timeout-ms = <50>;
-        key-positions = <12 3>;
-        bindings = <&kp N1>;
+        bindings = <&kp BSLH>;
         layers = <0 1 2>;
     };
     
@@ -82,10 +57,17 @@ behaviors {
         layers = <0 1 2>;
     };
 
-    combo2_esc {
+    combo2_del2 {
         timeout-ms = <50>;
         key-positions = <21 22>;
-        bindings = <&kp ESC>;
+        bindings = <&kp DEL>;
+        layers = <0 1 2>;
+    };
+
+    combo2_tilde {
+        timeout-ms = <50>;
+        key-positions = <22 23>;
+        bindings = <&kp TILDE>;
         layers = <0 1 2>;
     };
     
@@ -205,25 +187,6 @@ behaviors {
         layers = <0 1 2>;
     };
 
-    combo2_at2 {
-        timeout-ms = <50>;
-        key-positions = <16 7>;
-        bindings = <&kp AT_SIGN>;
-        layers = <0 1 2>;
-    };
-    combo2_dollar {
-        timeout-ms = <50>;
-        key-positions = <16 8>;
-        bindings = <&kp DOLLAR>;
-        layers = <0 1 2>;
-    };
-    combo2_caret2 {
-        timeout-ms = <50>;
-        key-positions = <16 9>;
-        bindings = <&kp CARET>;
-        layers = <0 1 2>;
-    };
-
     combo2_colon {
         timeout-ms = <50>;
         key-positions = <16 17>;
@@ -237,10 +200,17 @@ behaviors {
         layers = <0 1 2>;
     };
 
-    combo2_bslh {
+    combo2_plus {
+        timeout-ms = <50>;
+        key-positions = <26 27>;
+        bindings = <&kp PLUS>;
+        layers = <0 1 2>;
+    };
+
+    combo2_bspc {
         timeout-ms = <50>;
         key-positions = <27 28>;
-        bindings = <&kp BSLH>;
+        bindings = <&kp BSPC>;
         layers = <0 1 2>;
     };
 
@@ -368,13 +338,13 @@ behaviors {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
 // |  &  |  %  |  #  |  !  |  \  |  *  |  ?  |  @  |  $  |  ^  |
-// |  (  |  [  |  ]  |  )  |  ;  | BSPC|  :  |  }  |  {  |  _  |
-// |  '  |  <  |  >  |  "  |  `  |  -  |  =  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  |  ;  | BSPC|  }  |  :  |  _  |  {  |
+// |  '  |  <  |  >  |  "  |  `  |  +  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
    &kp AMPERSAND &kp PERCENT   &kp HASH       &kp EXCL       &kp BSLH    &kp STAR  &kp QUESTION    &kp AT_SIGN      &kp DOLLAR     &kp CARET
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT &hm LCTRL RPAR &kp SEMI    &kp BSPC  &hm RCTRL RBRC  &hm RSHFT COLON  &hm RGUI UNDER &hm RALT LBRC
-   &kp APOS      &kp LT        &kp GT         &kp DQT        &kp GRAVE   &kp MINUS &kp EQUAL       &trans           &trans         &trans
+   &kp APOS      &kp LT        &kp GT         &kp DQT        &kp GRAVE   &kp PLUS  &kp EQUAL       &trans           &trans         &trans
                  &trans        &trans         &kp TAB                              &kp ENTER       &mt RSHFT SPACE  &trans
                         >;
                 };
@@ -383,13 +353,13 @@ behaviors {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
 // |  7  |  5  |  3  |  1  |  9  |  8  |  0  |  2  |  4  |  6  |
-// |  (  |  [  |  ]  |  )  |  ;  | BSPC|  :  |  }  |  {  |  _  |
-// |  '  |  <  |  >  |  "  |  `  |  -  |  =  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  |  ;  | BSPC|  }  |  :  |  _  |  {  |
+// |  '  |  <  |  >  |  "  |  `  |  +  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
    &kp N7        &kp N5        &kp N3         &kp N1         &kp N9      &kp N8    &kp N0          &kp N2           &kp N4         &kp N6
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT &hm LCTRL RPAR &kp SEMI    &kp BSPC  &hm RCTRL RBRC  &hm RSHFT COLON  &hm RGUI UNDER &hm RALT LBRC
-   &kp APOS      &kp LT        &kp GT         &kp DQT        &kp GRAVE   &kp MINUS &kp EQUAL       &trans           &trans         &trans
+   &kp APOS      &kp LT        &kp GT         &kp DQT        &kp GRAVE   &kp PLUS  &kp EQUAL       &trans           &trans         &trans
                  &trans        &lt 4 SPACE    &kp TAB                              &kp ENTER       &trans           &trans
                          >;
                 };
