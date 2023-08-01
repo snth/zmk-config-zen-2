@@ -178,7 +178,7 @@ behaviors {
     combo2_star {
         timeout-ms = <50>;
         key-positions = <5 6>;
-        bindings = <&kp QUESTION>;
+        bindings = <&kp STAR>;
         layers = <0 1 2>;
     };
     combo2_question {
