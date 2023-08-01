@@ -57,10 +57,10 @@ behaviors {
         layers = <0 1 2>;
     };
 
-    combo2_tilde {
+    combo2_underscore {
         timeout-ms = <50>;
         key-positions = <21 22>;
-        bindings = <&kp TILDE>;
+        bindings = <&kp UNDERSCORE>;
         layers = <0 1 2>;
     };
     combo2_grave {
@@ -69,10 +69,10 @@ behaviors {
         bindings = <&kp GRAVE>;
         layers = <0 1 2>;
     };
-    combo2_underscore {
+    combo2_tilde {
         timeout-ms = <50>;
         key-positions = <23 24>;
-        bindings = <&kp UNDERSCORE>;
+        bindings = <&kp TILDE>;
         layers = <0 1 2>;
     };
     
