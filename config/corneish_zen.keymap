@@ -72,7 +72,7 @@ behaviors {
     combo2_underscore {
         timeout-ms = <50>;
         key-positions = <23 24>;
-        bindings = <&kp underscore>;
+        bindings = <&kp UNDERSCORE>;
         layers = <0 1 2>;
     };
     
