@@ -57,10 +57,10 @@ behaviors {
         layers = <0 1 2>;
     };
 
-    combo2_del2 {
+    combo2_tilde {
         timeout-ms = <50>;
         key-positions = <21 22>;
-        bindings = <&kp DEL>;
+        bindings = <&kp TILDE>;
         layers = <0 1 2>;
     };
     combo2_grave {
@@ -69,10 +69,10 @@ behaviors {
         bindings = <&kp GRAVE>;
         layers = <0 1 2>;
     };
-    combo2_tilde {
+    combo2_underscore {
         timeout-ms = <50>;
         key-positions = <23 24>;
-        bindings = <&kp TILDE>;
+        bindings = <&kp underscore>;
         layers = <0 1 2>;
     };
     
@@ -147,18 +147,20 @@ behaviors {
         bindings = <&kp ENTER>;
         layers = <0 1 2>;
     };
+
     combo4_esc {
         timeout-ms = <50>;
         key-positions = <10 11 12 13>;
         bindings = <&kp ESC>;
         layers = <0 1 2>;
     };
-    combo4_tab {
+    combo4_del {
         timeout-ms = <50>;
         key-positions = <11 12 13 14>;
-        bindings = <&kp TAB>;
+        bindings = <&kp DEL>;
         layers = <0 1 2>;
     };
+
     combo4_home {
         timeout-ms = <50>;
         key-positions = <20 21 22 23>;
@@ -173,6 +175,12 @@ behaviors {
     };
 
     // RHS 2-key combos    
+    combo2_star {
+        timeout-ms = <50>;
+        key-positions = <5 6>;
+        bindings = <&kp QUESTION>;
+        layers = <0 1 2>;
+    };
     combo2_question {
         timeout-ms = <50>;
         key-positions = <6 7>;
@@ -205,10 +213,10 @@ behaviors {
         layers = <0 1 2>;
     };
 
-    combo2_plus {
+    combo2_semicolon {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&kp PLUS>;
+        bindings = <&kp SEMI>;
         layers = <0 1 2>;
     };
     combo2_equal {
@@ -217,10 +225,10 @@ behaviors {
         bindings = <&kp EQUAL>;
         layers = <0 1 2>;
     };
-    combo2_bspc {
+    combo2_plus {
         timeout-ms = <50>;
         key-positions = <27 28>;
-        bindings = <&kp BSPC>;
+        bindings = <&kp PLUS>;
         layers = <0 1 2>;
     };
 
@@ -263,22 +271,22 @@ behaviors {
         layers = <0 1 2>;
     };
     
-    combo3_plus {
+    combo3_del {
         timeout-ms = <50>;
         key-positions = <25 26 27>;
-        bindings = <&kp PLUS>;
+        bindings = <&kp DEL>;
         layers = <0 1 2>;
     };
-    combo3_equal {
+    combo3_home {
         timeout-ms = <50>;
         key-positions = <26 27 28>;
-        bindings = <&kp EQUAL>;
+        bindings = <&kp HOME>;
         layers = <0 1 2>;
     };
-    combo3_tilde {
+    combo3_end {
         timeout-ms = <50>;
         key-positions = <27 28 29>;
-        bindings = <&kp TILDE>;
+        bindings = <&kp END>;
         layers = <0 1 2>;
     };
 
@@ -296,10 +304,10 @@ behaviors {
         layers = <0 1 2>;
     };
     
-    combo4_del {
+    combo4_bksp {
         timeout-ms = <50>;
         key-positions = <15 16 17 18>;
-        bindings = <&kp DEL>;
+        bindings = <&kp BKSP>;
         layers = <0 1 2>;
     };  
     combo4_underscore {
