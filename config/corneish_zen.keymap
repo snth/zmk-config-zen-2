@@ -25,10 +25,10 @@ behaviors {
     compatible = "zmk,combos";
       
     // LHS 2-key combos
-    combo2_ampersand {
+    combo2_percent {
         timeout-ms = <50>;
         key-positions = <0 1>;
-        bindings = <&kp AMPERSAND>;
+        bindings = <&kp PERCENT>;
         layers = <0 1 2>;
     };
     combo2_hash {
@@ -43,58 +43,64 @@ behaviors {
         bindings = <&kp EXCL>;
         layers = <0 1 2>;
     };
-    combo2_bslh2 {
+    combo2_one {
         timeout-ms = <50>;
         key-positions = <3 4>;
-        bindings = <&kp BSLH>;
+        bindings = <&kp 1>;
         layers = <0 1 2>;
     };
     
-    combo2_dqt {
+    combo2_underscore {
         timeout-ms = <50>;
         key-positions = <11 12>;
-        bindings = <&kp DQT>;
+        bindings = <&kp UNDERSCORE>;
+        layers = <0 1 2>;
+    };
+    combo2_semicolon {
+        timeout-ms = <50>;
+        key-positions = <13 14>;
+        bindings = <&kp SEMICOLON>;
         layers = <0 1 2>;
     };
 
-    combo2_underscore {
+    combo2_percent2 {
         timeout-ms = <50>;
         key-positions = <21 22>;
-        bindings = <&kp UNDERSCORE>;
+        bindings = <&kp PERCENT>;
+        layers = <0 1 2>;
+    };
+    combo2_dqt {
+        timeout-ms = <50>;
+        key-positions = <22 23>;
+        bindings = <&kp DQT>;
         layers = <0 1 2>;
     };
     combo2_grave {
         timeout-ms = <50>;
-        key-positions = <22 23>;
-        bindings = <&kp GRAVE>;
-        layers = <0 1 2>;
-    };
-    combo2_tilde {
-        timeout-ms = <50>;
         key-positions = <23 24>;
-        bindings = <&kp TILDE>;
+        bindings = <&kp GRAVE>;
         layers = <0 1 2>;
     };
     
     // LHS 3-key combos
-    combo3_lbkt {
+    combo3_ampersand {
         timeout-ms = <50>;
         key-positions = <0 1 2>;
-        bindings = <&kp LBKT>;
+        bindings = <&kp AMPERSAND>;
         layers = <0 1 2>;
     };
-    combo3_rbkt {
+    combo3_pipe {
         timeout-ms = <50>;
         key-positions = <1 2 3>;
-        bindings = <&kp RBKT>;
+        bindings = <&kp PIPE>;
         layers = <0 1 2>;
     };
-    combo3_BSLH {
+    combo3_bslh {
         timeout-ms = <50>;
         key-positions = <2 3 4>;
         bindings = <&kp BSLH>;
         layers = <0 1 2>;
-    };
+    };  
     
     combo3_lpar {
         timeout-ms = <50>;
@@ -127,24 +133,24 @@ behaviors {
         bindings = <&kp GT>;
         layers = <0 1 2>;
     };
-    combo3_grave {
+    combo3_tilde {
         timeout-ms = <50>;
         key-positions = <22 23 24>;
-        bindings = <&kp GRAVE>;
+        bindings = <&kp TILDE>;
         layers = <0 1 2>;
     };
 
     // LHS 4-key combos
-    combo4_percent {
+    combo4_home {
         timeout-ms = <50>;
         key-positions = <0 1 2 3>;
-        bindings = <&kp PERCENT>;
+        bindings = <&kp HOME>;
         layers = <0 1 2>;
     };
-    combo4_enter {
+    combo4_end {
         timeout-ms = <50>;
         key-positions = <1 2 3 4>;
-        bindings = <&kp ENTER>;
+        bindings = <&kp END>;
         layers = <0 1 2>;
     };
 
@@ -161,24 +167,24 @@ behaviors {
         layers = <0 1 2>;
     };
 
-    combo4_home {
+    combo4_lbkt {
         timeout-ms = <50>;
         key-positions = <20 21 22 23>;
-        bindings = <&kp HOME>;
+        bindings = <&kp LBKT>;
         layers = <0 1 2>;
     };
-    combo4_end {
+    combo4_rbkt {
         timeout-ms = <50>;
         key-positions = <21 22 23 24>;
-        bindings = <&kp END>;
+        bindings = <&kp RBKT>;
         layers = <0 1 2>;
     };
 
     // RHS 2-key combos    
-    combo2_star {
+    combo2_zero {
         timeout-ms = <50>;
         key-positions = <5 6>;
-        bindings = <&kp STAR>;
+        bindings = <&kp 0>;
         layers = <0 1 2>;
     };
     combo2_question {
@@ -193,13 +199,19 @@ behaviors {
         bindings = <&kp AT_SIGN>;
         layers = <0 1 2>;
     };
-    combo2_caret {
+    combo2_dollar {
         timeout-ms = <50>;
         key-positions = <8 9>;
-        bindings = <&kp CARET>;
+        bindings = <&kp DOLLAR>;
         layers = <0 1 2>;
     };
 
+    combo2_semi_rhs {
+        timeout-ms = <50>;
+        key-positions = <16 17>;
+        bindings = <&kp SEMI>;
+        layers = <0 1 2>;
+    };
     combo2_colon {
         timeout-ms = <50>;
         key-positions = <16 17>;
@@ -213,10 +225,10 @@ behaviors {
         layers = <0 1 2>;
     };
 
-    combo2_semicolon {
+    combo2_ampersand {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&kp SEMI>;
+        bindings = <&kp AMPERSAND>;
         layers = <0 1 2>;
     };
     combo2_equal {
@@ -239,23 +251,23 @@ behaviors {
         bindings = <&kp STAR>;
         layers = <0 1 2>;
     };
-    combo3_dollar {
-        timeout-ms = <50>;
-        key-positions = <6 7 8>;
-        bindings = <&kp DOLLAR>;
-        layers = <0 1 2>;
-    };
     combo3_caret {
         timeout-ms = <50>;
-        key-positions = <7 8 9>;
+        key-positions = <6 7 8>;
         bindings = <&kp CARET>;
         layers = <0 1 2>;
     };
+    combo3_dollar {
+        timeout-ms = <50>;
+        key-positions = <7 8 9>;
+        bindings = <&kp DOLLAR>;
+        layers = <0 1 2>;
+    };
     
-    combo3_bksp {
+    combo3_del {
         timeout-ms = <50>;
         key-positions = <15 16 17>;
-        bindings = <&kp BKSP>;
+        bindings = <&kp DEL>;
         layers = <0 1 2>;
     };
     combo3_rbrc {
@@ -271,10 +283,10 @@ behaviors {
         layers = <0 1 2>;
     };
     
-    combo3_del {
+    combo3_pipe {
         timeout-ms = <50>;
         key-positions = <25 26 27>;
-        bindings = <&kp DEL>;
+        bindings = <&kp PIPE>;
         layers = <0 1 2>;
     };
     combo3_home {
@@ -291,16 +303,16 @@ behaviors {
     };
 
     // RHS 4-key combos
-    combo4_pgup {
+    combo4_home_rhs {
         timeout-ms = <50>;
         key-positions = <5 6 7 8>;
-        bindings = <&kp PGUP>;
+        bindings = <&kp HOME>;
         layers = <0 1 2>;
     };  
-    combo4_pgdn {
+    combo4_end_rhs {
         timeout-ms = <50>;
         key-positions = <6 7 8 9>;
-        bindings = <&kp PGDN>;
+        bindings = <&kp END>;
         layers = <0 1 2>;
     };
     
@@ -317,16 +329,16 @@ behaviors {
         layers = <0 1 2>;
     };
 
-    combo4_pipe {
+    combo4_pgup {
         timeout-ms = <50>;
         key-positions = <25 26 27 28>;
-        bindings = <&kp PIPE>;
+        bindings = <&kp PGUP>;
         layers = <0 1 2>;
     };
-    combo4_ampersand {
+    combo4_pgdn {
         timeout-ms = <50>;
         key-positions = <26 27 28 29>;
-        bindings = <&kp AMPERSAND>;
+        bindings = <&kp PGDN>;
         layers = <0 1 2>;
     };
 
@@ -385,13 +397,13 @@ behaviors {
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// |  &  |  %  |  #  |  !  | PGUP|  *   | HOME | PGUP | PGDN | END  |
-// | DEL | RET | TAB | ESC | PGDN| BSPC | LEFT |  UP  | DOWN | RIGHT|
+// | CAPS| PGDN| PGUP|ENTER|NUMLK|  *   | HOME | PGUP | PGDN | END  |
+// | DEL | RET | TAB | ESC | INS | BSPC | LEFT |  UP  | DOWN | RIGHT|
 // | UNDO| CUT | COPY|PASTE|CTL+K|  +   |  =   |      |      |      |
 //             |     |     |     |      |      |      |
                         bindings = <
-   &kp AMPERSAND &kp PERCENT  &kp HASH      &kp EXCL       &kp PG_UP  &kp STAR  &kp HOME    &kp PG_UP       &kp PG_DN &kp END
-   &hm LALT DEL  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC  &kp PG_DN  &kp BSPC  &kp LEFT    &kp UP          &kp DOWN  &kp RIGHT
+   &kp CAPS      &kp PG_DN    &kp PG_UP     &kp ENTER      &kp KP_NUM &kp STAR  &kp HOME    &kp PG_UP       &kp PG_DN &kp END
+   &hm LALT DEL  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC  &kp INS    &kp BSPC  &kp LEFT    &kp UP          &kp DOWN  &kp RIGHT
    &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)      &kp LC(K)  &kp PLUS  &kp EQUAL   &trans          &trans    &trans
                  &trans       &trans        &kp TAB                             &lt 4 ENTER &mt RSHFT SPACE &trans
                         >;
