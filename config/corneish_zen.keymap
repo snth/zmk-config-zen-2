@@ -283,7 +283,7 @@ behaviors {
         layers = <0 1 2>;
     };
     
-    combo3_pipe {
+    combo3_pipe_rhs {
         timeout-ms = <50>;
         key-positions = <25 26 27>;
         bindings = <&kp PIPE>;
