@@ -46,7 +46,7 @@ behaviors {
     combo2_one {
         timeout-ms = <50>;
         key-positions = <3 4>;
-        bindings = <&kp 1>;
+        bindings = <&kp N1>;
         layers = <0 1 2>;
     };
     
@@ -184,7 +184,7 @@ behaviors {
     combo2_zero {
         timeout-ms = <50>;
         key-positions = <5 6>;
-        bindings = <&kp 0>;
+        bindings = <&kp N0>;
         layers = <0 1 2>;
     };
     combo2_question {
@@ -208,7 +208,7 @@ behaviors {
 
     combo2_semi_rhs {
         timeout-ms = <50>;
-        key-positions = <16 17>;
+        key-positions = <15 16>;
         bindings = <&kp SEMI>;
         layers = <0 1 2>;
     };
@@ -322,10 +322,10 @@ behaviors {
         bindings = <&kp BKSP>;
         layers = <0 1 2>;
     };  
-    combo4_underscore {
+    combo4_capslock {
         timeout-ms = <50>;
         key-positions = <16 17 18 19>;
-        bindings = <&kp UNDERSCORE>;
+        bindings = <&kp CAPSLOCK>;
         layers = <0 1 2>;
     };
 
@@ -397,12 +397,12 @@ behaviors {
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// | CAPS| PGDN| PGUP|ENTER|NUMLK|  *   | HOME | PGUP | PGDN | END  |
+// | MUTE| PGDN| PGUP| PLAY|ENTER|  *   | HOME | PGUP | PGDN | END  |
 // | DEL | RET | TAB | ESC | INS | BSPC | LEFT |  UP  | DOWN | RIGHT|
 // | UNDO| CUT | COPY|PASTE|CTL+K|  +   |  =   |      |      |      |
 //             |     |     |     |      |      |      |
                         bindings = <
-   &kp CAPS      &kp PG_DN    &kp PG_UP     &kp ENTER      &kp KP_NUM &kp STAR  &kp HOME    &kp PG_UP       &kp PG_DN &kp END
+   &kp C_MUTE    &kp PG_DN    &kp PG_UP     &kp C_PP       &kp ENTER  &kp STAR  &kp HOME    &kp PG_UP       &kp PG_DN &kp END
    &hm LALT DEL  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC  &kp INS    &kp BSPC  &kp LEFT    &kp UP          &kp DOWN  &kp RIGHT
    &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)      &kp LC(K)  &kp PLUS  &kp EQUAL   &trans          &trans    &trans
                  &trans       &trans        &kp TAB                             &lt 4 ENTER &mt RSHFT SPACE &trans
