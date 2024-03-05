@@ -344,10 +344,10 @@ behaviors {
         bindings = <&kp UP>;
         layers = <0 1 2 3>;
     };
-    combo4_dn {
+    combo4_down {
         timeout-ms = <50>;
         key-positions = <26 27 28 29>;
-        bindings = <&kp PGDN>;
+        bindings = <&kp DOWN>;
         layers = <0 1 2 3>;
     };
 
