@@ -421,12 +421,12 @@ behaviors {
                 utl_layer {
                         label = "UTIL";
 // -----------------------------------------------------------------------------------------
-// | MUTE| PREV| NEXT| PLAY | F11 |  F12 |CPSLCK|VOL_UP|VOL_DN|K_LOCK|
+// | MUTE| PREV| NEXT| PLAY | F11 |  F12 | LOCK |VOL_UP|VOL_DN|CPSLCK|
 // | F7  | F5  | F3  | F1   | F9  |  F8  |  F10 |  F2  |  F4  |  F6  |
 // | BACK| DOWN| UP  | FWD  | ??? | BTCLR|  BT0 |  BT1 |  BT2 |  BT3 |
 //             |     |      |     |      |      |      |
                         bindings = <
-   &kp C_MUTE   &kp C_PREV        &kp C_NEXT      &kp C_PP      &kp F11         &kp F12    &kp CAPSLOCK    &kp C_VOL_UP    &kp C_VOL_DN   &kp K_LOCK
+   &kp C_MUTE   &kp C_PREV        &kp C_NEXT      &kp C_PP      &kp F11         &kp F12    &kp LG(L)       &kp C_VOL_UP    &kp C_VOL_DN   &kp CAPSLOCK
    &hm LALT F7  &hm LGUI F5       &hm LSHFT F3    &hm LCTRL F1  &kp F9          &kp F8     &hm RCTRL F10   &hm RSHFT F2    &hm RGUI F4    &hm RALT F6
    &kp K_BACK   &kp K_SCROLL_DOWN &kp K_SCROLL_UP &kp K_FORWARD &kp C_AC_SEARCH &bt BT_CLR &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3
                 &trans            &trans          &kp TAB                                  &kp ENTER       &trans          &trans
