@@ -150,7 +150,7 @@ behaviors {
     combo4_shifttab {
         timeout-ms = <50>;
         key-positions = <0 1 2 3>;
-        bindings = <&kp LS(TAB>;
+        bindings = <&kp LS(TAB)>;
         layers = <0 1 2 3>;
     };
     combo4_capslock {
