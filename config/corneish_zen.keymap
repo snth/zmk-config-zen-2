@@ -414,7 +414,7 @@ behaviors {
    &kp C_MUTE    &kp PG_DN    &kp PG_UP     &kp C_PP       &kp ENTER  &kp F12   &kp HOME    &kp PG_UP    &kp PG_DN &kp END
    &hm LALT INS  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC  &kp DEL    &kp BSPC  &kp LEFT    &kp UP       &kp DOWN  &kp RIGHT
    &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)      &kp LC(K)  &kp BSLH  &kp EQUAL   &trans       &trans    &trans
-                 &trans       &trans        &kp TAB                             &lt 3 ENTER &lt 4 SPACE  &sk SHIFT
+                 &trans       &trans        &kp TAB                             &lt 3 ENTER &lt 4 SPACE  &sk RSHFT
                         >;
                 };
 
