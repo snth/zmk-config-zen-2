@@ -153,10 +153,10 @@ behaviors {
         bindings = <&kp LS(TAB)>;
         layers = <0 1 2 3>;
     };
-    combo4_capslock {
+    combo4_shiftenter {
         timeout-ms = <50>;
         key-positions = <1 2 3 4>;
-        bindings = <&kp CAPSLOCK>;
+        bindings = <&kp LS(ENTER)>;
         layers = <0 1 2 3>;
     };
 
