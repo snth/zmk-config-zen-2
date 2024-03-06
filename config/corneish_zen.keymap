@@ -151,26 +151,50 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <0 1 2 3>;
         bindings = <&kp LEFT>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo4_left_shift {
+        timeout-ms = <50>;
+        key-positions = <0 1 2 3>;
+        bindings = <&kp LS(LEFT)>;
+        layers = <1>;
     };
     combo4_right {
         timeout-ms = <50>;
         key-positions = <1 2 3 4>;
         bindings = <&kp RIGHT>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo4_right_shift {
+        timeout-ms = <50>;
+        key-positions = <1 2 3 4>;
+        bindings = <&kp LS(RIGHT)>;
+        layers = <1>;
     };
 
     combo4_esc {
         timeout-ms = <50>;
         key-positions = <10 11 12 13>;
         bindings = <&kp ESC>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo4_esc_shift {
+        timeout-ms = <50>;
+        key-positions = <10 11 12 13>;
+        bindings = <&kp LS(ESC)>;
+        layers = <1>;
     };
     combo4_enter {
         timeout-ms = <50>;
         key-positions = <11 12 13 14>;
         bindings = <&kp ENTER>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo4_enter_shift {
+        timeout-ms = <50>;
+        key-positions = <11 12 13 14>;
+        bindings = <&kp LS(ENTER)>;
+        layers = <1>;
     };
 
     combo4_shifttab {
@@ -307,7 +331,13 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <15 16 17>;
         bindings = <&kp BSPC>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo3_bspc_shift {
+        timeout-ms = <50>;
+        key-positions = <15 16 17>;
+        bindings = <&kp LS(BSPC)>;
+        layers = <1>;
     };
     combo3_rbrc {
         timeout-ms = <50>;
@@ -346,39 +376,75 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <5 6 7 8>;
         bindings = <&kp UP>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo4_up_shift {
+        timeout-ms = <50>;
+        key-positions = <5 6 7 8>;
+        bindings = <&kp LS(UP)>;
+        layers = <1>;
     };
     combo4_down {
         timeout-ms = <50>;
         key-positions = <6 7 8 9>;
         bindings = <&kp DOWN>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo4_down_shift {
+        timeout-ms = <50>;
+        key-positions = <6 7 8 9>;
+        bindings = <&kp LS(DOWN)>;
+        layers = <1>;
     };
     
-    combo4_home_rhs {
+    combo4_home {
         timeout-ms = <50>;
         key-positions = <15 16 17 18>;
         bindings = <&kp HOME>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
     };  
-    combo4_end_rhs {
+    combo4_home_shift {
+        timeout-ms = <50>;
+        key-positions = <15 16 17 18>;
+        bindings = <&kp LS(HOME)>;
+        layers = <1>;
+    };  
+    combo4_end {
         timeout-ms = <50>;
         key-positions = <16 17 18 19>;
         bindings = <&kp END>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo4_end_shift {
+        timeout-ms = <50>;
+        key-positions = <16 17 18 19>;
+        bindings = <&kp LS(END)>;
+        layers = <1>;
     };
 
     combo4_pgup {
         timeout-ms = <50>;
         key-positions = <25 26 27 28>;
         bindings = <&kp PGUP>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };  
+    combo4_pgup_shift {
+        timeout-ms = <50>;
+        key-positions = <25 26 27 28>;
+        bindings = <&kp LS(PGUP)>;
+        layers = <1>;
     };  
     combo4_pgdn {
         timeout-ms = <50>;
         key-positions = <26 27 28 29>;
         bindings = <&kp PGDN>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo4_pgdn_shift {
+        timeout-ms = <50>;
+        key-positions = <26 27 28 29>;
+        bindings = <&kp LS(PGDN)>;
+        layers = <1>;
     };
 
   };
