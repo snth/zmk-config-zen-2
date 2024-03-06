@@ -425,25 +425,25 @@ behaviors {
     combo4_up {
         timeout-ms = <50>;
         key-positions = <25 26 27 28>;
-        bindings = <&kp K_SCROLL_UP>;
+        bindings = <&kp UP>;
         layers = <0 2 3>;
     };
     combo4_up_nav {
         timeout-ms = <50>;
         key-positions = <25 26 27 28>;
-        bindings = <&kp K_SCROLL_UP>;
+        bindings = <&kp UP>;
         layers = <1>;
     };
     combo4_down {
         timeout-ms = <50>;
         key-positions = <26 27 28 29>;
-        bindings = <&kp K_SCROLL_DOWN>;
+        bindings = <&kp DOWN>;
         layers = <0 2 3>;
     };
     combo4_down_nav {
         timeout-ms = <50>;
         key-positions = <26 27 28 29>;
-        bindings = <&kp K_SCROLL_DOWN>;
+        bindings = <&kp DOWN>;
         layers = <1>;
     };
 
