@@ -56,12 +56,6 @@ behaviors {
         bindings = <&kp UNDERSCORE>;
         layers = <0 1 2 3>;
     };
-    combo2_dqt {
-        timeout-ms = <50>;
-        key-positions = <12 13>;
-        bindings = <&kp DQT>;
-        layers = <0 1 2 3>;
-    };
     combo2_tilde {
         timeout-ms = <50>;
         key-positions = <13 14>;
@@ -75,10 +69,10 @@ behaviors {
         bindings = <&kp AMPERSAND>;
         layers = <0 1 2 3>;
     };
-    combo2_pipe {
+    combo2_dqt {
         timeout-ms = <50>;
         key-positions = <22 23>;
-        bindings = <&kp PIPE>;
+        bindings = <&kp DQT>;
         layers = <0 1 2 3>;
     };
     combo2_grave {
@@ -285,7 +279,7 @@ behaviors {
     combo2_bslh_nav {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&kp BSLH>;
+        bindings = <&kp PIPE>;
         layers = <1>;
     };
     combo2_equal {
