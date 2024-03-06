@@ -187,7 +187,7 @@ behaviors {
     };
 
     // RHS Combos
-    // -------------------------------
+    // ----------------------------------------------------------------------------------------------------------------------------
 
     // RHS 2-key combos    
     combo2_zero {
@@ -215,36 +215,66 @@ behaviors {
         layers = <0 1 2 3>;
     };
 
-    combo2_semi_rhs {
+    combo2_app {
         timeout-ms = <50>;
         key-positions = <15 16>;
-        bindings = <&kp SEMI>;
-        layers = <0 1 2 3>;
+        bindings = <&kp K_APP>;
+        layers = <0 2 3>;
     };
-    combo2_colon {
+    combo2_app_shift {
+        timeout-ms = <50>;
+        key-positions = <15 16>;
+        bindings = <&kp LS(K_APP)>;
+        layers = <1>;
+    };
+    combo2_semi {
         timeout-ms = <50>;
         key-positions = <16 17>;
-        bindings = <&kp COLON>;
-        layers = <0 1 2 3>;
+        bindings = <&kp SEMI>;
+        layers = <0 2 3>;
+    };
+    combo2_semi_shift {
+        timeout-ms = <50>;
+        key-positions = <16 17>;
+        bindings = <&kp LS(SEMI)>;
+        layers = <1>;
     };
     combo2_minus {
         timeout-ms = <50>;
         key-positions = <17 18>;
         bindings = <&kp MINUS>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo2_minus_shift {
+        timeout-ms = <50>;
+        key-positions = <17 18>;
+        bindings = <&kp LS(MINUS)>;
+        layers = <1>;
     };
 
     combo2_bslh {
         timeout-ms = <50>;
         key-positions = <25 26>;
         bindings = <&kp BSLH>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo2_bslh_shift {
+        timeout-ms = <50>;
+        key-positions = <25 26>;
+        bindings = <&kp LS(BSLH)>;
+        layers = <1>;
     };
     combo2_equal {
         timeout-ms = <50>;
         key-positions = <26 27>;
         bindings = <&kp EQUAL>;
-        layers = <0 1 2 3>;
+        layers = <0 2 3>;
+    };
+    combo2_equal_shift {
+        timeout-ms = <50>;
+        key-positions = <26 27>;
+        bindings = <&kp LS(EQUAL)>;
+        layers = <1>;
     };
     combo2_plus {
         timeout-ms = <50>;
