@@ -63,6 +63,12 @@ behaviors {
         layers = <0 1 2 3>;
     };
 
+    combo2_apostrophe {
+        timeout-ms = <50>;
+        key-positions = <20 21>;
+        bindings = <&kp APOS>;
+        layers = <0 1 2 3>;
+    };
     combo2_ampersand {
         timeout-ms = <50>;
         key-positions = <21 22>;
@@ -245,13 +251,13 @@ behaviors {
         bindings = <&kp K_APP>;
         layers = <1>;
     };
-    combo2_semi {
+    combo2_colon {
         timeout-ms = <50>;
         key-positions = <16 17>;
-        bindings = <&kp SEMI>;
+        bindings = <&kp COLON>;
         layers = <0 2 3>;
     };
-    combo2_semi_nav {
+    combo2_colon_nav {
         timeout-ms = <50>;
         key-positions = <16 17>;
         bindings = <&kp COLON>;
@@ -269,6 +275,18 @@ behaviors {
         bindings = <&kp MINUS>;
         layers = <1>;
     };
+    combo2_semi {
+        timeout-ms = <50>;
+        key-positions = <18 19>;
+        bindings = <&kp SEMI>;
+        layers = <0 2 3>;
+    };
+    combo2_semi_nav {
+        timeout-ms = <50>;
+        key-positions = <18 19>;
+        bindings = <&kp SEMI>;
+        layers = <1>;
+    };
 
     combo2_bslh {
         timeout-ms = <50>;
@@ -279,7 +297,7 @@ behaviors {
     combo2_bslh_nav {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&kp PIPE>;
+        bindings = <&kp BSLH>;
         layers = <1>;
     };
     combo2_equal {
@@ -298,6 +316,12 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <27 28>;
         bindings = <&kp PLUS>;
+        layers = <0 1 2 3>;
+    };
+    combo2_pipe {
+        timeout-ms = <50>;
+        key-positions = <28 29>;
+        bindings = <&kp PIPE>;
         layers = <0 1 2 3>;
     };
 
