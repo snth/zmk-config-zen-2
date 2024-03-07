@@ -477,7 +477,7 @@ behaviors {
    &kp Z      &kp W      &kp F       &kp P       &kp B   &kp J &kp L       &kp U        &kp Y       &kp Q
    &kp A      &kp R      &kp S       &kp T       &kp G   &kp M &kp N       &kp E        &kp I       &kp O
    &kp APOS   &kp X      &kp C       &kp D       &kp K   &kp V &kp H       &kp SLASH    &kp DOT     &kp COMMA
-              &sk LCTRL  &lt 1 SPACE &lt 3 TAB                 &lt 2 ENTER &sk RSHFT    &sk RALT
+              &sk LCTRL  &lt 1 SPACE &lt 2 TAB                 &lt 3 ENTER &sk RSHFT    &sk RALT
                         >;
                 };
 
@@ -500,14 +500,14 @@ behaviors {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
 // |  7  |  5  |  3  |  1  |  9  |  8  |  0  |  2  |  4  |  6  |
-// |  (  |  [  |  ]  |  )  | DEL | BSPC|  }  |  :  |  _  |  {  |
+// |  (  |  [  |  ]  |  )  | DEL | BSPC|  ;  |  }  |  {  |  -  |
 // |  '  |  <  |  >  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
    &kp N7        &kp N5        &kp N3          &kp N1         &kp N9      &kp N8    &kp N0          &kp N2           &kp N4         &kp N6
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC  &hm RCTRL RBRC  &hm RSHFT SEMI   &hm RGUI MINUS &hm RALT LBRC
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC  &hm RCTRL SEMI  &hm RSHFT RBRC   &hm RGUI LBRC  &hm RALT MINUS
    &kp APOS      &kp LT        &kp GT          &kp DQT        &kp GRAVE   &kp BSLH  &kp EQUAL       &trans           &trans         &trans
-                 &trans        &mt LSHFT SPACE &kp TAB                              &kp ENTER       &trans           &trans
+                 &trans        &trans          &kp TAB                              &kp ENTER       &mt RSHFT SPACE  &trans
                          >;
                 };
 
@@ -515,14 +515,14 @@ behaviors {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
 // |  &  |  %  |  #  |  !  |ENTER|  *  |  ?  |  @  |  $  |  ^  |
-// |  (  |  [  |  ]  |  )  | DEL | BSPC|  }  |  ;  |  -  |  {  |
+// |  (  |  [  |  ]  |  )  | DEL | BSPC|  ;  |  }  |  {  |  -  |
 // |  '  |  <  |  >  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
-   &kp AMPERSAND &kp PERCENT   &kp HASH       &kp EXCL       &kp ENTER   &kp STAR  &kp QUESTION    &kp AT_SIGN      &kp DOLLAR     &kp CARET
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT &hm LCTRL RPAR &kp DEL     &kp BSPC  &hm RCTRL RBRC  &hm RSHFT SEMI   &hm RGUI MINUS &hm RALT LBRC
-   &kp APOS      &kp LT        &kp GT         &kp DQT        &kp GRAVE   &kp BSLH  &kp EQUAL       &trans           &trans         &trans
-                 &trans        &trans         &kp TAB                              &kp ENTER       &mt RSHFT SPACE  &trans
+   &kp AMPERSAND &kp PERCENT   &kp HASH        &kp EXCL       &kp ENTER   &kp STAR  &kp QUESTION    &kp AT_SIGN      &kp DOLLAR     &kp CARET
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC  &hm RCTRL SEMI  &hm RSHFT RBRC   &hm RGUI LBRC  &hm RALT MINUS
+   &kp APOS      &kp LT        &kp GT          &kp DQT        &kp GRAVE   &kp BSLH  &kp EQUAL       &trans           &trans         &trans
+                 &trans        &mt LSHFT SPACE &kp TAB                              &kp ENTER       &mt RSHFT SPACE  &trans
                         >;
                 };
 
