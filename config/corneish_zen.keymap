@@ -275,17 +275,11 @@ behaviors {
         bindings = <&kp MINUS>;
         layers = <1>;
     };
-    combo2_semi {
+    combo2_pipe {
         timeout-ms = <50>;
         key-positions = <18 19>;
-        bindings = <&kp SEMI>;
-        layers = <0 2 3>;
-    };
-    combo2_semi_nav {
-        timeout-ms = <50>;
-        key-positions = <18 19>;
-        bindings = <&kp SEMI>;
-        layers = <1>;
+        bindings = <&kp PIPE>;
+        layers = <0 1 2 3>;
     };
 
     combo2_bslh {
@@ -318,10 +312,10 @@ behaviors {
         bindings = <&kp PLUS>;
         layers = <0 1 2 3>;
     };
-    combo2_pipe {
+    combo2_semi {
         timeout-ms = <50>;
         key-positions = <28 29>;
-        bindings = <&kp PIPE>;
+        bindings = <&kp SEMI>;
         layers = <0 1 2 3>;
     };
 
