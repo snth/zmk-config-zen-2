@@ -370,16 +370,16 @@ behaviors {
         bindings = <&kp AMPERSAND>;
         layers = <0 1 2 3>;
     };
-    combo3_rbkt_rhs {
+    combo3_rbrc_rhs {
         timeout-ms = <50>;
         key-positions = <26 27 28>;
-        bindings = <&kp RBKT>;
+        bindings = <&kp RBRC>;
         layers = <0 1 2 3>;
     };
-    combo3_lbkt_rhs {
+    combo3_lbrc_rhs {
         timeout-ms = <50>;
         key-positions = <27 28 29>;
-        bindings = <&kp LBKT>;
+        bindings = <&kp LBRC>;
         layers = <0 1 2 3>;
     };
 
