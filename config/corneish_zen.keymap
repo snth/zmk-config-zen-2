@@ -43,10 +43,10 @@ behaviors {
         bindings = <&kp EXCL>;
         layers = <0 1 2 3>;
     };
-    combo2_one {
+    combo2_enter {
         timeout-ms = <50>;
         key-positions = <3 4>;
-        bindings = <&kp N1>;
+        bindings = <&kp ENTER>;
         layers = <0 1 2 3>;
     };
   
@@ -101,10 +101,10 @@ behaviors {
         bindings = <&kp C_PP>;
         layers = <0 1 2 3>;
     };
-    combo3_enter {
+    combo3_one {
         timeout-ms = <50>;
         key-positions = <2 3 4>;
-        bindings = <&kp ENTER>;
+        bindings = <&kp N1>;
         layers = <0 1 2 3>;
     };  
     
@@ -127,16 +127,16 @@ behaviors {
         layers = <0 1 2 3>;
     };
     
-    combo3_lt {
+    combo3_lbkt {
         timeout-ms = <50>;
         key-positions = <20 21 22>;
-        bindings = <&kp LT>;
+        bindings = <&kp LBKT>;
         layers = <0 1 2 3>;
     };
-    combo3_gt {
+    combo3_rbkt {
         timeout-ms = <50>;
         key-positions = <21 22 23>;
-        bindings = <&kp GT>;
+        bindings = <&kp RBKT>;
         layers = <0 1 2 3>;
     };
     combo3_tilde {
@@ -214,10 +214,10 @@ behaviors {
     // ----------------------------------------------------------------------------------------------------------------------------
 
     // RHS 2-key combos    
-    combo2_zero {
+    combo2_star {
         timeout-ms = <50>;
         key-positions = <5 6>;
-        bindings = <&kp N0>;
+        bindings = <&kp STAR>;
         layers = <0 1 2 3>;
     };
     combo2_question {
@@ -320,10 +320,10 @@ behaviors {
     };
 
     // RHS 3-key combos
-    combo3_star {
+    combo3_zero {
         timeout-ms = <50>;
         key-positions = <5 6 7>;
-        bindings = <&kp STAR>;
+        bindings = <&kp N0>;
         layers = <0 1 2 3>;
     };
     combo3_caret {
@@ -351,16 +351,16 @@ behaviors {
         bindings = <&kp BSPC>;
         layers = <1>;
     };
-    combo3_rbrc {
+    combo3_gt {
         timeout-ms = <50>;
         key-positions = <16 17 18>;
-        bindings = <&kp RBRC>;
+        bindings = <&kp GT>;
         layers = <0 1 2 3>;
     };
-    combo3_lbrc {
+    combo3_lt {
         timeout-ms = <50>;
         key-positions = <17 18 19>;
-        bindings = <&kp LBRC>;
+        bindings = <&kp LT>;
         layers = <0 1 2 3>;
     };
     
@@ -484,14 +484,14 @@ behaviors {
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// | MUTE| PGDN| PGUP| PLAY|ENTER|  *   | HOME | PGUP | PGDN | END  |
+// | MUTE| PGDN| PGUP| PLAY| F11 | F12  | HOME | PGUP | PGDN | END  |
 // | INS | RET | TAB | ESC | DEL | BSPC | LEFT |  UP  | DOWN | RIGHT|
-// | UNDO| CUT | COPY|PASTE|CTL+K|  \   |  =   |      |      |      |
+// | UNDO| CUT | COPY|PASTE|CTL+K|  \   |  =   |  /   |  .   |  ,   |
 //             |     |     |     |      |      |      |
                         bindings = <
-   &kp C_MUTE    &kp PG_DN    &kp PG_UP     &kp C_PP       &kp ENTER  &kp F12   &kp HOME    &kp PG_UP    &kp PG_DN &kp END
-   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC  &kp DEL    &kp BSPC  &kp LEFT    &kp UP       &kp DOWN  &kp RIGHT
-   &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)      &kp LC(K)  &kp BSLH  &kp EQUAL   &trans       &trans    &trans
+   &kp C_MUTE    &kp PG_DN    &kp PG_UP     &kp C_PP      &kp F11     &kp F12   &kp HOME    &kp PG_UP    &kp PG_DN  &kp END
+   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC &kp DEL     &kp BSPC  &kp LEFT    &kp UP       &kp DOWN   &kp RIGHT
+   &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(K)   &kp BSLH  &kp EQUAL   &trans       &trans     &trans
                  &trans       &trans        &kp TAB                             &lt 2 ENTER &lt 4 SPACE  &sk RSHFT
                         >;
                 };
@@ -500,13 +500,13 @@ behaviors {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
 // |  7  |  5  |  3  |  1  |  9  |  8  |  0  |  2  |  4  |  6  |
-// |  (  |  [  |  ]  |  )  | DEL | BSPC|  ;  |  }  |  {  |  -  |
-// |  '  |  <  |  >  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  | DEL | BSPC|  ;  |  >  |  <  |  -  |
+// |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
    &kp N7        &kp N5        &kp N3          &kp N1         &kp N9      &kp N8    &kp N0          &kp N2           &kp N4         &kp N6
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC  &hm RCTRL SEMI  &hm RSHFT RBRC   &hm RGUI LBRC  &hm RALT MINUS
-   &kp APOS      &kp LT        &kp GT          &kp DQT        &kp GRAVE   &kp BSLH  &kp EQUAL       &trans           &trans         &trans
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC  &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
+   &kp APOS      &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &kp BSLH  &kp EQUAL       &trans           &trans         &trans
                  &trans        &trans          &kp TAB                              &kp ENTER       &mt RSHFT SPACE  &trans
                          >;
                 };
@@ -515,13 +515,13 @@ behaviors {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
 // |  &  |  %  |  #  |  !  |ENTER|  *  |  ?  |  @  |  $  |  ^  |
-// |  (  |  [  |  ]  |  )  | DEL | BSPC|  ;  |  }  |  {  |  -  |
-// |  '  |  <  |  >  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  | DEL | BSPC|  ;  |  >  |  <  |  -  |
+// |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
    &kp AMPERSAND &kp PERCENT   &kp HASH        &kp EXCL       &kp ENTER   &kp STAR  &kp QUESTION    &kp AT_SIGN      &kp DOLLAR     &kp CARET
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC  &hm RCTRL SEMI  &hm RSHFT RBRC   &hm RGUI LBRC  &hm RALT MINUS
-   &kp APOS      &kp LT        &kp GT          &kp DQT        &kp GRAVE   &kp BSLH  &kp EQUAL       &trans           &trans         &trans
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC  &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
+   &kp APOS      &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &kp BSLH  &kp EQUAL       &trans           &trans         &trans
                  &trans        &mt LSHFT SPACE &kp TAB                              &kp ENTER       &mt RSHFT SPACE  &trans
                         >;
                 };
