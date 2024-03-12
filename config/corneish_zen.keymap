@@ -3,16 +3,16 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DFT      0
-#define NAV_CFG  1
-#define NUM_CFG  2
-#define SYM_CFG  3
-#define UTL      4
-#define NAV      5
-#define NAV_LCK  6
-#define NUM      7
-#define NUM_LCK  8
-#define SYM      9
-#define SYM_LCK 10
+#define NAV      1
+#define NAV_MOM  2
+#define NAV_LCK  3
+#define NUM      4
+#define NUM_MOM  5
+#define NUM_LCK  6
+#define SYM      7
+#define SYM_MOM  8
+#define SYM_LCK  9
+#define UTL      10
 
 
 / {
@@ -26,28 +26,28 @@
 conditional_layers {
     compatible = "zmk,conditional-layers";
     nav_mom {
-        if-layers = <NAV>;
-        then-layer = <NAV_CFG>;
+        if-layers = <NAV_MOM>;
+        then-layer = <NAV>;
     };
     nav_lck {
         if-layers = <NAV_LCK>;
-        then-layer = <NAV_CFG>;
+        then-layer = <NAV>;
     };
     num_mom {
-        if-layers = <NUM>;
-        then-layer = <NUM_CFG>;
+        if-layers = <NUM_MOM>;
+        then-layer = <NUM>;
     };
     num_lck {
         if-layers = <NUM_LCK>;
-        then-layer = <NUM_CFG>;
+        then-layer = <NUM>;
     };
     sym_mom {
-        if-layers = <SYM>;
-        then-layer = <SYM_CFG>;
+        if-layers = <SYM_MOM>;
+        then-layer = <SYM>;
     };
     sym_lck {
         if-layers = <SYM_LCK>;
-        then-layer = <SYM_CFG>;
+        then-layer = <SYM>;
     };
 };
 
@@ -231,19 +231,19 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <10 11>;
         bindings = <&tog NAV_LCK>;
-        layers = <NAV_CFG>;
+        layers = <NAV>;
     };
     combo2_num_lck {
         timeout-ms = <50>;
         key-positions = <10 11>;
         bindings = <&tog NUM_LCK>;
-        layers = <NUM_CFG>;
+        layers = <NUM>;
     };
     combo2_sym_lck {
         timeout-ms = <50>;
         key-positions = <10 11>;
         bindings = <&tog SYM_LCK>;
-        layers = <SYM_CFG>;
+        layers = <SYM>;
     };
 
     combo2_minus_lhs {
@@ -656,8 +656,28 @@ behaviors {
                         >;
                 };
 
+                nav_mom_layer {
+                        label = "NAV_MOM";
+                        bindings = <
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans                                        &trans       &trans       &trans
+                        >;
+                };
+
+                nav_lck_layer {
+                        label = "NAV_LCK";
+                        bindings = <
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans                                        &trans       &trans       &trans
+                        >;
+                };
+
                 num_layer {
-                        label = "NUMBER";
+                        label = "NUM";
 // -----------------------------------------------------------------------------------------
 // |  7  |  5  |  3  |  1  |  9  |  8  |  0  |  2  |  4  |  6  |
 // |  (  |  [  |  ]  |  )  | DEL | BSPC|  ;  |  >  |  <  |  -  |
@@ -671,8 +691,28 @@ behaviors {
                          >;
                 };
 
+                num_mom_layer {
+                        label = "NUM_MOM";
+                        bindings = <
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans                                        &trans       &trans       &trans
+                        >;
+                };
+
+                num_lck_layer {
+                        label = "NUM_LCK";
+                        bindings = <
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans                                        &trans       &trans       &trans
+                        >;
+                };
+
                 sym_layer {
-                        label = "SYMBOL";
+                        label = "SYM";
 // -----------------------------------------------------------------------------------------
 // |  &  |  %  |  #  |  !  |ENTER|  *  |  ?  |  @  |  $  |  ^  |
 // |  (  |  [  |  ]  |  )  | DEL | BSPC|  ;  |  >  |  <  |  -  |
@@ -686,8 +726,28 @@ behaviors {
                         >;
                 };
 
+                sym_mom_layer {
+                        label = "SYM_MOM";
+                        bindings = <
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans                                        &trans       &trans       &trans
+                        >;
+                };
+
+                sym_lck_layer {
+                        label = "SYM_LCK";
+                        bindings = <
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans                                        &trans       &trans       &trans
+                        >;
+                };
+
                 utl_layer {
-                        label = "UTIL";
+                        label = "UTL";
 // -----------------------------------------------------------------------------------------
 // | MUTE| PREV| NEXT| PLAY | F11 |  F12 | LOCK |VOL_UP|VOL_DN|CPSLCK|
 // | F7  | F5  | F3  | F1   | F9  |  F8  |  F10 |  F2  |  F4  |  F6  |
