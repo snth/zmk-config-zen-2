@@ -27,6 +27,30 @@ behaviors {
       bindings = <&kp APOS>, <&kp APOS>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
+  bslh_o: bslh_only {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp BSLH>, <&kp BSLH>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  slash_o: slash_only {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp SLASH>, <&kp SLASH>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  dot_o: dot_only {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp DOT>, <&kp DOT>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  comma_o: comma_only {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp COMMA>, <&kp COMMA>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
 
   combos {
     compatible = "zmk,combos";
@@ -73,7 +97,7 @@ behaviors {
     combo2_apostrophe {
         timeout-ms = <50>;
         key-positions = <20 21>;
-        bindings = <&kp apos_o>;
+        bindings = <&apos_o>;
         layers = <0 1 2 3>;
     };
     combo2_ampersand {
@@ -274,7 +298,7 @@ behaviors {
     combo2_bslh {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&kp BSLH>;
+        bindings = <&bslh_o>;
         layers = <0 1 2 3>;
     };
     combo2_equal {
@@ -447,7 +471,7 @@ behaviors {
                         bindings = <
    &kp Z      &kp W      &kp F       &kp P       &kp B   &kp J &kp L       &kp U        &kp Y       &kp Q
    &kp A      &kp R      &kp S       &kp T       &kp G   &kp M &kp N       &kp E        &kp I       &kp O
-   &kp apos_o &kp X      &kp C       &kp D       &kp K   &kp V &kp H       &kp SLASH    &kp DOT     &kp COMMA
+   &apos_o    &kp X      &kp C       &kp D       &kp K   &kp V &kp H       &slash_o     &dot_o      &comma_o
               &sk LCTRL  &lt 1 SPACE &lt 2 TAB                 &lt 3 ENTER &sk RSHFT    &sk RALT
                         >;
                 };
@@ -460,10 +484,10 @@ behaviors {
 // | UNDO| CUT | COPY|PASTE|CTL+K|  \   |  =   |  /   |  .   |  ,   |
 //             |     |     |     |      |      |      |
                         bindings = <
-   &kp C_MUTE    &kp PG_DN    &kp PG_UP     &kp C_PP      &kp F11     &kp F12   &kp HOME    &kp PG_UP    &kp PG_DN  &kp END
-   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC &kp DEL     &kp BSPC  &kp LEFT    &kp UP       &kp DOWN   &kp RIGHT
-   &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(K)   &kp BSLH  &kp EQUAL   &trans       &trans     &trans
-                 &trans       &trans        &kp TAB                             &lt 2 ENTER &lt 4 SPACE  &sk RSHFT
+   &kp C_MUTE    &kp PG_DN    &kp PG_UP     &kp C_PP      &kp F11     &kp F12    &kp HOME    &kp PG_UP    &kp PG_DN  &kp END
+   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT    &kp UP       &kp DOWN   &kp RIGHT
+   &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL   &trans       &trans     &trans
+                 &trans       &trans        &kp TAB                              &lt 2 ENTER &lt 4 SPACE  &sk RSHFT
                         >;
                 };
 
@@ -475,10 +499,10 @@ behaviors {
 // |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
-   &kp N7        &kp N5        &kp N3          &kp N1         &kp N9      &kp N8    &kp N0          &kp N2           &kp N4         &kp N6
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC  &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
-   &kp APOS      &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &kp BSLH  &kp EQUAL       &trans           &trans         &trans
-                 &trans        &trans          &kp TAB                              &kp ENTER       &mt RSHFT SPACE  &trans
+   &kp N7        &kp N5        &kp N3          &kp N1         &kp N9      &kp N8     &kp N0          &kp N2           &kp N4         &kp N6
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
+   &kp APOS      &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans           &trans         &trans
+                 &trans        &trans          &kp TAB                               &kp ENTER       &mt RSHFT SPACE  &trans
                          >;
                 };
 
@@ -490,10 +514,10 @@ behaviors {
 // |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
-   &kp AMPERSAND &kp PERCENT   &kp HASH        &kp EXCL       &kp ENTER   &kp STAR  &kp QUESTION    &kp AT_SIGN      &kp DOLLAR     &kp CARET
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC  &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
-   &kp APOS      &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &kp BSLH  &kp EQUAL       &trans           &trans         &trans
-                 &trans        &mt LSHFT SPACE &kp TAB                              &kp ENTER       &mt RSHFT SPACE  &trans
+   &kp AMPERSAND &kp PERCENT   &kp HASH        &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN      &kp DOLLAR     &kp CARET
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
+   &kp APOS      &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans           &trans         &trans
+                 &trans        &mt LSHFT SPACE &kp TAB                               &kp ENTER       &mt RSHFT SPACE  &trans
                         >;
                 };
 
