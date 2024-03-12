@@ -540,10 +540,10 @@ behaviors {
 // |  '  |  X  |  C  |  D    |  K    |    V  |  H  |  /  |  .  |  ,  |
 //             | CTL |NAV/SPC|NUM/TAB|SYM/ENT| SFT | ALT |
                         bindings = <
-   &kp Z      &kp W      &kp F         &kp P       &kp B   &kp J  &kp L         &kp U              &kp Y       &kp Q
-   &kp A      &kp R      &kp S         &kp T       &kp G   &kp M  &kp N         &kp E              &kp I       &kp O
-   &apos_o    &kp X      &kp C         &kp D       &kp K   &kp V  &kp H         &slash_o           &dot_o      &comma_o
-              &sk LCTRL  &lt NAV SPACE &lt NUM TAB                &lt SYM ENTER &mt_td_shft RSHFT 0 &sk RALT
+   &kp Z      &kp W      &kp F         &kp P       &kp B   &kp J  &kp L         &kp U               &kp Y       &kp Q
+   &kp A      &kp R      &kp S         &kp T       &kp G   &kp M  &kp N         &kp E               &kp I       &kp O
+   &apos_o    &kp X      &kp C         &kp D       &kp K   &kp V  &kp H         &slash_o            &dot_o      &comma_o
+              &sk LCTRL  &lt NAV SPACE &lt NUM TAB                &lt SYM ENTER &td_shft            &sk RALT
                         >;
                 };
 
@@ -570,10 +570,10 @@ behaviors {
 // |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
-   &kp N7        &kp N5        &kp N3         &kp N1         &kp N9      &kp N8     &kp N0          &kp N2              &kp N4         &kp N6
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT        &hm RGUI LT    &hm RALT MINUS
-   &trans        &kp LBRC      &kp RBRC       &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans              &trans         &trans
-                 &td_sym       &mt LSHFT SPACE &trans                               &trans          &mt_td_shft RSHFT 0 &td_num
+   &kp N7        &kp N5        &kp N3           &kp N1         &kp N9      &kp N8     &kp N0          &kp N2              &kp N4         &kp N6
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT   &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT        &hm RGUI LT    &hm RALT MINUS
+   &trans        &kp LBRC      &kp RBRC         &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans              &trans         &trans
+                 &td_sym       &mt LSHFT SPACE  &trans                                &trans          &mt RSHFT SPACE     &td_num
                          >;
                 };
 
@@ -585,10 +585,10 @@ behaviors {
 // |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
-   &kp AMPERSAND &kp PERCENT   &kp HASH       &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN         &kp DOLLAR     &kp CARET
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT        &hm RGUI LT    &hm RALT MINUS
-   &trans        &kp LBRC      &kp RBRC       &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans              &trans         &trans
-                 &td_sym       &mt LSHFT SPACE &trans                               &trans          &mt_td_shft RSHFT 0 &td_num
+   &kp AMPERSAND &kp PERCENT   &kp HASH         &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN         &kp DOLLAR     &kp CARET
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT   &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT        &hm RGUI LT    &hm RALT MINUS
+   &trans        &kp LBRC      &kp RBRC         &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans              &trans         &trans
+                 &td_sym       &mt LSHFT SPACE  &trans                                &trans          &mt RSHFT SPACE     &td_num
                         >;
                 };
 
