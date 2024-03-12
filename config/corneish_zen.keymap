@@ -34,6 +34,21 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&sk RSHFT>, <&caps_word>, <&kp CAPSLOCK>;
   };
+  mt_td_shft: modtap_shift_tap_dance {
+      compatible = "zmk,behavior-hold-tap";
+      label = "modtap_shift_tap_dance";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <175>;
+      bindings = <&kp>, <&td_shft>;
+  };
+  td_spc:  space_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SPACE>, <&caps_word>, <&kp CAPSLOCK>;
+  };
   mt_td_spc: modtap_space_tap_dance {
       compatible = "zmk,behavior-hold-tap";
       label = "modtap_space_tap_dance";
@@ -42,12 +57,6 @@ behaviors {
       tapping-term-ms = <200>;
       quick-tap-ms = <175>;
       bindings = <&kp>, <&td_spc>;
-  };
-  td_spc:  space_tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&caps_word>, <&kp CAPSLOCK>;
   };
   lt_td_spc: layertap_space_tap_dance {
       compatible = "zmk,behavior-hold-tap";
@@ -534,7 +543,7 @@ behaviors {
    &kp Z      &kp W      &kp F         &kp P       &kp B   &kp J  &kp L         &kp U              &kp Y       &kp Q
    &kp A      &kp R      &kp S         &kp T       &kp G   &kp M  &kp N         &kp E              &kp I       &kp O
    &apos_o    &kp X      &kp C         &kp D       &kp K   &kp V  &kp H         &slash_o           &dot_o      &comma_o
-              &sk LCTRL  &lt NAV SPACE &lt NUM TAB                &lt SYM ENTER &mt_td_sft RSHFT 0 &sk RALT
+              &sk LCTRL  &lt NAV SPACE &lt NUM TAB                &lt SYM ENTER &mt_td_shft RSHFT 0 &sk RALT
                         >;
                 };
 
@@ -561,10 +570,10 @@ behaviors {
 // |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
-   &kp N7        &kp N5        &kp N3         &kp N1         &kp N9      &kp N8     &kp N0          &kp N2             &kp N4         &kp N6
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT       &hm RGUI LT    &hm RALT MINUS
-   &trans        &kp LBRC      &kp RBRC       &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans             &trans         &trans
-                 &td_sym      &mt LSHFT SPACE &trans                                &trans          &mt_td_sft RSHFT 0 &td_num
+   &kp N7        &kp N5        &kp N3         &kp N1         &kp N9      &kp N8     &kp N0          &kp N2              &kp N4         &kp N6
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT        &hm RGUI LT    &hm RALT MINUS
+   &trans        &kp LBRC      &kp RBRC       &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans              &trans         &trans
+                 &td_sym       &mt LSHFT SPACE &trans                               &trans          &mt_td_shft RSHFT 0 &td_num
                          >;
                 };
 
@@ -576,10 +585,10 @@ behaviors {
 // |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
-   &kp AMPERSAND &kp PERCENT   &kp HASH       &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN      &kp DOLLAR     &kp CARET
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
-   &trans        &kp LBRC      &kp RBRC       &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans           &trans         &trans
-                 &td_sym      &mt LSHFT SPACE &trans                                &trans          &mt_td_sft RSHFT 0 &td_num
+   &kp AMPERSAND &kp PERCENT   &kp HASH       &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN         &kp DOLLAR     &kp CARET
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT        &hm RGUI LT    &hm RALT MINUS
+   &trans        &kp LBRC      &kp RBRC       &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans              &trans         &trans
+                 &td_sym       &mt LSHFT SPACE &trans                               &trans          &mt_td_shft RSHFT 0 &td_num
                         >;
                 };
 
@@ -594,7 +603,7 @@ behaviors {
    &kp C_MUTE   &kp C_PREV        &kp C_NEXT      &kp C_PP      &kp F11         &kp F12    &kp LG(L)       &kp C_VOL_UP    &kp C_VOL_DN   &kp CAPSLOCK
    &hm LALT F7  &hm LGUI F5       &hm LSHFT F3    &hm LCTRL F1  &kp F9          &kp F8     &hm RCTRL F10   &hm RSHFT F2    &hm RGUI F4    &hm RALT F6
    &kp K_BACK   &kp K_SCROLL_DOWN &kp K_SCROLL_UP &kp K_FORWARD &kp C_AC_SEARCH &bt BT_CLR &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3
-                &trans            &trans          &kp TAB                                  &kp ENTER       &trans          &trans
+                &trans            &trans          &trans                                   &trans          &trans          &trans
                         >;
                 };
                 
