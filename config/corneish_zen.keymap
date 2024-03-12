@@ -3,15 +3,15 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DFT      0
-#define NAV      1
-#define NUM      2
-#define SYM      3
+#define NAV_CFG  1
+#define NUM_CFG  2
+#define SYM_CFG  3
 #define UTL      4
-#define NAV_CFG  5
+#define NAV      5
 #define NAV_LCK  6
-#define NUM_CFG  7
+#define NUM      7
 #define NUM_LCK  8
-#define SYM_CFG  9
+#define SYM      9
 #define SYM_LCK 10
 
 
