@@ -3,9 +3,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DFT      0
-#define NAV      1
-#define NAV_MOM  2
-#define NAV_LCK  3
+#define NAV_MOM  1
+#define NAV_LCK  2
+#define NAV      3
 #define NUM      4
 #define NUM_MOM  5
 #define NUM_LCK  6
@@ -637,22 +637,7 @@ behaviors {
    &kp Z         &kp W        &kp F             &kp P         &kp B       &kp J      &kp L             &kp U                  &kp Y       &kp Q
    &kp A         &kp R        &kp S             &kp T         &kp G       &kp M      &kp N             &kp E                  &kp I       &kp O
    &apos_o       &kp X        &kp C             &kp D         &kp K       &kp V      &kp H             &slash_o               &dot_o      &comma_o
-                 &sk LCTRL    &lt NAV SPACE     &lt_num_tab NUM 0                    &lt_sym_ent SYM 0 &mt_caps_shft RSHFT 0  &sk RALT
-                        >;
-                };
-
-                nav_layer {
-                        label = "NAV";
-// -----------------------------------------------------------------------------------------
-// | MUTE| PGDN| PGUP| PLAY| F11 | F12  | HOME | PGUP | PGDN | END  |
-// | INS | RET | TAB | ESC | DEL | BSPC | LEFT |  UP  | DOWN | RIGHT|
-// | UNDO| CUT | COPY|PASTE|CTL+K|  \   |  =   |  /   |  .   |  ,   |
-//             |     |     |     |      |      |      |
-                        bindings = <
-   &kp C_MUTE    &kp PG_DN    &kp PG_UP         &kp C_PP      &kp F11     &kp F12    &kp HOME        &kp PG_UP                &kp PG_DN  &kp END
-   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB     &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT        &kp UP                   &kp DOWN   &kp RIGHT
-   &kp LC(Z)     &kp LC(X)    &kp LC(C)         &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL       &trans                   &trans     &trans
-                 &trans       &lt_dft_spc DFT 0 &trans                               &trans          &lt_caps_spc UTL 0       &trans
+                 &sk LCTRL    &lt NAV_MOM SPACE &lt_num_tab NUM 0                    &lt_sym_ent SYM 0 &mt_caps_shft RSHFT 0  &sk RALT
                         >;
                 };
 
@@ -673,6 +658,21 @@ behaviors {
    &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
    &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans                                        &trans       &trans       &trans
+                        >;
+                };
+
+                nav_layer {
+                        label = "NAV";
+// -----------------------------------------------------------------------------------------
+// | MUTE| PGDN| PGUP| PLAY| F11 | F12  | HOME | PGUP | PGDN | END  |
+// | INS | RET | TAB | ESC | DEL | BSPC | LEFT |  UP  | DOWN | RIGHT|
+// | UNDO| CUT | COPY|PASTE|CTL+K|  \   |  =   |  /   |  .   |  ,   |
+//             |     |     |     |      |      |      |
+                        bindings = <
+   &kp C_MUTE    &kp PG_DN    &kp PG_UP         &kp C_PP      &kp F11     &kp F12    &kp HOME        &kp PG_UP                &kp PG_DN  &kp END
+   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB     &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT        &kp UP                   &kp DOWN   &kp RIGHT
+   &kp LC(Z)     &kp LC(X)    &kp LC(C)         &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL       &trans                   &trans     &trans
+                 &trans       &lt_dft_spc DFT 0 &trans                               &trans          &lt_caps_spc UTL 0       &trans
                         >;
                 };
 
