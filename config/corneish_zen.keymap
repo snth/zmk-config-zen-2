@@ -28,7 +28,7 @@ behaviors {
         bindings = <&kp>, <&kp>;
   };
 
-  shft_dance: shift_tap_dance {
+  shft_dnc: shift_tap_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -507,10 +507,10 @@ behaviors {
 // |  '  |  X  |  C  |  D    |  K    |    V  |  H  |  /  |  .  |  ,  |
 //             | CTL |NAV/SPC|NUM/TAB|SYM/ENT| SFT | ALT |
                         bindings = <
-   &kp Z      &kp W      &kp F         &kp P       &kp B   &kp J  &kp L         &kp U        &kp Y       &kp Q
-   &kp A      &kp R      &kp S         &kp T       &kp G   &kp M  &kp N         &kp E        &kp I       &kp O
-   &apos_o    &kp X      &kp C         &kp D       &kp K   &kp V  &kp H         &slash_o     &dot_o      &comma_o
-              &sk LCTRL  &lt NAV SPACE &lt NUM TAB                &lt SYM ENTER &shft_dance  &sk RALT
+   &kp Z      &kp W      &kp F         &kp P       &kp B   &kp J  &kp L         &kp U              &kp Y       &kp Q
+   &kp A      &kp R      &kp S         &kp T       &kp G   &kp M  &kp N         &kp E              &kp I       &kp O
+   &apos_o    &kp X      &kp C         &kp D       &kp K   &kp V  &kp H         &slash_o           &dot_o      &comma_o
+              &sk LCTRL  &lt NAV SPACE &lt NUM TAB                &lt SYM ENTER &mt RSHFT shft_dnc &sk RALT
                         >;
                 };
 
