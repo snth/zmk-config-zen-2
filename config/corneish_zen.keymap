@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEF  0
+#define DFT  0
 #define NAV  1
 #define NUM  2
 #define SYM  3
@@ -71,19 +71,19 @@ behaviors {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to DEF>, <&to NAV>;
+            bindings = <&to DFT>, <&to NAV>;
   };
   td_num:  num_tap_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to DEF>, <&to NUM>;
+            bindings = <&to DFT>, <&to NUM>;
   };
   td_sym:  sym_tap_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to DEF>, <&to SYM>;
+            bindings = <&to DFT>, <&to SYM>;
   };
 
   apos_o: apos_only {
@@ -558,7 +558,7 @@ behaviors {
    &kp C_MUTE    &kp PG_DN    &kp PG_UP       &kp C_PP      &kp F11     &kp F12    &kp HOME        &kp PG_UP        &kp PG_DN  &kp END
    &hm LALT INS  &hm LGUI RET &hm LSHFT TAB   &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT        &kp UP           &kp DOWN   &kp RIGHT
    &kp LC(Z)     &kp LC(X)    &kp LC(C)       &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL       &trans           &trans     &trans
-                 &trans       &to DEV         &trans                               &trans          &lt_td_spc UTL 0 &to NAV
+                 &trans       &to DEF         &trans                               &trans          &lt_td_spc UTL 0 &to NAV
                         >;
                 };
 
