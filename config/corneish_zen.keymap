@@ -2,6 +2,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEF  0
+#define NAV  1
+#define NUM  2
+#define SYM  3
+#define UTL  4
+
+
 / {
   chosen {
       zmk,physical-layout = &foostan_corne_6col_layout;
@@ -470,15 +477,15 @@ behaviors {
                 default_layer {
                         label = "COLEDUST";
 // -----------------------------------------------------------------------------------------
-// |  Z  |  W  |  F  |  P  |  B     |     J  |  L  |  U  |  Y  |  Q  |
-// |  A  |  R  |  S  |  T  |  G     |     M  |  N  |  E  |  I  |  O  |
-// |  '  |  X  |  C  |  D  |  K     |     V  |  H  |  /  |  .  |  ,  |
-//             | CTL |2/SPC|1/TAB   |   1/ENT| SFT | ALT |
+// |  Z  |  W  |  F  |  P    |  B    |    J  |  L  |  U  |  Y  |  Q  |
+// |  A  |  R  |  S  |  T    |  G    |    M  |  N  |  E  |  I  |  O  |
+// |  '  |  X  |  C  |  D    |  K    |    V  |  H  |  /  |  .  |  ,  |
+//             | CTL |NAV/SPC|NUM/TAB|SYM/ENT| SFT | ALT |
                         bindings = <
-   &kp Z      &kp W      &kp F       &kp P       &kp B   &kp J &kp L       &kp U        &kp Y       &kp Q
-   &kp A      &kp R      &kp S       &kp T       &kp G   &kp M &kp N       &kp E        &kp I       &kp O
-   &apos_o    &kp X      &kp C       &kp D       &kp K   &kp V &kp H       &slash_o     &dot_o      &comma_o
-              &sk LCTRL  &lt 1 SPACE &lt 2 TAB                 &lt 3 ENTER &sk RSHFT    &sk RALT
+   &kp Z      &kp W      &kp F         &kp P       &kp B   &kp J  &kp L         &kp U        &kp Y       &kp Q
+   &kp A      &kp R      &kp S         &kp T       &kp G   &kp M  &kp N         &kp E        &kp I       &kp O
+   &apos_o    &kp X      &kp C         &kp D       &kp K   &kp V  &kp H         &slash_o     &dot_o      &comma_o
+              &sk LCTRL  &lt NAV SPACE &lt NUM TAB                &lt SYM ENTER &sk RSHFT    &sk RALT
                         >;
                 };
 
@@ -490,10 +497,10 @@ behaviors {
 // | UNDO| CUT | COPY|PASTE|CTL+K|  \   |  =   |  /   |  .   |  ,   |
 //             |     |     |     |      |      |      |
                         bindings = <
-   &kp C_MUTE    &kp PG_DN    &kp PG_UP     &kp C_PP      &kp F11     &kp F12    &kp HOME        &kp PG_UP    &kp PG_DN  &kp END
-   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT        &kp UP       &kp DOWN   &kp RIGHT
-   &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL       &trans       &trans     &trans
-                 &trans       &kp SPACE     &kp TAB                              &mt RSHFT ENTER &lt 4 SPACE  &tog 1
+   &kp C_MUTE    &kp PG_DN    &kp PG_UP     &kp C_PP      &kp F11     &kp F12    &kp HOME        &kp PG_UP     &kp PG_DN  &kp END
+   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT        &kp UP        &kp DOWN   &kp RIGHT
+   &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL       &trans        &trans     &trans
+                 &trans       &tog NAV      &kp TAB                              &mt RSHFT ENTER &lt UTL SPACE &sl NAV
                         >;
                 };
 
