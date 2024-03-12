@@ -3,15 +3,15 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DFT      0
-#define NAV_MOM  1
-#define NAV_LCK  2
-#define NAV      3
+#define SYM_MOM  1
+#define SYM_LCK  2
+#define SYM      3
 #define NUM_MOM  4
 #define NUM_LCK  5
 #define NUM      6
-#define SYM_MOM  7
-#define SYM_LCK  8
-#define SYM      9
+#define NAV_MOM  7
+#define NAV_LCK  8
+#define NAV      9
 #define UTL      10
 
 
@@ -578,7 +578,7 @@ behaviors {
    &kp N7        &kp N5        &kp N3            &kp N1         &kp N9      &kp N8     &kp N0          &kp N2                 &kp N4         &kp N6
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT    &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT           &hm RGUI LT    &hm RALT MINUS
    &trans        &kp LBRC      &kp RBRC          &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans                 &trans         &trans
-                 &trans        &kp SPACE         &trans                                &trans          &mt_caps_shft RSHFT 0  &trans
+                 &trans        &trans            &trans                                &trans          &lt_caps_spc UTL 0     &trans
                          >;
                 };
 
@@ -598,7 +598,7 @@ behaviors {
    &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
    &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
    &trans       &trans       &trans       &trans       &trans              &trans       &trans       &trans       &trans       &trans
-                &trans       &trans       &trans                                        &trans       &trans       &trans
+                &trans        &trans            &trans                                &trans          &lt_caps_spc UTL 0     &trans
                         >;
                 };
 
@@ -613,7 +613,7 @@ behaviors {
    &kp AMPERSAND &kp PERCENT   &kp HASH          &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN            &kp DOLLAR     &kp CARET
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT    &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT           &hm RGUI LT    &hm RALT MINUS
    &trans        &kp LBRC      &kp RBRC          &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans                 &trans         &trans
-                 &trans        &kp SPACE         &trans                                &trans          &mt_caps_shft RSHFT 0  &trans
+                 &trans        &kp SPACE         &trans                                &trans          &mt RSHFT SPACE        &trans
                         >;
                 };
 
