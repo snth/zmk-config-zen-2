@@ -23,8 +23,14 @@ behaviors {
 
   apos_o: apos_only {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0 1 2 3>;
+      #binding-cells = <0>;
       bindings = <&kp APOS>, <&kp APOS>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  semi_o: semi_only {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp SEMI>, <&kp SEMI>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   bslh_o: bslh_only {
@@ -47,7 +53,7 @@ behaviors {
   };
   comma_o: comma_only {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0 2 3>;
+      #binding-cells = <0>;
       bindings = <&kp COMMA>, <&kp COMMA>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
@@ -170,10 +176,10 @@ behaviors {
         bindings = <&kp RBKT>;
         layers = <0 1 2 3>;
     };
-    combo3_tilde {
+    combo3_semi_lhs {
         timeout-ms = <50>;
         key-positions = <22 23 24>;
-        bindings = <&kp TILDE>;
+        bindings = <&semi_o>;
         layers = <0 1 2 3>;
     };
 
@@ -359,10 +365,10 @@ behaviors {
         layers = <0 1 2 3>;
     };
     
-    combo3_pipe_rhs {
+    combo3_semi_rhs {
         timeout-ms = <50>;
         key-positions = <25 26 27>;
-        bindings = <&kp PIPE>;
+        bindings = <&semi_o>;
         layers = <0 1 2 3>;
     };
     combo3_gt {
@@ -501,7 +507,7 @@ behaviors {
                         bindings = <
    &kp N7        &kp N5        &kp N3          &kp N1         &kp N9      &kp N8     &kp N0          &kp N2           &kp N4         &kp N6
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
-   &kp APOS      &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans           &trans         &trans
+   &trans        &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans           &trans         &trans
                  &trans        &trans          &kp TAB                               &kp ENTER       &mt RSHFT SPACE  &trans
                          >;
                 };
@@ -516,7 +522,7 @@ behaviors {
                         bindings = <
    &kp AMPERSAND &kp PERCENT   &kp HASH        &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN      &kp DOLLAR     &kp CARET
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
-   &kp APOS      &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans           &trans         &trans
+   &trans        &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans           &trans         &trans
                  &trans        &mt LSHFT SPACE &kp TAB                               &kp ENTER       &mt RSHFT SPACE  &trans
                         >;
                 };
