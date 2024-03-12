@@ -23,7 +23,7 @@ behaviors {
 
   apos_o: apos_only {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
+      #binding-cells = <0 1 2 3>;
       bindings = <&kp APOS>, <&kp APOS>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
@@ -47,7 +47,7 @@ behaviors {
   };
   comma_o: comma_only {
       compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
+      #binding-cells = <0 2 3>;
       bindings = <&kp COMMA>, <&kp COMMA>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
