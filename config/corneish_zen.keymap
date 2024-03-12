@@ -543,7 +543,7 @@ behaviors {
    &kp AMPERSAND &kp PERCENT   &kp HASH          &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN            &kp DOLLAR     &kp CARET
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT    &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT           &hm RGUI LT    &hm RALT MINUS
    &trans        &kp LBRC      &kp RBRC          &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans                 &trans         &trans
-                 &trans        &trans            &trans                                &trans          &trans                 &trans
+                 &trans        &trans            &trans                                &trans          &lt UTL SPACE          &trans
                         >;
                 };
 
@@ -578,7 +578,7 @@ behaviors {
    &kp N7        &kp N5        &kp N3            &kp N1         &kp N9      &kp N8     &kp N0          &kp N2                 &kp N4         &kp N6
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT    &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT           &hm RGUI LT    &hm RALT MINUS
    &trans        &kp LBRC      &kp RBRC          &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans                 &trans         &trans
-                 &trans        &trans            &trans                                &trans          &trans                 &trans
+                 &trans        &trans            &trans                                &trans          &lt UTL SPACE          &trans
                           >;
                 };
 
@@ -613,7 +613,7 @@ behaviors {
    &kp C_MUTE    &kp PG_DN    &kp PG_UP         &kp C_PP      &kp F11     &kp F12    &kp HOME        &kp PG_UP                &kp PG_DN  &kp END
    &hm LALT INS  &hm LGUI RET &hm LSHFT TAB     &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT        &kp UP                   &kp DOWN   &kp RIGHT
    &kp LC(Z)     &kp LC(X)    &kp LC(C)         &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL       &trans                   &trans     &trans
-                 &trans       &trans            &trans                               &trans          &lt_caps_spc UTL 0       &trans
+                 &trans       &trans            &trans                               &trans          &lt UTL SPACE            &trans
                         >;
                 };
 
