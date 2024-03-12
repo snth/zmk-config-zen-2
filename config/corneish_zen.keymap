@@ -7,11 +7,11 @@
 #define NUM      2
 #define SYM      3
 #define UTL      4
-#define NAV_MOM  5
+#define NAV_CFG  5
 #define NAV_LCK  6
-#define NUM_MOM  7
+#define NUM_CFG  7
 #define NUM_LCK  8
-#define SYM_MOM  9
+#define SYM_CFG  9
 #define SYM_LCK 10
 
 
@@ -26,28 +26,28 @@
 conditional_layers {
     compatible = "zmk,conditional-layers";
     nav_mom {
-        if-layers = <NAV_MOM>;
-        then-layer = <NAV>;
+        if-layers = <NAV>;
+        then-layer = <NAV_CFG>;
     };
     nav_lck {
         if-layers = <NAV_LCK>;
-        then-layer = <NAV>;
+        then-layer = <NAV_CFG>;
     };
     num_mom {
-        if-layers = <NUM_MOM>;
-        then-layer = <NUM>;
+        if-layers = <NUM>;
+        then-layer = <NUM_CFG>;
     };
     num_lck {
         if-layers = <NUM_LCK>;
-        then-layer = <NUM>;
+        then-layer = <NUM_CFG>;
     };
     sym_mom {
-        if-layers = <SYM_MOM>;
-        then-layer = <SYM>;
+        if-layers = <SYM>;
+        then-layer = <SYM_CFG>;
     };
     sym_lck {
         if-layers = <SYM_LCK>;
-        then-layer = <SYM>;
+        then-layer = <SYM_CFG>;
     };
 };
 
@@ -119,7 +119,7 @@ behaviors {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&kp SPACE>, <&to NAV>, <&kp SPACE>;
+      bindings = <&kp SPACE>, <&to NAV_LCK>, <&kp SPACE>;
   };
   lt_nav_spc: layertap_nav_tap_dance {
       compatible = "zmk,behavior-hold-tap";
@@ -134,7 +134,7 @@ behaviors {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&kp TAB>, <&to NUM>, <&kp TAB>;
+      bindings = <&kp TAB>, <&to NUM_LCK>, <&kp TAB>;
   };
   lt_num_tab: layertap_num_tab_tap_dance {
       compatible = "zmk,behavior-hold-tap";
@@ -149,7 +149,7 @@ behaviors {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&kp ENTER>, <&to SYM>, <&kp ENTER>;
+      bindings = <&kp ENTER>, <&to SYM_LCK>, <&kp ENTER>;
   };
   lt_sym_ent: layertap_sym_enter_tap_dance {
       compatible = "zmk,behavior-hold-tap";
@@ -231,19 +231,19 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <10 11>;
         bindings = <&tog NAV_LCK>;
-        layers = <NAV>;
+        layers = <NAV_CFG>;
     };
     combo2_num_lck {
         timeout-ms = <50>;
         key-positions = <10 11>;
         bindings = <&tog NUM_LCK>;
-        layers = <NUM>;
+        layers = <NUM_CFG>;
     };
     combo2_sym_lck {
         timeout-ms = <50>;
         key-positions = <10 11>;
         bindings = <&tog SYM_LCK>;
-        layers = <SYM>;
+        layers = <SYM_CFG>;
     };
 
     combo2_minus_lhs {
