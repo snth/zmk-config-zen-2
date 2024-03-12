@@ -67,11 +67,20 @@ behaviors {
       quick-tap-ms = <175>;
       bindings = <&mo>, <&td_spc>;
   };
-  td_nav:  nav_tap_dance {
+  td_nav_spc:  nav_spc_tap_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to DFT>, <&to NAV>;
+            bindings = <&kp SPACE>, <&to NAV>;
+  };
+  lt_nav_spc: layertap_nav_tap_dance {
+      compatible = "zmk,behavior-hold-tap";
+      label = "layertap_nav_tap_dance";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <175>;
+      bindings = <&mo>, <&td_nav_spc>;
   };
   td_num:  num_tap_dance {
             compatible = "zmk,behavior-tap-dance";
@@ -540,10 +549,10 @@ behaviors {
 // |  '  |  X  |  C  |  D    |  K    |    V  |  H  |  /  |  .  |  ,  |
 //             | CTL |NAV/SPC|NUM/TAB|SYM/ENT| SFT | ALT |
                         bindings = <
-   &kp Z      &kp W      &kp F         &kp P       &kp B   &kp J  &kp L         &kp U               &kp Y       &kp Q
-   &kp A      &kp R      &kp S         &kp T       &kp G   &kp M  &kp N         &kp E               &kp I       &kp O
-   &apos_o    &kp X      &kp C         &kp D       &kp K   &kp V  &kp H         &slash_o            &dot_o      &comma_o
-              &sk LCTRL  &lt NAV SPACE &lt NUM TAB                &lt SYM ENTER &td_shft            &sk RALT
+   &kp Z      &kp W      &kp F             &kp P       &kp B   &kp J  &kp L         &kp U               &kp Y       &kp Q
+   &kp A      &kp R      &kp S             &kp T       &kp G   &kp M  &kp N         &kp E               &kp I       &kp O
+   &apos_o    &kp X      &kp C             &kp D       &kp K   &kp V  &kp H         &slash_o            &dot_o      &comma_o
+              &sk LCTRL  &lt_nav_spc NAV 0 &lt NUM TAB                &lt SYM ENTER &td_shft            &sk RALT
                         >;
                 };
 
