@@ -50,10 +50,10 @@ behaviors {
         layers = <0 1 2 3>;
     };
   
-    combo2_pipe {
+    combo2_minus_lhs {
         timeout-ms = <50>;
         key-positions = <11 12>;
-        bindings = <&kp PIPE>;
+        bindings = <&kp MINUS>;
         layers = <0 1 2 3>;
     };
     combo2_tilde {
@@ -243,25 +243,13 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <15 16>;
         bindings = <&kp K_APP>;
-        layers = <0 2 3>;
-    };
-    combo2_app_nav {
-        timeout-ms = <50>;
-        key-positions = <15 16>;
-        bindings = <&kp K_APP>;
-        layers = <1>;
+        layers = <0 1 2 3>;
     };
     combo2_colon {
         timeout-ms = <50>;
         key-positions = <16 17>;
         bindings = <&kp COLON>;
-        layers = <0 2 3>;
-    };
-    combo2_colon_nav {
-        timeout-ms = <50>;
-        key-positions = <16 17>;
-        bindings = <&kp COLON>;
-        layers = <1>;
+        layers = <0 1 2 3>;
     };
     combo2_underscore {
         timeout-ms = <50>;
@@ -280,13 +268,7 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <25 26>;
         bindings = <&kp BSLH>;
-        layers = <0 2 3>;
-    };
-    combo2_bslh_nav {
-        timeout-ms = <50>;
-        key-positions = <25 26>;
-        bindings = <&kp BSLH>;
-        layers = <1>;
+        layers = <0 1 2 3>;
     };
     combo2_equal {
         timeout-ms = <50>;
@@ -294,10 +276,10 @@ behaviors {
         bindings = <&kp EQUAL>;
         layers = <0 1 2 3>;
     };
-    combo2_semi {
+    combo2_pipe {
         timeout-ms = <50>;
         key-positions = <27 28>;
-        bindings = <&kp SEMI>;
+        bindings = <&kp PIPE>;
         layers = <0 1 2 3>;
     };
     combo2_plus {
@@ -346,10 +328,10 @@ behaviors {
         layers = <0 1 2 3>;
     };
     
-    combo3_ampersand_rhs {
+    combo3_pipe_rhs {
         timeout-ms = <50>;
         key-positions = <25 26 27>;
-        bindings = <&kp AMPERSAND>;
+        bindings = <&kp PIPE>;
         layers = <0 1 2 3>;
     };
     combo3_gt {
