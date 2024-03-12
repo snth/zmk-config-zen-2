@@ -490,10 +490,10 @@ behaviors {
 // | UNDO| CUT | COPY|PASTE|CTL+K|  \   |  =   |  /   |  .   |  ,   |
 //             |     |     |     |      |      |      |
                         bindings = <
-   &kp C_MUTE    &kp PG_DN    &kp PG_UP     &kp C_PP      &kp F11     &kp F12    &kp HOME    &kp PG_UP    &kp PG_DN  &kp END
-   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT    &kp UP       &kp DOWN   &kp RIGHT
-   &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL   &trans       &trans     &trans
-                 &trans       &trans        &kp TAB                              &lt 2 ENTER &lt 4 SPACE  &sk RSHFT
+   &kp C_MUTE    &kp PG_DN    &kp PG_UP     &kp C_PP      &kp F11     &kp F12    &kp HOME        &kp PG_UP    &kp PG_DN  &kp END
+   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT        &kp UP       &kp DOWN   &kp RIGHT
+   &kp LC(Z)     &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL       &trans       &trans     &trans
+                 &trans       &kp SPACE     &kp TAB                              &mt RSHFT ENTER &lt 4 SPACE  &tog 1
                         >;
                 };
 
