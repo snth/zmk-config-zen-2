@@ -21,6 +21,13 @@ behaviors {
         bindings = <&kp>, <&kp>;
   };
 
+  apos_o: apos_only {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp APOS>, <&kp APOS>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+
   combos {
     compatible = "zmk,combos";
       
@@ -66,7 +73,7 @@ behaviors {
     combo2_apostrophe {
         timeout-ms = <50>;
         key-positions = <20 21>;
-        bindings = <&kp APOS>;
+        bindings = <&kp apos_o>;
         layers = <0 1 2 3>;
     };
     combo2_ampersand {
@@ -440,7 +447,7 @@ behaviors {
                         bindings = <
    &kp Z      &kp W      &kp F       &kp P       &kp B   &kp J &kp L       &kp U        &kp Y       &kp Q
    &kp A      &kp R      &kp S       &kp T       &kp G   &kp M &kp N       &kp E        &kp I       &kp O
-   &kp APOS   &kp X      &kp C       &kp D       &kp K   &kp V &kp H       &kp SLASH    &kp DOT     &kp COMMA
+   &kp apos_o &kp X      &kp C       &kp D       &kp K   &kp V &kp H       &kp SLASH    &kp DOT     &kp COMMA
               &sk LCTRL  &lt 1 SPACE &lt 2 TAB                 &lt 3 ENTER &sk RSHFT    &sk RALT
                         >;
                 };
