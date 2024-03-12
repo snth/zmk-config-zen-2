@@ -637,7 +637,7 @@ behaviors {
    &kp Z         &kp W        &kp F             &kp P         &kp B       &kp J      &kp L             &kp U                  &kp Y       &kp Q
    &kp A         &kp R        &kp S             &kp T         &kp G       &kp M      &kp N             &kp E                  &kp I       &kp O
    &apos_o       &kp X        &kp C             &kp D         &kp K       &kp V      &kp H             &slash_o               &dot_o      &comma_o
-                 &sk LCTRL    &lt_nav_spc NAV 0 &lt_num_tab NUM 0                    &lt_sym_ent SYM 0 &mt_caps_shft RSHFT 0  &sk RALT
+                 &sk LCTRL    &lt NAV SPACE     &lt_num_tab NUM 0                    &lt_sym_ent SYM 0 &mt_caps_shft RSHFT 0  &sk RALT
                         >;
                 };
 
