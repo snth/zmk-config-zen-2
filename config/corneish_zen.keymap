@@ -2,11 +2,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DFT  0
-#define NAV  1
-#define NUM  2
-#define SYM  3
-#define UTL  4
+#define DFT      0
+#define NAV      1
+#define NUM      2
+#define SYM      3
+#define UTL      4
+#define LCK      5
+#define NAV_LCK  6
+#define NUM_LCK  7
+#define SYM_LCK  8
 
 
 / {
@@ -17,6 +21,22 @@
 };
 
 / {
+conditional_layers {
+    compatible = "zmk,conditional-layers";
+    nav_lock {
+        if-layers = <NAV_LCK>;
+        then-layer = <NAV>;
+    };
+    num_lock {
+        if-layers = <NUM_LCK>;
+        then-layer = <NUM>;
+    };
+
+    sym_lock {
+        if-layers = <SYM_LCK>;
+        then-layer = <SYM>;
+    };
+};
 
 behaviors {
   hm: homerow_mods {
@@ -193,7 +213,32 @@ behaviors {
         bindings = <&kp ENTER>;
         layers = <0 1 2 3>;
     };
-  
+
+    combo2_dft_lck {
+        timeout-ms = <50>;
+        key-positions = <10 11>;
+        bindings = <&to DFT>;
+        layers = <NAV_LCK NUM_LCK SYM_LCK>;
+    };
+    combo2_nav_lck {
+        timeout-ms = <50>;
+        key-positions = <10 11>;
+        bindings = <&to NAV_LCK>;
+        layers = <NAV>;
+    };
+    combo2_num_lck {
+        timeout-ms = <50>;
+        key-positions = <10 11>;
+        bindings = <&to NUM_LCK>;
+        layers = <NUM>;
+    };
+    combo2_sym_lck {
+        timeout-ms = <50>;
+        key-positions = <10 11>;
+        bindings = <&to SYM_LCK>;
+        layers = <SYM>;
+    };
+
     combo2_minus_lhs {
         timeout-ms = <50>;
         key-positions = <11 12>;
