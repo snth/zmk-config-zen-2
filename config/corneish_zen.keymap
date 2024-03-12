@@ -61,21 +61,6 @@ behaviors {
         bindings = <&kp>, <&kp>;
   };
 
-  td_dft_spc:  dft_spc_tap_dance {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp SPACE>, <&to DFT>, <&kp SPACE>;
-  };
-  lt_dft_spc: layertap_dft_spc_tap_dance {
-      compatible = "zmk,behavior-hold-tap";
-      label = "layertap_dft_spc_tap_dance";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <175>;
-      bindings = <&mo>, <&td_dft_spc>;
-  };
   td_shft: shift_tap_dance {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
@@ -97,15 +82,6 @@ behaviors {
       tapping-term-ms = <200>;
       bindings = <&kp SPACE>, <&caps_word>, <&kp SPACE>;
   };
-  mt_caps_spc: modtap_capsword_space_tap_dance {
-      compatible = "zmk,behavior-hold-tap";
-      label = "modtap_capsword_space_tap_dance";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <175>;
-      bindings = <&kp>, <&td_caps_spc>;
-  };
   lt_caps_spc: layertap_capsword_space_tap_dance {
       compatible = "zmk,behavior-hold-tap";
       label = "layertap_capsword_space_tap_dance";
@@ -114,51 +90,6 @@ behaviors {
       tapping-term-ms = <200>;
       quick-tap-ms = <175>;
       bindings = <&mo>, <&td_caps_spc>;
-  };
-  td_nav_spc:  nav_spc_tap_dance {
-      compatible = "zmk,behavior-tap-dance";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp SPACE>, <&to NAV_LCK>, <&kp SPACE>;
-  };
-  lt_nav_spc: layertap_nav_tap_dance {
-      compatible = "zmk,behavior-hold-tap";
-      label = "layertap_nav_tap_dance";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <175>;
-      bindings = <&mo>, <&td_nav_spc>;
-  };
-  td_num_tab: num_tab_tap_dance {
-      compatible = "zmk,behavior-tap-dance";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp TAB>, <&to NUM_LCK>, <&kp TAB>;
-  };
-  lt_num_tab: layertap_num_tab_tap_dance {
-      compatible = "zmk,behavior-hold-tap";
-      label = "layertap_num_tab_tap_dance";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <175>;
-      bindings = <&mo>, <&td_num_tab>;
-  };
-  td_sym_ent: sym_enter_tap_dance {
-      compatible = "zmk,behavior-tap-dance";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp ENTER>, <&to SYM_LCK>, <&kp ENTER>;
-  };
-  lt_sym_ent: layertap_sym_enter_tap_dance {
-      compatible = "zmk,behavior-hold-tap";
-      label = "layertap_sym_enter_tap_dance";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <175>;
-      bindings = <&mo>, <&td_sym_ent>;
   };
 
   apos_o: apos_only {
