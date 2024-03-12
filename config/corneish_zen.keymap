@@ -137,25 +137,25 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <0 1>;
         bindings = <&kp PERCENT>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_hash {
         timeout-ms = <50>;
         key-positions = <1 2>;
         bindings = <&kp HASH>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_excl {
         timeout-ms = <50>;
         key-positions = <2 3>;
         bindings = <&kp EXCL>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_enter {
         timeout-ms = <50>;
         key-positions = <3 4>;
         bindings = <&kp ENTER>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     combo2_nav_lck {
@@ -181,38 +181,38 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <11 12>;
         bindings = <&kp MINUS>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_tilde {
         timeout-ms = <50>;
         key-positions = <13 14>;
         bindings = <&kp TILDE>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     combo2_apostrophe {
         timeout-ms = <50>;
         key-positions = <20 21>;
         bindings = <&apos_o>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_ampersand {
         timeout-ms = <50>;
         key-positions = <21 22>;
         bindings = <&kp AMPERSAND>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_dqt {
         timeout-ms = <50>;
         key-positions = <22 23>;
         bindings = <&kp DQT>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_grave {
         timeout-ms = <50>;
         key-positions = <23 24>;
         bindings = <&kp GRAVE>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     
     // LHS 3-key combos
@@ -220,57 +220,57 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <0 1 2>;
         bindings = <&kp C_MUTE>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_play {
         timeout-ms = <50>;
         key-positions = <1 2 3>;
         bindings = <&kp C_PP>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_one {
         timeout-ms = <50>;
         key-positions = <2 3 4>;
         bindings = <&kp N1>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };  
     
     combo3_lpar {
         timeout-ms = <50>;
         key-positions = <10 11 12>;
         bindings = <&kp LPAR>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_rpar {
         timeout-ms = <50>;
         key-positions = <11 12 13>;
         bindings = <&kp RPAR>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_del {
         timeout-ms = <50>;
         key-positions = <12 13 14>;
         bindings = <&kp DEL>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     
     combo3_lbkt {
         timeout-ms = <50>;
         key-positions = <20 21 22>;
         bindings = <&kp LBKT>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_rbkt {
         timeout-ms = <50>;
         key-positions = <21 22 23>;
         bindings = <&kp RBKT>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_semi_lhs {
         timeout-ms = <50>;
         key-positions = <22 23 24>;
         bindings = <&semi_o>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     // LHS 4-key combos
@@ -278,63 +278,39 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <0 1 2 3>;
         bindings = <&kp LS(TAB)>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo4_shiftenter {
         timeout-ms = <50>;
         key-positions = <1 2 3 4>;
         bindings = <&kp LS(ENTER)>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     combo4_esc {
         timeout-ms = <50>;
         key-positions = <10 11 12 13>;
         bindings = <&kp ESC>;
-        layers = <0 2 3>;
-    };
-    combo4_esc_nav {
-        timeout-ms = <50>;
-        key-positions = <10 11 12 13>;
-        bindings = <&kp ESC>;
-        layers = <1>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo4_enter {
         timeout-ms = <50>;
         key-positions = <11 12 13 14>;
         bindings = <&kp ENTER>;
-        layers = <0 2 3>;
-    };
-    combo4_enter_nav {
-        timeout-ms = <50>;
-        key-positions = <11 12 13 14>;
-        bindings = <&kp ENTER>;
-        layers = <1>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     combo4_left {
         timeout-ms = <50>;
         key-positions = <20 21 22 23>;
         bindings = <&kp LEFT>;
-        layers = <0 2 3>;
-    };
-    combo4_left_nav {
-        timeout-ms = <50>;
-        key-positions = <20 21 22 23>;
-        bindings = <&kp LEFT>;
-        layers = <1>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo4_right {
         timeout-ms = <50>;
         key-positions = <21 22 23 24>;
         bindings = <&kp RIGHT>;
-        layers = <0 2 3>;
-    };
-    combo4_right_nav {
-        timeout-ms = <50>;
-        key-positions = <21 22 23 24>;
-        bindings = <&kp RIGHT>;
-        layers = <1>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     // RHS Combos
@@ -345,75 +321,75 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <5 6>;
         bindings = <&kp STAR>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_question {
         timeout-ms = <50>;
         key-positions = <6 7>;
         bindings = <&kp QUESTION>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_at {
         timeout-ms = <50>;
         key-positions = <7 8>;
         bindings = <&kp AT_SIGN>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_dollar {
         timeout-ms = <50>;
         key-positions = <8 9>;
         bindings = <&kp DOLLAR>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     combo2_app {
         timeout-ms = <50>;
         key-positions = <15 16>;
         bindings = <&kp K_APP>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_colon {
         timeout-ms = <50>;
         key-positions = <16 17>;
         bindings = <&kp COLON>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_underscore {
         timeout-ms = <50>;
         key-positions = <17 18>;
         bindings = <&kp UNDERSCORE>;
-        layers = <0 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_minus {
         timeout-ms = <50>;
         key-positions = <18 19>;
         bindings = <&kp MINUS>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     combo2_bslh {
         timeout-ms = <50>;
         key-positions = <25 26>;
         bindings = <&bslh_o>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_equal {
         timeout-ms = <50>;
         key-positions = <26 27>;
         bindings = <&kp EQUAL>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_pipe {
         timeout-ms = <50>;
         key-positions = <27 28>;
         bindings = <&kp PIPE>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_plus {
         timeout-ms = <50>;
         key-positions = <28 29>;
         bindings = <&kp PLUS>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     // RHS 3-key combos
@@ -421,57 +397,57 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <5 6 7>;
         bindings = <&kp N0>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_caret {
         timeout-ms = <50>;
         key-positions = <6 7 8>;
         bindings = <&kp CARET>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_dollar {
         timeout-ms = <50>;
         key-positions = <7 8 9>;
         bindings = <&kp DOLLAR>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     
     combo3_bspc {
         timeout-ms = <50>;
         key-positions = <15 16 17>;
         bindings = <&kp BSPC>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_rbrc_rhs {
         timeout-ms = <50>;
         key-positions = <16 17 18>;
         bindings = <&kp RBRC>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_lbrc_rhs {
         timeout-ms = <50>;
         key-positions = <17 18 19>;
         bindings = <&kp LBRC>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     
     combo3_semi_rhs {
         timeout-ms = <50>;
         key-positions = <25 26 27>;
         bindings = <&semi_o>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_gt {
         timeout-ms = <50>;
         key-positions = <26 27 28>;
         bindings = <&kp GT>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo3_lt {
         timeout-ms = <50>;
         key-positions = <27 28 29>;
         bindings = <&kp LT>;
-        layers = <0 1 2 3>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     // RHS 4-key combos
@@ -479,75 +455,39 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <5 6 7 8>;
         bindings = <&kp PGUP>;
-        layers = <0 2 3>;
-    };  
-    combo4_pgup_nav {
-        timeout-ms = <50>;
-        key-positions = <5 6 7 8>;
-        bindings = <&kp PGUP>;
-        layers = <1>;
+        layers = <DFT NAV NUM SYM>;
     };  
     combo4_pgdn {
         timeout-ms = <50>;
         key-positions = <6 7 8 9>;
         bindings = <&kp PGDN>;
-        layers = <0 2 3>;
-    };
-    combo4_pgdn_nav {
-        timeout-ms = <50>;
-        key-positions = <6 7 8 9>;
-        bindings = <&kp PGDN>;
-        layers = <1>;
+        layers = <DFT NAV NUM SYM>;
     };
     
     combo4_end {
         timeout-ms = <50>;
         key-positions = <15 16 17 18>;
         bindings = <&kp END>;
-        layers = <0 2 3>;
-    };  
-    combo4_end_nav {
-        timeout-ms = <50>;
-        key-positions = <15 16 17 18>;
-        bindings = <&kp END>;
-        layers = <1>;
+        layers = <DFT NAV NUM SYM>;
     };  
     combo4_home {
         timeout-ms = <50>;
         key-positions = <16 17 18 19>;
         bindings = <&kp HOME>;
-        layers = <0 2 3>;
-    };
-    combo4_home_nav {
-        timeout-ms = <50>;
-        key-positions = <16 17 18 19>;
-        bindings = <&kp HOME>;
-        layers = <1>;
+        layers = <DFT NAV NUM SYM>;
     };
 
     combo4_up {
         timeout-ms = <50>;
         key-positions = <25 26 27 28>;
         bindings = <&kp UP>;
-        layers = <0 2 3>;
-    };
-    combo4_up_nav {
-        timeout-ms = <50>;
-        key-positions = <25 26 27 28>;
-        bindings = <&kp UP>;
-        layers = <1>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo4_down {
         timeout-ms = <50>;
         key-positions = <26 27 28 29>;
         bindings = <&kp DOWN>;
-        layers = <0 2 3>;
-    };
-    combo4_down_nav {
-        timeout-ms = <50>;
-        key-positions = <26 27 28 29>;
-        bindings = <&kp DOWN>;
-        layers = <1>;
+        layers = <DFT NAV NUM SYM>;
     };
 
   };
