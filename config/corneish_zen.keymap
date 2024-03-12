@@ -28,11 +28,26 @@ behaviors {
         bindings = <&kp>, <&kp>;
   };
 
+  td_dft_spc:  dft_spc_tap_dance {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp SPACE>, <&to DFT>, <&kp SPACE>;
+  };
+  lt_dft_spc: layertap_dft_spc_tap_dance {
+      compatible = "zmk,behavior-hold-tap";
+      label = "layertap_dft_spc_tap_dance";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <175>;
+      bindings = <&mo>, <&td_dft_spc>;
+  };
   td_shft: shift_tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk RSHFT>, <&caps_word>, <&kp CAPSLOCK>;
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&sk RSHFT>, <&caps_word>, <&kp CAPSLOCK>;
   };
   mt_td_shft: modtap_shift_tap_dance {
       compatible = "zmk,behavior-hold-tap";
@@ -43,29 +58,29 @@ behaviors {
       quick-tap-ms = <175>;
       bindings = <&kp>, <&td_shft>;
   };
-  td_spc:  space_tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&caps_word>, <&kp CAPSLOCK>;
+  td_caps_spc:  space_tap_dance {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp SPACE>, <&caps_word>, <&kp SPACE>;
   };
-  mt_td_spc: modtap_space_tap_dance {
+  mt_caps_spc: modtap_capsword_space_tap_dance {
       compatible = "zmk,behavior-hold-tap";
-      label = "modtap_space_tap_dance";
+      label = "modtap_capsword_space_tap_dance";
       #binding-cells = <2>;
       flavor = "tap-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <175>;
-      bindings = <&kp>, <&td_spc>;
+      bindings = <&kp>, <&td_caps_spc>;
   };
-  lt_td_spc: layertap_space_tap_dance {
+  lt_caps_spc: layertap_capsword_space_tap_dance {
       compatible = "zmk,behavior-hold-tap";
-      label = "layertap_space_tap_dance";
+      label = "layertap_capsword_space_tap_dance";
       #binding-cells = <2>;
       flavor = "tap-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <175>;
-      bindings = <&mo>, <&td_spc>;
+      bindings = <&mo>, <&td_caps_spc>;
   };
   td_nav_spc:  nav_spc_tap_dance {
             compatible = "zmk,behavior-tap-dance";
@@ -549,10 +564,10 @@ behaviors {
 // |  '  |  X  |  C  |  D    |  K    |    V  |  H  |  /  |  .  |  ,  |
 //             | CTL |NAV/SPC|NUM/TAB|SYM/ENT| SFT | ALT |
                         bindings = <
-   &kp Z      &kp W      &kp F             &kp P       &kp B   &kp J  &kp L         &kp U               &kp Y       &kp Q
-   &kp A      &kp R      &kp S             &kp T       &kp G   &kp M  &kp N         &kp E               &kp I       &kp O
-   &apos_o    &kp X      &kp C             &kp D       &kp K   &kp V  &kp H         &slash_o            &dot_o      &comma_o
-              &sk LCTRL  &lt_nav_spc NAV 0 &lt NUM TAB                &lt SYM ENTER &td_shft            &sk RALT
+   &kp Z         &kp W        &kp F             &kp P         &kp B       &kp J      &kp L           &kp U                  &kp Y       &kp Q
+   &kp A         &kp R        &kp S             &kp T         &kp G       &kp M      &kp N           &kp E                  &kp I       &kp O
+   &apos_o       &kp X        &kp C             &kp D         &kp K       &kp V      &kp H           &slash_o               &dot_o      &comma_o
+                 &sk LCTRL    &lt_nav_spc NAV 0 &lt NUM TAB                          &lt SYM ENTER   &mt_td_shft RSHFT 0    &sk RALT
                         >;
                 };
 
@@ -564,10 +579,10 @@ behaviors {
 // | UNDO| CUT | COPY|PASTE|CTL+K|  \   |  =   |  /   |  .   |  ,   |
 //             |     |     |     |      |      |      |
                         bindings = <
-   &kp C_MUTE    &kp PG_DN    &kp PG_UP       &kp C_PP      &kp F11     &kp F12    &kp HOME        &kp PG_UP        &kp PG_DN  &kp END
-   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB   &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT        &kp UP           &kp DOWN   &kp RIGHT
-   &kp LC(Z)     &kp LC(X)    &kp LC(C)       &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL       &trans           &trans     &trans
-                 &trans       &to DFT         &trans                               &trans          &lt_td_spc UTL 0 &to NAV
+   &kp C_MUTE    &kp PG_DN    &kp PG_UP         &kp C_PP      &kp F11     &kp F12    &kp HOME        &kp PG_UP              &kp PG_DN  &kp END
+   &hm LALT INS  &hm LGUI RET &hm LSHFT TAB     &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT        &kp UP                 &kp DOWN   &kp RIGHT
+   &kp LC(Z)     &kp LC(X)    &kp LC(C)         &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL       &trans                 &trans     &trans
+                 &trans       &lt_dft_spc DFT 0 &trans                               &trans          &lt_td_spc UTL 0       &trans
                         >;
                 };
 
@@ -579,10 +594,10 @@ behaviors {
 // |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
-   &kp N7        &kp N5        &kp N3           &kp N1         &kp N9      &kp N8     &kp N0          &kp N2              &kp N4         &kp N6
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT   &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT        &hm RGUI LT    &hm RALT MINUS
-   &trans        &kp LBRC      &kp RBRC         &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans              &trans         &trans
-                 &td_sym       &mt LSHFT SPACE  &trans                                &trans          &mt RSHFT SPACE     &td_num
+   &kp N7        &kp N5        &kp N3            &kp N1         &kp N9      &kp N8     &kp N0          &kp N2               &kp N4         &kp N6
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT    &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT         &hm RGUI LT    &hm RALT MINUS
+   &trans        &kp LBRC      &kp RBRC          &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans               &trans         &trans
+                 &td_sym       &lt_dft_spc DFT 0 &trans                                &trans          &mt_caps_spc RSHFT 0 &td_num
                          >;
                 };
 
@@ -594,10 +609,10 @@ behaviors {
 // |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
-   &kp AMPERSAND &kp PERCENT   &kp HASH         &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN         &kp DOLLAR     &kp CARET
-   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT   &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT        &hm RGUI LT    &hm RALT MINUS
-   &trans        &kp LBRC      &kp RBRC         &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans              &trans         &trans
-                 &td_sym       &mt LSHFT SPACE  &trans                                &trans          &mt RSHFT SPACE     &td_num
+   &kp AMPERSAND &kp PERCENT   &kp HASH          &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN         &kp DOLLAR     &kp CARET
+   &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT    &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT        &hm RGUI LT    &hm RALT MINUS
+   &trans        &kp LBRC      &kp RBRC          &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans              &trans         &trans
+                 &td_sym       &lt_dft_spc DFT 0 &trans                                &trans          &mt_caps_spc RSHFT 0 &td_num
                         >;
                 };
 
