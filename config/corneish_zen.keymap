@@ -546,7 +546,7 @@ behaviors {
    &kp N7        &kp N5        &kp N3          &kp N1         &kp N9      &kp N8     &kp N0          &kp N2           &kp N4         &kp N6
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
    &trans        &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans           &trans         &trans
-                 &sym_dnc      &mt LSHFT SPACE &trans                                &trans          &RSFT SPACE      &num_dnc
+                 &sym_dnc      &mt LSHFT SPACE &trans                                &trans          &mt RSHFT SPACE  &num_dnc
                          >;
                 };
 
@@ -561,7 +561,7 @@ behaviors {
    &kp AMPERSAND &kp PERCENT   &kp HASH        &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN      &kp DOLLAR     &kp CARET
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT  &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT     &hm RGUI LT    &hm RALT MINUS
    &trans        &kp LBRC      &kp RBRC        &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans           &trans         &trans
-                 &sym_dnc      &mt LSHFT SPACE &trans                                &trans          &RSFT SPACE      &num_dnc
+                 &sym_dnc      &mt LSHFT SPACE &trans                                &trans          &mt RSHFT SPACE  &num_dnc
                         >;
                 };
 
