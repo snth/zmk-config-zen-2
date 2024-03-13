@@ -507,7 +507,7 @@ behaviors {
    &kp Z         &kp W        &kp F                   &kp P           &kp B       &kp J      &kp L             &kp U                  &kp Y       &kp Q
    &kp A         &kp R        &kp S                   &kp T           &kp G       &kp M      &kp N             &kp E                  &kp I       &kp O
    &apos_o       &kp X        &kp C                   &kp D           &kp K       &kp V      &kp H             &slash_o               &dot_o      &comma_o
-                 &sk LCTRL    &lt_caps_spc NAV_MOM 0  &lt NUM_MOM TAB                        &lt SYM_MOM ENTER &mt_caps_spc RSHFT 0   &sk RALT
+                 &sk LCTRL    &lt NAV_MOM SPACE       &lt NUM_MOM TAB                        &lt SYM_MOM ENTER &mt_caps_spc RSHFT 0   &sk RALT
                         >;
                 };
 
