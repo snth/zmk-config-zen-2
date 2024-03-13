@@ -158,35 +158,34 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo2_nav_lck {
+    combo2_alt {
         timeout-ms = <50>;
         key-positions = <10 11>;
+        bindings = <&sk LALT>;
+        layers = <DFT NAV NUM SYM>;
+    };    
+    combo2_nav_lck {
+        timeout-ms = <50>;
+        key-positions = <11 12>;
         bindings = <&tog NAV_LCK>;
         layers = <NAV>;
     };
     combo2_num_lck {
         timeout-ms = <50>;
-        key-positions = <10 11>;
+        key-positions = <11 12>;
         bindings = <&tog NUM_LCK>;
         layers = <NUM>;
     };
     combo2_sym_lck {
         timeout-ms = <50>;
-        key-positions = <10 11>;
+        key-positions = <11 12>;
         bindings = <&tog SYM_LCK>;
         layers = <SYM>;
     };
-
-    combo2_minus_lhs {
-        timeout-ms = <50>;
-        key-positions = <11 12>;
-        bindings = <&kp MINUS>;
-        layers = <DFT NAV NUM SYM>;
-    };
-    combo2_tilde {
+    combo2_del {
         timeout-ms = <50>;
         key-positions = <13 14>;
-        bindings = <&kp TILDE>;
+        bindings = <&kp DEL>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -247,10 +246,10 @@ behaviors {
         bindings = <&kp RPAR>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo3_del {
+    combo3_tilde {
         timeout-ms = <50>;
         key-positions = <12 13 14>;
-        bindings = <&kp DEL>;
+        bindings = <&kp TILDE>;
         layers = <DFT NAV NUM SYM>;
     };
     
@@ -342,10 +341,10 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo2_app {
+    combo2_bspc {
         timeout-ms = <50>;
         key-positions = <15 16>;
-        bindings = <&kp K_APP>;
+        bindings = <&kp BSPC>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_colon {
@@ -412,10 +411,10 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
     
-    combo3_bspc {
+    combo3_app {
         timeout-ms = <50>;
         key-positions = <15 16 17>;
-        bindings = <&kp BSPC>;
+        bindings = <&kp K_APP>;
         layers = <DFT NAV NUM SYM>;
     };
     combo3_rbrc_rhs {
