@@ -107,6 +107,12 @@ behaviors {
       bindings = <&kp APOS>, <&kp APOS>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
+  grave_o: grave_only {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp GRAVE>, <&kp GRAVE>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
   semi_o: semi_only {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
@@ -140,6 +146,63 @@ behaviors {
 
   combos {
     compatible = "zmk,combos";
+
+    // LHS Vertical 2-key combos
+    combo2_lpar_vert {
+        timeout-ms = <50>;
+        key-positions = <0 10>;
+        bindings = <&kp LPAR>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_lbkt_vert {
+        timeout-ms = <50>;
+        key-positions = <1 11>;
+        bindings = <&kp LBKT>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_rbkt_vert {
+        timeout-ms = <50>;
+        key-positions = <2 12>;
+        bindings = <&kp RBKT>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_rpar_vert {
+        timeout-ms = <50>;
+        key-positions = <3 13>;
+        bindings = <&kp RBRKT>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_one_vert {
+        timeout-ms = <50>;
+        key-positions = <4 14>;
+        bindings = <&kp N1>;
+        layers = <DFT NAV NUM SYM>;
+    };
+
+    combo2_lbrc_vert {
+        timeout-ms = <50>;
+        key-positions = <11 21>;
+        bindings = <&kp LBRC>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_rbrc_vert {
+        timeout-ms = <50>;
+        key-positions = <12 22>;
+        bindings = <&kp RBRC>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_dqt_vert {
+        timeout-ms = <50>;
+        key-positions = <13 23>;
+        bindings = <&kp DQT>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_tilde_vert {
+        timeout-ms = <50>;
+        key-positions = <14 24>;
+        bindings = <&kp TILDE>;
+        layers = <DFT NAV NUM SYM>;
+    };
       
     // LHS 2-key combos
     combo2_percent {
@@ -219,7 +282,7 @@ behaviors {
     combo2_grave {
         timeout-ms = <50>;
         key-positions = <23 24>;
-        bindings = <&kp GRAVE>;
+        bindings = <&grave_o>;
         layers = <DFT NAV NUM SYM>;
     };
     
@@ -255,10 +318,10 @@ behaviors {
         bindings = <&kp RPAR>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo3_tilde {
+    combo3_del {
         timeout-ms = <50>;
         key-positions = <12 13 14>;
-        bindings = <&kp TILDE>;
+        bindings = <&kp DEL>;
         layers = <DFT NAV NUM SYM>;
     };
     
