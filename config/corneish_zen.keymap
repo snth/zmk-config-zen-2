@@ -169,7 +169,7 @@ behaviors {
     combo2_rpar_vert {
         timeout-ms = <50>;
         key-positions = <3 13>;
-        bindings = <&kp RBRKT>;
+        bindings = <&kp RPAR>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_one_vert {
@@ -179,6 +179,12 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
+    combo2_question_vert {
+        timeout-ms = <50>;
+        key-positions = <10 20>;
+        bindings = <&kp QUESTION>;
+        layers = <DFT NAV NUM SYM>;
+    };
     combo2_lbrc_vert {
         timeout-ms = <50>;
         key-positions = <11 21>;
@@ -205,28 +211,28 @@ behaviors {
     };
       
     // LHS 2-key combos
-    combo2_percent {
+    combo2_ampersand {
         timeout-ms = <50>;
         key-positions = <0 1>;
+        bindings = <&kp AMPERSAND>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_percent {
+        timeout-ms = <50>;
+        key-positions = <1 2>;
         bindings = <&kp PERCENT>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_hash {
         timeout-ms = <50>;
-        key-positions = <1 2>;
+        key-positions = <2 3>;
         bindings = <&kp HASH>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_excl {
         timeout-ms = <50>;
-        key-positions = <2 3>;
-        bindings = <&kp EXCL>;
-        layers = <DFT NAV NUM SYM>;
-    };
-    combo2_enter {
-        timeout-ms = <50>;
         key-positions = <3 4>;
-        bindings = <&kp ENTER>;
+        bindings = <&kp EXCL>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -261,22 +267,16 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo2_apostrophe {
-        timeout-ms = <50>;
-        key-positions = <20 21>;
-        bindings = <&apos_o>;
-        layers = <DFT NAV NUM SYM>;
-    };
-    combo2_ampersand {
+    combo2_pipe {
         timeout-ms = <50>;
         key-positions = <21 22>;
-        bindings = <&kp AMPERSAND>;
+        bindings = <&kp PIPE>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_dqt {
+    combo2_question {
         timeout-ms = <50>;
         key-positions = <22 23>;
-        bindings = <&kp DQT>;
+        bindings = <&kp QUESTION>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_grave {
@@ -394,22 +394,22 @@ behaviors {
         bindings = <&kp STAR>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_question {
-        timeout-ms = <50>;
-        key-positions = <6 7>;
-        bindings = <&kp QUESTION>;
-        layers = <DFT NAV NUM SYM>;
-    };
     combo2_at {
         timeout-ms = <50>;
-        key-positions = <7 8>;
+        key-positions = <6 7>;
         bindings = <&kp AT_SIGN>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_dollar {
         timeout-ms = <50>;
-        key-positions = <8 9>;
+        key-positions = <7 8>;
         bindings = <&kp DOLLAR>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_caret {
+        timeout-ms = <50>;
+        key-positions = <8 9>;
+        bindings = <&kp CARET>;
         layers = <DFT NAV NUM SYM>;
     };
 
