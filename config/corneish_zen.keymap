@@ -61,20 +61,20 @@ behaviors {
         bindings = <&kp>, <&kp>;
   };
 
-  td_shft: shift_tap_dance {
+  td_caps_shft: shift_tap_dance {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&sk RSHFT>, <&caps_word>, <&kp CAPSLOCK>;
+      bindings = <&sk LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
   };
-  mt_caps_shft: modtap_shift_tap_dance {
+  lt_caps_shft: layertap_capsword_shift_tap_dance {
       compatible = "zmk,behavior-hold-tap";
-      label = "modtap_shift_tap_dance";
+      label = "layertap_capsword_shift_tap_dance";
       #binding-cells = <2>;
       flavor = "tap-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <175>;
-      bindings = <&kp>, <&td_shft>;
+      bindings = <&mo>, <&td_caps_shft>;
   };
   td_caps_spc:  space_tap_dance {
       compatible = "zmk,behavior-tap-dance";
@@ -82,14 +82,14 @@ behaviors {
       tapping-term-ms = <200>;
       bindings = <&kp SPACE>, <&caps_word>, <&kp SPACE>;
   };
-  lt_caps_spc: layertap_capsword_space_tap_dance {
+  mt_caps_spc: modtap_caps_space_tap_dance {
       compatible = "zmk,behavior-hold-tap";
-      label = "layertap_capsword_space_tap_dance";
+      label = "modtap_caps_space_tap_dance";
       #binding-cells = <2>;
       flavor = "tap-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <175>;
-      bindings = <&mo>, <&td_caps_spc>;
+      bindings = <&kp>, <&td_caps_spc>;
   };
 
   apos_o: apos_only {
@@ -500,15 +500,15 @@ behaviors {
                 default_layer {
                         label = "COLEDUST";
 // -----------------------------------------------------------------------------------------
-// |  Z  |  W  |  F  |  P    |  B    |    J  |  L  |  U  |  Y  |  Q  |
-// |  A  |  R  |  S  |  T    |  G    |    M  |  N  |  E  |  I  |  O  |
-// |  '  |  X  |  C  |  D    |  K    |    V  |  H  |  /  |  .  |  ,  |
-//             | CTL |NAV/SPC|NUM/TAB|SYM/ENT| SFT | ALT |
+// |  Z  |  W  |  F  |  P    |  B    |    J  |   L   |  U  |  Y  |  Q  |
+// |  A  |  R  |  S  |  T    |  G    |    M  |   N   |  E  |  I  |  O  |
+// |  '  |  X  |  C  |  D    |  K    |    V  |   H   |  /  |  .  |  ,  |
+//             | CTL |NAV/SFT|NUM/TAB|SYM/ENT|SFT/SPC| ALT |
                         bindings = <
-   &kp Z         &kp W        &kp F             &kp P           &kp B       &kp J      &kp L             &kp U                  &kp Y       &kp Q
-   &kp A         &kp R        &kp S             &kp T           &kp G       &kp M      &kp N             &kp E                  &kp I       &kp O
-   &apos_o       &kp X        &kp C             &kp D           &kp K       &kp V      &kp H             &slash_o               &dot_o      &comma_o
-                 &sk LCTRL    &lt NAV_MOM SPACE &lt NUM_MOM TAB                        &lt SYM_MOM ENTER &mt_caps_shft RSHFT 0  &sk RALT
+   &kp Z         &kp W        &kp F                   &kp P           &kp B       &kp J      &kp L             &kp U                  &kp Y       &kp Q
+   &kp A         &kp R        &kp S                   &kp T           &kp G       &kp M      &kp N             &kp E                  &kp I       &kp O
+   &apos_o       &kp X        &kp C                   &kp D           &kp K       &kp V      &kp H             &slash_o               &dot_o      &comma_o
+                 &sk LCTRL    &lt_caps_shft NAV_MOM 0 &lt NUM_MOM TAB                        &lt SYM_MOM ENTER &mt RSHFT SPACE        &sk RALT
                         >;
                 };
 
@@ -543,7 +543,7 @@ behaviors {
    &kp AMPERSAND &kp PERCENT   &kp HASH          &kp EXCL       &kp ENTER   &kp STAR   &kp QUESTION    &kp AT_SIGN            &kp DOLLAR     &kp CARET
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT    &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT           &hm RGUI LT    &hm RALT MINUS
    &trans        &kp LBRC      &kp RBRC          &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans                 &trans         &trans
-                 &trans        &trans            &trans                                &trans          &lt UTL SPACE          &trans
+                 &trans        &trans            &trans                                &trans          &trans                 &trans
                         >;
                 };
 
@@ -578,7 +578,7 @@ behaviors {
    &kp N7        &kp N5        &kp N3            &kp N1         &kp N9      &kp N8     &kp N0          &kp N2                 &kp N4         &kp N6
    &hm LALT LPAR &hm LGUI LBKT &hm LSHFT RBKT    &hm LCTRL RPAR &kp DEL     &kp BSPC   &hm RCTRL SEMI  &hm RSHFT GT           &hm RGUI LT    &hm RALT MINUS
    &trans        &kp LBRC      &kp RBRC          &kp DQT        &kp GRAVE   &bslh_o    &kp EQUAL       &trans                 &trans         &trans
-                 &trans        &trans            &trans                                &trans          &lt UTL SPACE          &trans
+                 &trans        &trans            &trans                                &trans          &trans                 &trans
                           >;
                 };
 
