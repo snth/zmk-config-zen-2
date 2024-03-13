@@ -67,6 +67,15 @@ behaviors {
       tapping-term-ms = <200>;
       bindings = <&sk LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
   };
+  mt_caps_shft: modtap_caps_shift_tap_dance {
+      compatible = "zmk,behavior-hold-tap";
+      label = "modtap_caps_shift_tap_dance";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <175>;
+      bindings = <&kp>, <&td_caps_shft>;
+  };
   td_caps_spc:  space_tap_dance {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
