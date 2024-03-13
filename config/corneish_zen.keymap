@@ -67,20 +67,20 @@ behaviors {
       tapping-term-ms = <200>;
       bindings = <&sk LSHFT>, <&caps_word>, <&kp CAPSLOCK>;
   };
-  lt_caps_shft: layertap_capsword_shift_tap_dance {
-      compatible = "zmk,behavior-hold-tap";
-      label = "layertap_capsword_shift_tap_dance";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <200>;
-      quick-tap-ms = <175>;
-      bindings = <&mo>, <&td_caps_shft>;
-  };
   td_caps_spc:  space_tap_dance {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&kp SPACE>, <&caps_word>, <&kp SPACE>;
+  };
+  lt_caps_spc: layertap_capsword_space_tap_dance {
+      compatible = "zmk,behavior-hold-tap";
+      label = "layertap_capsword_space_tap_dance";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <175>;
+      bindings = <&mo>, <&td_caps_spc>;
   };
   mt_caps_spc: modtap_caps_space_tap_dance {
       compatible = "zmk,behavior-hold-tap";
@@ -508,7 +508,7 @@ behaviors {
    &kp Z         &kp W        &kp F                   &kp P           &kp B       &kp J      &kp L             &kp U                  &kp Y       &kp Q
    &kp A         &kp R        &kp S                   &kp T           &kp G       &kp M      &kp N             &kp E                  &kp I       &kp O
    &apos_o       &kp X        &kp C                   &kp D           &kp K       &kp V      &kp H             &slash_o               &dot_o      &comma_o
-                 &sk LCTRL    &lt_caps_shft NAV_MOM 0 &lt NUM_MOM TAB                        &lt SYM_MOM ENTER &mt RSHFT SPACE        &sk RALT
+                 &sk LCTRL    &lt_caps_spc NAV_MOM 0  &lt NUM_MOM TAB                        &lt SYM_MOM ENTER &mt_caps_spc RSHFT 0   &sk RALT
                         >;
                 };
 
@@ -613,7 +613,7 @@ behaviors {
    &kp C_MUTE    &kp PG_DN    &kp PG_UP         &kp C_PP      &kp F11     &kp F12    &kp HOME        &kp PG_UP                &kp PG_DN  &kp END
    &hm LALT INS  &hm LGUI RET &hm LSHFT TAB     &hm LCTRL ESC &kp DEL     &kp BSPC   &kp LEFT        &kp UP                   &kp DOWN   &kp RIGHT
    &kp LC(Z)     &kp LC(X)    &kp LC(C)         &kp LC(V)     &kp LC(K)   &bslh_o    &kp EQUAL       &trans                   &trans     &trans
-                 &trans       &trans            &trans                               &trans          &lt UTL SPACE            &trans
+                 &trans       &trans            &trans                               &trans          &lt_caps_spc UTL 0       &trans
                         >;
                 };
 
