@@ -387,6 +387,57 @@ behaviors {
     // RHS Combos
     // ----------------------------------------------------------------------------------------------------------------------------
 
+    // RHS vertical combos    
+    combo2_zero_vert {
+        timeout-ms = <50>;
+        key-positions = <5 15>;
+        bindings = <&kp N0>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_equal_vert {
+        timeout-ms = <50>;
+        key-positions = <6 16>;
+        bindings = <&kp EQUAL>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_gt_vert {
+        timeout-ms = <50>;
+        key-positions = <7 17>;
+        bindings = <&kp GT>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_lt_vert {
+        timeout-ms = <50>;
+        key-positions = <8 18>;
+        bindings = <&kp LT>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_minus_vert {
+        timeout-ms = <50>;
+        key-positions = <9 19>;
+        bindings = <&kp MINUS>;
+        layers = <DFT NAV NUM SYM>;
+    };
+
+    combo2_pipe_vert {
+        timeout-ms = <50>;
+        key-positions = <15 25>;
+        bindings = <&kp PIPE>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_semi_vert {
+        timeout-ms = <50>;
+        key-positions = <16 26>;
+        bindings = <&kp SEMI>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_plus_vert {
+        timeout-ms = <50>;
+        key-positions = <19 29>;
+        bindings = <&kp PLUS>;
+        layers = <DFT NAV NUM SYM>;
+    };
+
     // RHS 2-key combos    
     combo2_star {
         timeout-ms = <50>;
@@ -450,7 +501,7 @@ behaviors {
         bindings = <&kp EQUAL>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_pipe {
+    combo2_pipe_rhs {
         timeout-ms = <50>;
         key-positions = <27 28>;
         bindings = <&kp PIPE>;
