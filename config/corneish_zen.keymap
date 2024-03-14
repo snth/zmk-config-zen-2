@@ -778,9 +778,9 @@ behaviors {
 // | UNDO| CUT | COPY|PASTE|CTL+K|  \   |  ;   |  /   |  .   |  ,   |
 //             |     |     |     |      |      |      |
                         bindings = <
-   &kp C_MUTE     &kp  PG_DN     &kp  PG_UP        &kp  C_PP       &kp F11             &kp F12      &kp  HOME         &kp  PG_UP             &kp  PG_DN     &kp  END
-   &hml LALT INS  &hml LGUI RET  &hml LSHFT TAB    &hml LCTRL ESC  &kp DEL             &kp BSPC     &hmr RCTRL LEFT   &hmr RSHFT UP          &hmr RGUI DOWN &hmr RALT RIGHT
-   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &bslh_o      &kp  SEMI         &trans                 &trans         &trans
+   &kp C_MUTE     &kp  PG_DN     &kp  PG_UP        &kp  C_PP       &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
+   &hml LALT INS  &hml LGUI RET  &hml LSHFT TAB    &hml LCTRL ESC  &kp DEL             &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
+   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &bslh_o      &kp SEMI          &trans                 &trans         &trans
                   &trans         &trans            &trans                                           &trans            &lt_caps_spc UTL 0     &trans
                         >;
                 };
