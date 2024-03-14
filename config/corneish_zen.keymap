@@ -149,7 +149,7 @@ behaviors {
     compatible = "zmk,combos";
     
   // ---------------------------- Combos ----------------------------
-  // |#####|  &  |  %  |  #  |  !  |  *  |  @  |  $  |  ^  |#####|
+  // |#####|  %  |  #  |  !  |  &  |  *  |  ^  |  @  |  $  |#####|
   //    7     5     3     1     9     8     0     2     4     6
   // |#####| ALT | LCK |     | DEL | BSPC|  :  |  _  |  -  |#####|
   //    (     [     ]     )     ~     |     =     >     <     +
@@ -220,28 +220,28 @@ behaviors {
     };
 
     // LHS 2-key combos
-    combo2_ampersand {
-        timeout-ms = <50>;
-        key-positions = <0 1>;
-        bindings = <&kp AMPERSAND>;
-        layers = <DFT NAV NUM SYM>;
-    };
     combo2_percent {
         timeout-ms = <50>;
-        key-positions = <1 2>;
+        key-positions = <0 1>;
         bindings = <&kp PERCENT>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_hash {
         timeout-ms = <50>;
-        key-positions = <2 3>;
+        key-positions = <1 2>;
         bindings = <&kp HASH>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_excl {
         timeout-ms = <50>;
-        key-positions = <3 4>;
+        key-positions = <2 3>;
         bindings = <&kp EXCL>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_ampersand {
+        timeout-ms = <50>;
+        key-positions = <3 4>;
+        bindings = <&kp AMPERSAND>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -472,22 +472,22 @@ behaviors {
         bindings = <&kp STAR>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_at {
+    combo2_caret {
         timeout-ms = <50>;
         key-positions = <6 7>;
+        bindings = <&kp CARET>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_at {
+        timeout-ms = <50>;
+        key-positions = <7 8>;
         bindings = <&kp AT_SIGN>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_dollar {
         timeout-ms = <50>;
-        key-positions = <7 8>;
-        bindings = <&kp DOLLAR>;
-        layers = <DFT NAV NUM SYM>;
-    };
-    combo2_caret {
-        timeout-ms = <50>;
         key-positions = <8 9>;
-        bindings = <&kp CARET>;
+        bindings = <&kp DOLLAR>;
         layers = <DFT NAV NUM SYM>;
     };
 
