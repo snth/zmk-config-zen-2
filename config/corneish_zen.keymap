@@ -379,16 +379,16 @@ behaviors {
     };
 
     // LHS 4-key combos
-    combo4_toggle_nav_lock {
-        timeout-ms = <50>;
-        key-positions = <0 1 2 3>;
-        bindings = <&tog NAV_LCK>;
-        layers = <DFT NAV NUM SYM>;
-    };
     combo4_toggle_num_lock {
         timeout-ms = <50>;
-        key-positions = <1 2 3 4>;
+        key-positions = <0 1 2 3>;
         bindings = <&tog NUM_LCK>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo4_enter {
+        timeout-ms = <50>;
+        key-positions = <1 2 3 4>;
+        bindings = <&kp ENTER>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -398,10 +398,10 @@ behaviors {
         bindings = <&kp ESC>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo4_enter {
+    combo4_toggle_nav_lock {
         timeout-ms = <50>;
         key-positions = <11 12 13 14>;
-        bindings = <&kp ENTER>;
+        bindings = <&tog NAV_LCK>;
         layers = <DFT NAV NUM SYM>;
     };
 
