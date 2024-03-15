@@ -171,8 +171,8 @@ behaviors {
   // |#####|  %  |  #  |  !  |  &  |  *  |  ^  |  @  |  $  |#####|
   //    7     5     3     1     9     8     0     2     4     6
   // |#####| ALT | LCK |     | DEL | BSPC|  :  |  _  |  -  |#####|
-  //    (     [     ]     )     ~     |     =     >     <     +
-  // |#####|  {  |  }  |  "  |  `  |  \  |  ;  |  ?  |  |  |#####|
+  //    (     [     ]     )     ~     |     =     >     <     ;
+  // |#####|  {  |  }  |  "  |  `  |  \  |  ;  |  ?  |  +  |#####|
   //             |     |     |     |     |     |     |
 
     // LHS Vertical 2-key combos
@@ -477,10 +477,10 @@ behaviors {
         bindings = <&kp LT>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_plus_vert {
+    combo2_semi_vert {
         timeout-ms = <50>;
         key-positions = <19 29>;
-        bindings = <&kp PLUS>;
+        bindings = <&kp SEMI>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -553,10 +553,10 @@ behaviors {
         bindings = <&kp QUESTION>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_pipe {
+    combo2_plus {
         timeout-ms = <50>;
         key-positions = <28 29>;
-        bindings = <&kp PIPE>;
+        bindings = <&kp PLUS>;
         layers = <DFT NAV NUM SYM>;
     };
 
