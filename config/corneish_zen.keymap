@@ -620,18 +620,18 @@ behaviors {
 
     // RHS 4-key combos
     
-    combo4_toggle_sym_lock {
+    combo4_capslock_rhs {
         timeout-ms = <50>;
         key-positions = <5 6 7 8>;
+        bindings = <&kp CAPSLOCK>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo4_toggle_sym_lock {
+        timeout-ms = <50>;
+        key-positions = <6 7 8 9>;
         bindings = <&tog SYM_LCK>;
         layers = <DFT NAV NUM SYM>;
     };  
-    combo4_pgup_rhs {
-        timeout-ms = <50>;
-        key-positions = <6 7 8 9>;
-        bindings = <&kp PGUP>;
-        layers = <DFT NAV NUM SYM>;
-    };
 
     combo4_restore_default_layer {
         timeout-ms = <50>;
@@ -639,23 +639,23 @@ behaviors {
         bindings = <&to DFT>;
         layers = <DFT NAV NUM SYM>;
     };  
-    combo4_pgdn_rhs {
+    combo4_app_rhs {
         timeout-ms = <50>;
         key-positions = <16 17 18 19>;
-        bindings = <&kp PGDN>;
+        bindings = <&kp K_APP>;
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo4_up_rhs {
+    combo4_pgup_rhs {
         timeout-ms = <50>;
         key-positions = <25 26 27 28>;
-        bindings = <&kp UP>;
+        bindings = <&kp PGUP>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo4_down_rhs {
+    combo4_pgdn_rhs {
         timeout-ms = <50>;
         key-positions = <26 27 28 29>;
-        bindings = <&kp DOWN>;
+        bindings = <&kp PGDN>;
         layers = <DFT NAV NUM SYM>;
     };
 
