@@ -567,16 +567,16 @@ behaviors {
         bindings = <&kp LG(L)>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo3_app_rhs {
-        timeout-ms = <50>;
-        key-positions = <6 7 8>;
-        bindings = <&kp K_APP>;
-        layers = <DFT NAV NUM SYM>;
-    };
     combo3_capsword_rhs {
         timeout-ms = <50>;
-        key-positions = <7 8 9>;
+        key-positions = <6 7 8>;
         bindings = <&caps_word>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo3_capslock_rhs {
+        timeout-ms = <50>;
+        key-positions = <7 8 9>;
+        bindings = <&kp CAPSLOCK>;
         layers = <DFT NAV NUM SYM>;
     };
     
