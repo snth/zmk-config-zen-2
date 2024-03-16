@@ -573,10 +573,10 @@ behaviors {
         bindings = <&kp K_APP>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo3_shft_app_rhs {
+    combo3_capsword_rhs {
         timeout-ms = <50>;
         key-positions = <7 8 9>;
-        bindings = <&kp LS(K_APP)>;
+        bindings = <&caps_word>;
         layers = <DFT NAV NUM SYM>;
     };
     
