@@ -327,18 +327,18 @@ behaviors {
         bindings = <&kp C_MUTE>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo3_play {
+    combo3_numword {
         timeout-ms = <50>;
         key-positions = <1 2 3>;
+        bindings = <&tog NUM_LCK>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo3_play {
+        timeout-ms = <50>;
+        key-positions = <2 3 4>;
         bindings = <&kp C_PP>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo3_task_manager {
-        timeout-ms = <50>;
-        key-positions = <2 3 4>;
-        bindings = <&kp LC(LS(ESC))>;
-        layers = <DFT NAV NUM SYM>;
-    };  
     
     combo3_prev_desktop {
         timeout-ms = <50>;
@@ -573,12 +573,12 @@ behaviors {
         bindings = <&caps_word>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo3_capslock_rhs {
+    combo3_task_manager {
         timeout-ms = <50>;
         key-positions = <7 8 9>;
-        bindings = <&kp CAPSLOCK>;
+        bindings = <&kp LC(LS(ESC))>;
         layers = <DFT NAV NUM SYM>;
-    };
+    };  
     
     combo3_up_rhs {
         timeout-ms = <50>;
