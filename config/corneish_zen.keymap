@@ -53,6 +53,15 @@ conditional_layers {
 
 behaviors {
 
+  /* old-style HRMs */
+  hm: homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_MODS";
+        #binding-cells = <2>;
+        tapping_term_ms = <200>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&kp>;
+  };
   /* left-hand HRMs */
   hml: homerow_mods_lhs {
       compatible = "zmk,behavior-hold-tap";
@@ -780,7 +789,7 @@ behaviors {
 //             |     |     |     |      |      |      |
                         bindings = <
    &kp C_MUTE     &kp  PG_DN     &kp  PG_UP        &kp  C_PP       &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
-   &hml LALT INS  &hml LGUI RET  &hml LSHFT TAB    &hml LCTRL ESC  &kp DEL             &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
+   &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &kp DEL             &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
    &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &bslh_o      &kp SEMI          &trans                 &trans         &trans
                   &trans         &trans            &trans                                           &trans            &lt_caps_spc UTL 0     &trans
                         >;
