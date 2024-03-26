@@ -273,29 +273,29 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo2_alt {
-        timeout-ms = <50>;
-        key-positions = <10 11>;
-        bindings = <&sk LALT>;
-        layers = <DFT NAV NUM SYM>;
-    };    
     combo2_nav_lck {
         timeout-ms = <50>;
-        key-positions = <11 12>;
+        key-positions = <10 11>;
         bindings = <&tog NAV_LCK>;
         layers = <NAV>;
     };
     combo2_num_lck {
         timeout-ms = <50>;
-        key-positions = <11 12>;
+        key-positions = <10 11>;
         bindings = <&tog NUM_LCK>;
         layers = <NUM>;
     };
     combo2_sym_lck {
         timeout-ms = <50>;
-        key-positions = <11 12>;
+        key-positions = <10 11>;
         bindings = <&tog SYM_LCK>;
         layers = <SYM>;
+    };
+    combo2_underscore {
+        timeout-ms = <50>;
+        key-positions = <11 12>;
+        bindings = <&kp UNDERSCORE>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_del {
         timeout-ms = <50>;
@@ -531,16 +531,16 @@ behaviors {
         bindings = <&kp COLON>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_underscore {
-        timeout-ms = <50>;
-        key-positions = <17 18>;
-        bindings = <&kp UNDERSCORE>;
-        layers = <DFT NAV NUM SYM>;
-    };
     combo2_minus {
         timeout-ms = <50>;
-        key-positions = <18 19>;
+        key-positions = <17 18>;
         bindings = <&kp MINUS>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_question {
+        timeout-ms = <50>;
+        key-positions = <18 19>;
+        bindings = <&kp QUESTION>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -550,22 +550,22 @@ behaviors {
         bindings = <&bslh_o>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_semi {
+    combo2_equal {
         timeout-ms = <50>;
         key-positions = <26 27>;
-        bindings = <&kp SEMI>;
-        layers = <DFT NAV NUM SYM>;
-    };
-    combo2_question {
-        timeout-ms = <50>;
-        key-positions = <27 28>;
-        bindings = <&kp QUESTION>;
+        bindings = <&kp EQUAL>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_plus {
         timeout-ms = <50>;
-        key-positions = <28 29>;
+        key-positions = <27 28>;
         bindings = <&kp PLUS>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_semi {
+        timeout-ms = <50>;
+        key-positions = <28 29>;
+        bindings = <&kp SEMI>;
         layers = <DFT NAV NUM SYM>;
     };
 
