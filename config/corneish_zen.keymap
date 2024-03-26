@@ -414,16 +414,16 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo4_left {
+    combo4_pgup_lhs {
         timeout-ms = <50>;
         key-positions = <20 21 22 23>;
-        bindings = <&kp LEFT>;
+        bindings = <&kp PGUP>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo4_right {
+    combo4_pgdn_lhs {
         timeout-ms = <50>;
         key-positions = <21 22 23 24>;
-        bindings = <&kp RIGHT>;
+        bindings = <&kp PGDN>;
         layers = <DFT NAV NUM SYM>;
     };
 
