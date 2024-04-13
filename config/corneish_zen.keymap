@@ -717,7 +717,7 @@ behaviors {
 // |  (  |  [  |  ]  |  )  |  ;  |  _  |  >  |  =  |  -  |  <  |
 // |  '  |  {  |  }  |  "  |  `  |  \  |  :  |  /  |  .  |  ,  |
 //             | SFT |     |     |     | BSPC| DEL |
-                        bindings =
+                        bindings = <
    &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp ENTER           &kp STAR     &kp  QUESTION     &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
    &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp SEMI            &kp UNDER    &hmr RCTRL GT     &hmr RSHFT EQUAL       &hmr RGUI MINUS &hmr RALT LT
    &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &bslh_o      &kp  COLON        &trans                 &trans          &trans
