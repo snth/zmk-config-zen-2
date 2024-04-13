@@ -681,12 +681,12 @@ behaviors {
 // |  Z  |  W  |  F  |  P    |  B    |    J  |   L   |  U  |  Y  |  Q  |
 // |  A  |  R  |  S  |  T    |  G    |    M  |   N   |  E  |  I  |  O  |
 // |  '  |  X  |  C  |  D    |  K    |    V  |   H   |  /  |  .  |  ,  |
-//             | DEL |NAV/SPC|NUM/TAB|SYM/ENT|SFT/SFT| BSPC |
+//             | SFT |NAV/SPC|SYM/TAB|NUM/ENT|  BSPC | DEL |
                         bindings = <
    &kp  Z       &kp  W           &kp F             &kp P           &kp B               &kp J        &kp  L            &kp  U                 &kp  Y         &kp  Q
    &hml LALT A  &hml LGUI R      &hml LSHFT S      &hml LCTRL T    &lt NAV_MOM G       &kp M        &hmr RCTRL N      &hmr RSHFT E           &hmr RGUI I    &hmr RALT O
    &apos_o      &kp X            &kp C             &kp D           &kp K               &kp V        &kp H             &slash_o               &dot_o         &comma_o
-                &sk DEL          &lt NAV_MOM SPACE &lt NUM_MOM TAB                                  &lt SYM_MOM ENTER &sk RSHFT              &kp BSPC
+                &sk LSHFT        &lt NAV_MOM SPACE &lt SYM_MOM TAB                                  &lt NUM_MOM ENTER &kp BSPC               &kp DEL
                         >;
                 };
 
@@ -714,23 +714,23 @@ behaviors {
                         label = "SYM";
 // --------------------------- SYM Layer ---------------------------
 // |  &  |  %  |  #  |  !  |ENTER|  *  |  ?  |  @  |  $  |  ^  |
-// |  (  |  [  |  ]  |  )  | DEL | BSPC|  =  |  >  |  <  |  -  |
-// |  '  |  {  |  }  |  "  |  `  |  \  |  ;  |  /  |  .  |  ,  |
-//             |     |     |     |     |     |     |
-                        bindings = <
-   &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp ENTER           &kp STAR     &kp  QUESTION     &kp  AT_SIGN           &kp  DOLLAR    &kp  CARET
-   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &lt NAV_MOM DEL     &kp BSPC     &hmr RCTRL EQUAL  &hmr RSHFT GT          &hmr RGUI LT   &hmr RALT MINUS
-   &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &bslh_o      &kp  SEMI         &trans                 &trans         &trans
-                  &trans         &trans            &trans                                           &trans            &mt RSHFT SPACE        &trans
+// |  (  |  [  |  ]  |  )  |  ;  |  _  |  >  |  =  |  -  |  <  |
+// |  '  |  {  |  }  |  "  |  `  |  \  |  :  |  /  |  .  |  ,  |
+//             | SFT |     |     |     | BSPC| DEL |
+                        bindings =
+   &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp ENTER           &kp STAR     &kp  QUESTION     &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
+   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp SEMI            &kp UNDER    &hmr RCTRL GT     &hmr RSHFT EQUAL       &hmr RGUI MINUS &hmr RALT LT
+   &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &bslh_o      &kp  COLON        &trans                 &trans          &trans
+                  &trans         &trans            &trans                                           &trans            &trans                 &trans
                         >;
                 };
 
                 num_mom_layer {
                         label = "NUM_MOM";
                         bindings = <
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
+   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
+   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
+   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
                   &trans         &trans            &trans                                           &trans            &trans                 &trans
                         >;
                 };
@@ -738,9 +738,9 @@ behaviors {
                 num_lck_layer {
                         label = "NUM_LCK";
                         bindings = <
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
+   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
+   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
+   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
                   &trans         &trans            &trans                                           &trans            &trans                 &trans
                         >;
                 };
@@ -749,14 +749,14 @@ behaviors {
                         label = "NUM";
 // -----------------------------------------------------------------------------------------
 // |  7  |  5  |  3  |  1  |  9  |  8  |  0  |  2  |  4  |  6  |
-// |  (  |  [  |  ]  |  )  | DEL | BSPC|  =  |  >  |  <  |  -  |
-// |  '  |  {  |  }  |  "  |  `  |  \  |  ;  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  |  ;  |  _  |  >  |  =  |  -  |  <  |
+// |  '  |  {  |  }  |  "  |  `  |  \  |  :  |  /  |  .  |  ,  |
 //             |     |     |     |     |     |     |
                         bindings = <
    &kp N7         &kp  N5        &kp  N3           &kp  N1         &kp N9              &kp N8       &kp N0            &kp  N2               &kp  N4         &kp  N6
-   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &lt NAV_MOM DEL     &kp BSPC     &hmr RCTRL EQUAL  &hmr RSHFT GT         &hmr RGUI LT    &hmr RALT MINUS
-   &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &bslh_o      &kp SEMI          &trans                &trans          &trans
-                  &trans         &trans            &trans                                           &trans            &mt RSHFT SPACE       &trans
+   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp SEMI            &kp UNDER    &hmr RCTRL GT     &hmr RSHFT EQUAL      &hmr RGUI MINUS &hmr RALT LT
+   &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &bslh_o      &kp  COLON        &trans                &trans          &trans
+                  &trans         &trans            &trans                                           &trans            &trans                &trans
                           >;
                 };
 
@@ -791,7 +791,7 @@ behaviors {
    &kp C_MUTE     &kp  PG_DN     &kp  PG_UP        &kp  C_PP       &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
    &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &lt NAV_MOM DEL     &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
    &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &bslh_o      &kp SEMI          &trans                 &trans         &trans
-                  &trans         &trans            &trans                                           &trans            &lt UTL SPACE          &trans
+                  &trans         &trans            &trans                                           &trans            &lt UTL BSPC           &trans
                         >;
                 };
 
