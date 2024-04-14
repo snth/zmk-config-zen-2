@@ -179,9 +179,9 @@ behaviors {
   // ---------------------------- Combos ----------------------------
   // |#####|  %  |  #  |  !  |  ?  |  *  |  ^  |  @  |  $  |#####|
   //    7     5     3     1     9     8     0     2     4     6
-  // |#####|  &  | LCK |  ;  | DEL | BSPC|  :  |  _  |     |#####|
+  // |#####|  &  | LCK |  ;  | DEL | BSPC|  :  |  _  |  |  |#####|
   //    (     [     ]     )     ~     |     >     =     -     <
-  // |#####|     |  {  |  }  |  `  |  \  |  +  |  -  |     |#####|
+  // |#####|  {  |  }  |  "  |  `  |  \  |  +  |  -  |     |#####|
   
     // LHS Vertical 2-key combos
     combo2_7_vert {
@@ -276,7 +276,7 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <10 11>;
         bindings = <&kp AMPERSAND>;
-        layers = <NAV>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_nav_lck {
         timeout-ms = <50>;
@@ -300,7 +300,7 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <12 13>;
         bindings = <&kp SEMI>;
-        layers = <NAV>;
+        layers = <DFT NAV NUM SYM>;
     };
     combo2_del {
         timeout-ms = <50>;
@@ -550,6 +550,12 @@ behaviors {
         bindings = <&kp UNDERSCORE>;
         layers = <DFT NAV NUM SYM>;
     };
+    combo2_pipe {
+        timeout-ms = <50>;
+        key-positions = <17 18>;
+        bindings = <&kp PIPE>;
+        layers = <DFT NAV NUM SYM>;
+    };
 
     combo2_colon_diag {
         timeout-ms = <50>;
@@ -574,12 +580,6 @@ behaviors {
         timeout-ms = <50>;
         key-positions = <27 28>;
         bindings = <&kp MINUS>;
-        layers = <DFT NAV NUM SYM>;
-    };
-    combo2_pipe {
-        timeout-ms = <50>;
-        key-positions = <28 29>;
-        bindings = <&kp PIPE>;
         layers = <DFT NAV NUM SYM>;
     };
 
