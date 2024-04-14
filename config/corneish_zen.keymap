@@ -735,7 +735,7 @@ behaviors {
    &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp QUESTION        &kp STAR     &kp  PLUS         &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
    &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &lt NAV_MOM SEMI    &kp UNDER    &hmr RCTRL GT     &hmr RSHFT EQUAL       &hmr RGUI MINUS &hmr RALT LT
    &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &BSHL_O      &kp  COLON        &trans                 &trans          &trans
-                  &trans         &trans            &trans                                           &trans            &trans                 &trans
+                  &trans         &trans            &trans                                           &trans            &kp SPACE              &trans
                         >;
                 };
 
@@ -770,7 +770,7 @@ behaviors {
    &kp N7         &kp  N5        &kp  N3           &kp  N1         &kp N9              &kp N8       &kp N0            &kp  N2               &kp  N4         &kp  N6
    &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &lt NAV_MOM SEMI    &kp UNDER    &hmr RCTRL GT     &hmr RSHFT EQUAL      &hmr RGUI MINUS &hmr RALT LT
    &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &BSHL_O      &kp  COLON        &trans                &trans          &trans
-                  &trans         &trans            &trans                                           &trans            &trans                &trans
+                  &trans         &trans            &trans                                           &trans            &kp SPACE             &trans
                           >;
                 };
 
@@ -803,9 +803,9 @@ behaviors {
 //             |     |     |     |      |      |      |
                         bindings = <
    &kp C_MUTE     &kp  PG_DN     &kp  PG_UP        &kp  C_PP       &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
-   &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &kp SEMI            &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
+   &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &kp DEL             &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
    &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &BSHL_O      &kp COLON         &trans                 &trans         &trans
-                  &trans         &trans            &trans                                           &trans            &lt UTL BSPC           &trans
+                  &trans         &trans            &trans                                           &trans            &lt UTL SPACE          &trans
                         >;
                 };
 
