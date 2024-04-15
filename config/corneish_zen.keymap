@@ -179,9 +179,9 @@ behaviors {
   // ---------------------------- Combos ----------------------------
   // |#####|  %  |  #  |  !  |  ?  |  *  |  ^  |  @  |  $  |#####|
   //    7     5     3     1     9     8     0     2     4     6
-  // |#####|  {  | LCK |  }  | DEL | BSPC|  =  |  -  |  ;  |#####|
+  // |#####|     |  _  |     | DEL | BSPC|  =  |  -  |  ;  |#####|
   //    (     [     ]     )     ~     |     >     =     -     <
-  // |#####|  &  |  \  |  "  |  `  |  \  |  :  |  _  |  |  |#####|
+  // |#####|  &  | LCK |  "  |  `  |  \  |  :  |  \  |  |  |#####|
   
     // LHS Vertical 2-key combos
     combo2_7_vert {
@@ -272,34 +272,10 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo2_lbrc {
-        timeout-ms = <50>;
-        key-positions = <10 11>;
-        bindings = <&kp LBRC>;
-        layers = <DFT NAV NUM SYM>;
-    };
-    combo2_nav_lck {
+    combo2_underscore {
         timeout-ms = <50>;
         key-positions = <11 12>;
-        bindings = <&tog NAV_LCK>;
-        layers = <NAV>;
-    };
-    combo2_num_lck {
-        timeout-ms = <50>;
-        key-positions = <11 12>;
-        bindings = <&tog NUM_LCK>;
-        layers = <NUM>;
-    };
-    combo2_sym_lck {
-        timeout-ms = <50>;
-        key-positions = <11 12>;
-        bindings = <&tog SYM_LCK>;
-        layers = <SYM>;
-    };
-    combo2_rbrc {
-        timeout-ms = <50>;
-        key-positions = <12 13>;
-        bindings = <&kp RBRC>;
+        bindings = <&kp UNDERSCORE>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_del {
@@ -322,11 +298,23 @@ behaviors {
         bindings = <&kp AMPERSAND>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_bslh_lhs {
+    combo2_nav_lck {
         timeout-ms = <50>;
         key-positions = <21 22>;
-        bindings = <&kp BSLH>;
-        layers = <DFT NAV NUM SYM>;
+        bindings = <&tog NAV_LCK>;
+        layers = <NAV>;
+    };
+    combo2_num_lck {
+        timeout-ms = <50>;
+        key-positions = <21 22>;
+        bindings = <&tog NUM_LCK>;
+        layers = <NUM>;
+    };
+    combo2_sym_lck {
+        timeout-ms = <50>;
+        key-positions = <21 22>;
+        bindings = <&tog SYM_LCK>;
+        layers = <SYM>;
     };
     combo2_dqt {
         timeout-ms = <50>;
@@ -576,10 +564,10 @@ behaviors {
         bindings = <&kp COLON>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_underscore {
+    combo2_bslh_rhs {
         timeout-ms = <50>;
         key-positions = <27 28>;
-        bindings = <&kp UNDERSCORE>;
+        bindings = <&kp BSLH>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_pipe {
