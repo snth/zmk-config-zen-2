@@ -793,14 +793,14 @@ behaviors {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
 // | MUTE| PGDN| PGUP| PLAY| F11 | F12  | HOME | PGUP | PGDN | END  |
-// | INS | RET | TAB | ESC | DEL | BSPC | LEFT |  UP  | DOWN | RIGHT|
-// | UNDO| CUT | COPY|PASTE|CTL+K|  \   |  ;   |  /   |  .   |  ,   |
+// | INS | RET | TAB | ESC |     |      | LEFT |  UP  | DOWN | RIGHT|
+// | UNDO| CUT | COPY|PASTE|CTL+K|      |      |      |      |      |
 //             |     |     |     |      |      |      |
                         bindings = <
    &kp C_MUTE     &kp  PG_DN     &kp  PG_UP        &kp  C_PP       &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
-   &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &kp DEL             &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
-   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &BSHL_O      &kp COLON         &trans                 &trans         &trans
-                  &trans         &trans            &trans                                           &trans            &lt UTL SPACE          &trans
+   &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &trans              &trans       &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
+   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &trans       &trans            &trans                 &trans         &trans
+                  &trans         &trans            &trans                                           &trans            &lt UTL BSPC           &trans
                         >;
                 };
 
