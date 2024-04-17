@@ -147,7 +147,7 @@ behaviors {
       bindings = <&kp SEMI>, <&kp SEMI>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
-  BSHL_O: bslh_only {
+  BSLH_O: bslh_only {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
       bindings = <&kp BSLH>, <&kp BSLH>;
@@ -555,7 +555,7 @@ behaviors {
     combo2_bslh {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&BSHL_O>;
+        bindings = <&kp BSLH>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_equal {
@@ -729,7 +729,7 @@ behaviors {
                         bindings = <
    &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp QUESTION        &kp STAR     &kp  PLUS         &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
    &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &lt NAV_MOM SEMI    &kp UNDER    &hmr RCTRL GT     &hmr RSHFT EQUAL       &hmr RGUI MINUS &hmr RALT LT
-   &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &BSHL_O      &kp  COLON        &trans                 &trans          &trans
+   &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &BSLH        &kp  COLON        &trans                 &trans          &trans
                   &trans         &trans            &trans                                           &trans            &trans                 &trans
                         >;
                 };
@@ -764,7 +764,7 @@ behaviors {
                         bindings = <
    &kp N7         &kp  N5        &kp  N3           &kp  N1         &kp N9              &kp N8       &kp N0            &kp  N2               &kp  N4         &kp  N6
    &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &lt NAV_MOM SEMI    &kp UNDER    &hmr RCTRL GT     &hmr RSHFT EQUAL      &hmr RGUI MINUS &hmr RALT LT
-   &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &BSHL_O      &kp  COLON        &trans                &trans          &trans
+   &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &BSLH        &kp  COLON        &trans                &trans          &trans
                   &trans         &trans            &trans                                           &trans            &trans                &trans
                           >;
                 };
