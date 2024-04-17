@@ -526,10 +526,10 @@ behaviors {
         bindings = <&kp BSPC>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_equal {
+    combo2_colon {
         timeout-ms = <50>;
         key-positions = <16 17>;
-        bindings = <&kp EQUAL>;
+        bindings = <&kp COLON>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_minus {
@@ -558,10 +558,10 @@ behaviors {
         bindings = <&BSHL_O>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_colon {
+    combo2_equal {
         timeout-ms = <50>;
         key-positions = <26 27>;
-        bindings = <&kp COLON>;
+        bindings = <&kp EQUAL>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_bslh_rhs {
@@ -730,7 +730,7 @@ behaviors {
    &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp QUESTION        &kp STAR     &kp  PLUS         &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
    &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &lt NAV_MOM SEMI    &kp UNDER    &hmr RCTRL GT     &hmr RSHFT EQUAL       &hmr RGUI MINUS &hmr RALT LT
    &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &BSHL_O      &kp  COLON        &trans                 &trans          &trans
-                  &trans         &trans            &trans                                           &trans            &kp SPACE              &trans
+                  &trans         &trans            &trans                                           &trans            &trans                 &trans
                         >;
                 };
 
@@ -765,7 +765,7 @@ behaviors {
    &kp N7         &kp  N5        &kp  N3           &kp  N1         &kp N9              &kp N8       &kp N0            &kp  N2               &kp  N4         &kp  N6
    &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &lt NAV_MOM SEMI    &kp UNDER    &hmr RCTRL GT     &hmr RSHFT EQUAL      &hmr RGUI MINUS &hmr RALT LT
    &trans         &kp  LBRC      &kp  RBRC         &kp  DQT        &kp GRAVE           &BSHL_O      &kp  COLON        &trans                &trans          &trans
-                  &trans         &trans            &trans                                           &trans            &kp SPACE             &trans
+                  &trans         &trans            &trans                                           &trans            &trans                &trans
                           >;
                 };
 
