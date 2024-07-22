@@ -487,7 +487,7 @@ behaviors {
         bindings = <&kp LT>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_rbrc_vert {
+    combo2_lbrc_vert {
         timeout-ms = <50>;
         key-positions = <19 29>;
         bindings = <&kp LBRC>;
