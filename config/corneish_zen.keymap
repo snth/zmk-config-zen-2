@@ -180,8 +180,8 @@ behaviors {
   // |#####|  %  |  #  |  !  |  ?  |  *  |  ^  |  @  |  $  |#####|
   //    7     5     3     1     9     8     0     2     4     6
   // |#####|     |  _  |     | DEL | BSPC|  :  |  -  |  ;  |#####|
-  //    (     [     ]     )     ~     |     >     =     -     <
-  // |#####|  &  | LCK |  "  |  `  |  \  |  =  |  +  |  |  |#####|
+  //    (     [     ]     )     ~    LCK    }     >     <     {
+  // |#####|  &  |  <  |  >  |  `  |  \  |  =  |  +  |  |  |#####|
   
     // LHS Vertical 2-key combos
     combo2_7_vert {
@@ -265,10 +265,10 @@ behaviors {
         bindings = <&kp EXCL>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_question_lhs {
+    combo2_bslh {
         timeout-ms = <50>;
         key-positions = <3 4>;
-        bindings = <&kp QUESTION>;
+        bindings = <&kp BSLH>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -298,28 +298,16 @@ behaviors {
         bindings = <&kp AMPERSAND>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_nav_lck {
-        timeout-ms = <50>;
-        key-positions = <21 22>;
-        bindings = <&tog NAV_LCK>;
-        layers = <NAV>;
-    };
-    combo2_num_lck {
-        timeout-ms = <50>;
-        key-positions = <21 22>;
-        bindings = <&tog NUM_LCK>;
-        layers = <NUM>;
-    };
-    combo2_sym_lck {
-        timeout-ms = <50>;
-        key-positions = <21 22>;
-        bindings = <&tog SYM_LCK>;
-        layers = <SYM>;
-    };
-    combo2_space {
+    combo2_lt {
         timeout-ms = <50>;
         key-positions = <22 23>;
-        bindings = <&kp SPACE>;
+        bindings = <&kp LT>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_gt {
+        timeout-ms = <50>;
+        key-positions = <22 23>;
+        bindings = <&kp GT>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_grave {
@@ -463,34 +451,46 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo2_pipe_vert {
+    combo2_nav_lck_vert {
         timeout-ms = <50>;
         key-positions = <15 25>;
-        bindings = <&kp PIPE>;
+        bindings = <&tog NAV_LCK>;
+        layers = <NAV>;
+    };
+    combo2_num_lck_vert {
+        timeout-ms = <50>;
+        key-positions = <15 25>;
+        bindings = <&tog NUM_LCK>;
+        layers = <NUM>;
+    };
+    combo2_sym_lck_vert {
+        timeout-ms = <50>;
+        key-positions = <15 25>;
+        bindings = <&tog SYM_LCK>;
+        layers = <SYM>;
+    };
+    combo2_rbrc_vert {
+        timeout-ms = <50>;
+        key-positions = <16 26>;
+        bindings = <&kp RBRC>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_gt_vert {
         timeout-ms = <50>;
-        key-positions = <16 26>;
-        bindings = <&kp GT>;
-        layers = <DFT NAV NUM SYM>;
-    };
-    combo2_equal_vert {
-        timeout-ms = <50>;
         key-positions = <17 27>;
-        bindings = <&kp EQUAL>;
-        layers = <DFT NAV NUM SYM>;
-    };
-    combo2_minus_vert {
-        timeout-ms = <50>;
-        key-positions = <18 28>;
-        bindings = <&kp MINUS>;
+        bindings = <&kp GT>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_lt_vert {
         timeout-ms = <50>;
-        key-positions = <19 29>;
+        key-positions = <18 28>;
         bindings = <&kp LT>;
+        layers = <DFT NAV NUM SYM>;
+    };
+    combo2_rbrc_vert {
+        timeout-ms = <50>;
+        key-positions = <19 29>;
+        bindings = <&kp LBRC>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -545,10 +545,10 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo2_bslh {
+    combo2_qmark {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&kp BSLH>;
+        bindings = <&kp QMARK>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_equal {
@@ -716,13 +716,13 @@ behaviors {
                         label = "SYM";
 // --------------------------- SYM Layer ---------------------------
 // |  &  |  %  |  #  |  !  |  ?  |  *  |  +  |  @  |  $  |  ^  |
-// |  (  |  [  |  ]  |  )  |  ;  |  _  |  >  |  =  |  -  |  <  |
-// |  '  |  {  |  }  |  "  |  `  |  \  |  :  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  | DEL | BSPC|  }  |  :  |  -  |  {  |
+// |  '  |  <  |  >  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     | SPC |     |
                         bindings = <
-   &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp QUESTION        &kp STAR     &kp  PLUS         &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
-   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL GT     &hmr RSHFT EQUAL       &hmr RGUI MINUS &hmr RALT LT
-   &trans         &kp  LBRC      &kp  RBRC         &lt NAV_MOM DQT &kp GRAVE           &kp BSLH     &kp  COLON        &trans                 &trans          &trans
+   &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp BSLH            &kp STAR     &kp  PLUS         &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
+   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL RBRC   &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT LBRC
+   &trans         &kp LT         &kp GT            &lt NAV_MOM DQT &kp GRAVE           &kp QMARK    &kp  EQUAL        &trans                 &trans          &trans
                   &trans         &trans            &trans                                           &trans            &kp SPACE              &trans
                         >;
                 };
@@ -751,13 +751,13 @@ behaviors {
                         label = "NUM";
 // -----------------------------------------------------------------------------------------
 // |  7  |  5  |  3  |  1  |  9  |  8  |  0  |  2  |  4  |  6  |
-// |  (  |  [  |  ]  |  )  |  ;  |  _  |  >  |  =  |  -  |  <  |
-// |  '  |  {  |  }  |  "  |  `  |  \  |  :  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  | DEL | BSPC|  }  |  :  |  -  |  {  |
+// |  '  |  {  |  }  |  "  |  `  |  ?  |  =  |  /  |  .  |  ,  |
 //             |     |     |     |     | SPC |     |
                         bindings = <
    &kp N7         &kp  N5        &kp  N3           &kp  N1         &kp N9              &kp N8       &kp N0            &kp  N2               &kp  N4         &kp  N6
-   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL GT     &hmr RSHFT EQUAL      &hmr RGUI MINUS &hmr RALT LT
-   &trans         &kp  LBRC      &kp  RBRC         &lt NAV_MOM DQT &kp GRAVE           &kp BSLH     &kp  COLON        &trans                &trans          &trans
+   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL RBRC   &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT LBRC
+   &trans         &kp LT         &kp GT            &lt NAV_MOM DQT &kp GRAVE           &kp QMARK    &kp  EQUAL        &trans                 &trans          &trans
                   &trans         &trans            &trans                                           &trans            &kp SPACE             &trans
                           >;
                 };
@@ -785,14 +785,14 @@ behaviors {
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// | MUTE| PGDN| PGUP| PLAY| F11   |   F12 |  HOME | PGUP | PGDN | END  |
+// | HOME| PGUP| PGDN| END | F11   |   F12 |  HOME | PGUP | PGDN | END  |
 // | INS | RET | TAB | ESC | DEL   |  BSPC |  LEFT |  UP  | DOWN | RIGHT|
-// | UNDO| CUT | COPY|PASTE|CTL+K  |    \  |    :  |      |      |      |
+// | UNDO| CUT | COPY|PASTE|CTL+K  |    ?  |    =  |      |      |      |
 //             |     |     |       |       |UTL/SPC|      |
                         bindings = <
-   &kp C_MUTE     &kp  PG_DN     &kp  PG_UP        &kp  C_PP       &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
+   &kp HOME       &kp  PG_UP     &kp  PG_DN        &kp  END        &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
    &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &kp DEL             &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
-   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &kp BSLH     &kp COLON         &trans                 &trans         &trans
+   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &kp QMARK    &kp EQUAL         &trans                 &trans         &trans
                   &trans         &trans            &trans                                           &trans            &lt UTL SPACE          &trans
                         >;
                 };
