@@ -451,6 +451,12 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
+    combo2_pipe_vert {
+        timeout-ms = <50>;
+        key-positions = <15 25>;
+        bindings = <&kp PIPE>;
+        layers = <DFT>;
+    };
     combo2_nav_lck_vert {
         timeout-ms = <50>;
         key-positions = <15 25>;
