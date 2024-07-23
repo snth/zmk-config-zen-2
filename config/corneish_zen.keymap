@@ -177,7 +177,7 @@ behaviors {
     compatible = "zmk,combos";
   
   // ---------------------------- Combos ----------------------------
-  // |#####|  %  |  #  |  !  |  \  |  *  |  ^  |  @  |  $  |#####|
+  // |#####|  %  |  #  |  !  |  ?  |  *  |  ^  |  @  |  $  |#####|
   //    7     5     3     1     9     8     0     2     4     6
   // |#####|     |  _  |     | DEL | BSPC|  :  |  -  |  ;  |#####|
   //    (     [     ]     )     ~    LCK    }     >     <     {
@@ -265,10 +265,10 @@ behaviors {
         bindings = <&kp EXCL>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_bslh {
+    combo2_qmark {
         timeout-ms = <50>;
         key-positions = <3 4>;
-        bindings = <&kp BSLH>;
+        bindings = <&kp QMARK>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -545,10 +545,10 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo2_qmark {
+    combo2_bslh {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&kp QMARK>;
+        bindings = <&kp BSLH>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_equal {
@@ -715,14 +715,14 @@ behaviors {
                 sym_layer {
                         label = "SYM";
 // --------------------------- SYM Layer ---------------------------
-// |  &  |  %  |  #  |  !  |  \  |  *  |  +  |  @  |  $  |  ^  |
+// |  &  |  %  |  #  |  !  |  ?  |  *  |  +  |  @  |  $  |  ^  |
 // |  (  |  [  |  ]  |  )  | DEL | BSPC|  }  |  :  |  -  |  {  |
-// |  '  |  {  |  }  |  "  |  `  |  ?  |  =  |  /  |  .  |  ,  |
+// |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     | SPC |     |     | SPC |     |
                         bindings = <
-   &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp BSLH            &kp STAR     &kp  PLUS         &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
+   &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp QMARK           &kp STAR     &kp  PLUS         &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
    &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL RBRC   &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT LBRC
-   &trans         &kp LT         &kp GT            &lt NAV_MOM DQT &kp GRAVE           &kp QMARK    &kp  EQUAL        &trans                 &trans          &trans
+   &trans         &kp LT         &kp GT            &lt NAV_MOM DQT &kp GRAVE           &kp BSLH     &kp  EQUAL        &trans                 &trans          &trans
                   &trans         &kp SPACE         &trans                                           &trans            &kp SPACE              &trans
                         >;
                 };
@@ -752,12 +752,12 @@ behaviors {
 // -----------------------------------------------------------------------------------------
 // |  7  |  5  |  3  |  1  |  9  |  8  |  0  |  2  |  4  |  6  |
 // |  (  |  [  |  ]  |  )  | DEL | BSPC|  }  |  :  |  -  |  {  |
-// |  '  |  {  |  }  |  "  |  `  |  ?  |  =  |  /  |  .  |  ,  |
+// |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
 //             |     | SPC |     |     | SPC |     |
                         bindings = <
    &kp N7         &kp  N5        &kp  N3           &kp  N1         &kp N9              &kp N8       &kp N0            &kp  N2               &kp  N4         &kp  N6
    &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL RBRC   &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT LBRC
-   &trans         &kp LT         &kp GT            &lt NAV_MOM DQT &kp GRAVE           &kp QMARK    &kp  EQUAL        &trans                 &trans          &trans
+   &trans         &kp LT         &kp GT            &lt NAV_MOM DQT &kp GRAVE           &kp BSLH     &kp  EQUAL        &trans                 &trans          &trans
                   &trans         &kp SPACE         &trans                                           &trans            &kp SPACE              &trans
                           >;
                 };
@@ -787,12 +787,12 @@ behaviors {
 // -----------------------------------------------------------------------------------------
 // | HOME| PGUP| PGDN| END | F11   |   F12 |  HOME | PGUP | PGDN | END  |
 // | INS | RET | TAB | ESC | DEL   |  BSPC |  LEFT |  UP  | DOWN | RIGHT|
-// | UNDO| CUT | COPY|PASTE|CTL+K  |    ?  |    =  |      |      |      |
+// | UNDO| CUT | COPY|PASTE|CTL+K  |    \  |    =  |      |      |      |
 //             |     |     |       |       |UTL/SPC|      |
                         bindings = <
    &kp HOME       &kp  PG_UP     &kp  PG_DN        &kp  END        &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
    &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &kp DEL             &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
-   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &kp QMARK    &kp EQUAL         &trans                 &trans         &trans
+   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &kp BSLH     &kp EQUAL         &trans                 &trans         &trans
                   &trans         &trans            &trans                                           &trans            &lt UTL SPACE          &trans
                         >;
                 };
