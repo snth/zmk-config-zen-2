@@ -794,12 +794,12 @@ behaviors {
 // | HOME| PGUP| PGDN| END | F11   |   F12 |  HOME | PGUP | PGDN | END  |
 // | INS | RET | TAB | ESC | DEL   |  BSPC |  LEFT |  UP  | DOWN | RIGHT|
 // | UNDO| CUT | COPY|PASTE|CTL+K  |    \  |    =  |      |      |      |
-//             |     |     |       |       |UTL/SPC|      |
+//             |     | SPC |       |       |UTL/SPC|      |
                         bindings = <
    &kp HOME       &kp  PG_UP     &kp  PG_DN        &kp  END        &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
    &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &kp DEL             &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
    &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(K)           &kp BSLH     &kp EQUAL         &trans                 &trans         &trans
-                  &trans         &trans            &trans                                           &trans            &lt UTL SPACE          &trans
+                  &trans         &kp SPACE         &trans                                           &trans            &lt UTL SPACE          &trans
                         >;
                 };
 
