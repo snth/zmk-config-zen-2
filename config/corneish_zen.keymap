@@ -180,8 +180,8 @@ behaviors {
   // |#####|  %  |  #  |  !  |  ?  |  *  |  ^  |  @  |  $  |#####|
   //    7     5     3     1     9     8     0     2     4     6
   // |#####|     |  _  |     | DEL | BSPC|  :  |  -  |  ;  |#####|
-  //    (     [     ]     )     ~    LCK    >     &     |     <
-  // |#####|  &  |  {  |  }  |  `  |  \  |  =  |  +  |  |  |#####|
+  //    (     [     ]     )     ~    LCK    \     :     -     &
+  // |#####|  &  |  {  |  }  |  `  |  ~  |  =  |  >  |  <  |#####|
   
     // LHS Vertical 2-key combos
     combo2_7_vert {
@@ -475,28 +475,28 @@ behaviors {
         bindings = <&tog SYM_LCK>;
         layers = <SYM>;
     };
-    combo2_gt_vert {
+    combo2_bslh_vert {
         timeout-ms = <50>;
         key-positions = <16 26>;
-        bindings = <&kp GT>;
+        bindings = <&kp BSLH>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_amp_vert {
+    combo2_colon_vert {
         timeout-ms = <50>;
         key-positions = <17 27>;
-        bindings = <&kp AMPERSAND>;
+        bindings = <&kp COLON>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_pipe_vert {
+    combo2_minus_vert {
         timeout-ms = <50>;
         key-positions = <18 28>;
-        bindings = <&kp PIPE>;
+        bindings = <&kp MINUS>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_lt_vert {
+    combo2_ampersand_vert {
         timeout-ms = <50>;
         key-positions = <19 29>;
-        bindings = <&kp LT>;
+        bindings = <&kp AMPERSAND>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -551,10 +551,10 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo2_bslh {
+    combo2_tilde {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&kp BSLH>;
+        bindings = <&kp TILDE>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_equal {
@@ -563,16 +563,16 @@ behaviors {
         bindings = <&kp EQUAL>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_plus {
+    combo2_gt {
         timeout-ms = <50>;
         key-positions = <27 28>;
-        bindings = <&kp PLUS>;
+        bindings = <&kp GT>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_pipe {
+    combo2_lt {
         timeout-ms = <50>;
         key-positions = <28 29>;
-        bindings = <&kp PIPE>;
+        bindings = <&kp LT>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -722,13 +722,13 @@ behaviors {
                         label = "SYM";
 // --------------------------- SYM Layer ---------------------------
 // |  &  |  %  |  #  |  !  |  ?  |  *  |  +  |  @  |  $  |  ^  |
-// |  (  |  [  |  ]  |  )  | DEL | BSPC|  >  |  :  |  -  |  <  |
-// |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  | DEL | BSPC|  \  |  :  |  -  |  &  |
+// |  '  |  {  |  }  |  "  |  `  |  ~  |  =  |  /  |  .  |  ,  |
 //             |     | SPC |     |     | SPC |     |
                         bindings = <
    &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp QMARK           &kp STAR     &kp  PLUS         &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
-   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL GT     &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT LT
-   &trans         &kp LBRC       &kp RBRC          &lt NAV_MOM DQT &kp GRAVE           &kp BSLH     &kp  EQUAL        &trans                 &trans          &trans
+   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL BSLH   &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT AMPERSAND
+   &trans         &kp LBRC       &kp RBRC          &lt NAV_MOM DQT &kp GRAVE           &kp TILDE    &kp  EQUAL        &trans                 &trans          &trans
                   &trans         &kp SPACE         &trans                                           &trans            &kp SPACE              &trans
                         >;
                 };
@@ -757,13 +757,13 @@ behaviors {
                         label = "NUM";
 // -----------------------------------------------------------------------------------------
 // |  7  |  5  |  3  |  1  |  9  |  8  |  0  |  2  |  4  |  6  |
-// |  (  |  [  |  ]  |  )  | DEL | BSPC|  >  |  :  |  -  |  <  |
-// |  '  |  {  |  }  |  "  |  `  |  \  |  =  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  | DEL | BSPC|  \  |  :  |  -  |  &  |
+// |  '  |  {  |  }  |  "  |  `  |  ~  |  =  |  /  |  .  |  ,  |
 //             |     | SPC |     |     | SPC |     |
                         bindings = <
    &kp N7         &kp  N5        &kp  N3           &kp  N1         &kp N9              &kp N8       &kp N0            &kp  N2                &kp  N4         &kp  N6
-   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL GT     &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT LT
-   &trans         &kp LBRC       &kp RBRC          &lt NAV_MOM DQT &kp GRAVE           &kp BSLH     &kp  EQUAL        &trans                 &trans          &trans
+   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL BSLH   &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT AMPERSAND
+   &trans         &kp LBRC       &kp RBRC          &lt NAV_MOM DQT &kp GRAVE           &kp TILDE    &kp  EQUAL        &trans                 &trans          &trans
                   &trans         &kp SPACE         &trans                                           &trans            &kp SPACE              &trans
                           >;
                 };
@@ -793,12 +793,12 @@ behaviors {
 // -----------------------------------------------------------------------------------------
 // | HOME| PGUP| PGDN| END | F11   |   F12 |  HOME | PGUP | PGDN | END  |
 // | INS | RET | TAB | ESC | DEL   |  BSPC |  LEFT |  UP  | DOWN | RIGHT|
-// | UNDO| CUT | COPY|PASTE|PASTE  |    \  |    =  |      |      |      |
+// | UNDO| CUT | COPY|PASTE|PASTE  | CTRL-K|    =  |      |      |      |
 //             |     | SPC |       |       |UTL/SPC|      |
                         bindings = <
    &kp HOME       &kp  PG_UP     &kp  PG_DN        &kp  END        &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
    &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &kp DEL             &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
-   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(V)           &kp BSLH     &kp EQUAL         &trans                 &trans         &trans
+   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(V)           &kp LC(K)    &kp EQUAL         &trans                 &trans         &trans
                   &trans         &kp SPACE         &trans                                           &trans            &lt UTL SPACE          &trans
                         >;
                 };
