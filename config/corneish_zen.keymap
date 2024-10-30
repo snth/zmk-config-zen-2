@@ -180,8 +180,8 @@ behaviors {
   // |#####|  %  |  #  |  !  |  ?  |  *  |  ^  |  @  |  $  |#####|
   //    7     5     3     1     9     8     0     2     4     6
   // |#####|     |  _  |     | DEL | BSPC|  :  |  -  |  ;  |#####|
-  //    (     [     ]     )     ~    LCK    \     :     -     &
-  // |#####|  {  |  }  |  "  |  `  |  ~  |  =  |  >  |  <  |#####|
+  //    (     [     ]     )     ~    LCK    \     :     >     <
+  // |#####|  {  |  }  |  "  |  `  |  &  |  =  |  >  |  <  |#####|
   
     // LHS Vertical 2-key combos
     combo2_7_vert {
@@ -487,16 +487,16 @@ behaviors {
         bindings = <&kp COLON>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_minus_vert {
+    combo2_gt_vert {
         timeout-ms = <50>;
         key-positions = <18 28>;
-        bindings = <&kp MINUS>;
+        bindings = <&kp GT>;
         layers = <DFT NAV NUM SYM>;
     };
-    combo2_ampersand_vert {
+    combo2_lt_vert {
         timeout-ms = <50>;
         key-positions = <19 29>;
-        bindings = <&kp AMPERSAND>;
+        bindings = <&kp LT>;
         layers = <DFT NAV NUM SYM>;
     };
 
@@ -551,10 +551,10 @@ behaviors {
         layers = <DFT NAV NUM SYM>;
     };
 
-    combo2_tilde {
+    combo2_ampersand {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&kp TILDE>;
+        bindings = <&kp AMPERSAND>;
         layers = <DFT NAV NUM SYM>;
     };
     combo2_equal {
@@ -691,30 +691,30 @@ behaviors {
 // |  '  |  X  |  C  |   D    |  V    |    K  |   H   |  /  |  .  |  ,  |
 //             |LSHFT|NAV/BSPC|SYM/TAB|NUM/ENT|  SPC  |RSHFT|
                         bindings = <
-   &kp  Q       &kp  W           &kp F             &kp P           &kp B               &kp J        &kp  L            &kp  U                 &kp  Y         &kp  Z
-   &hml LALT A  &hml LGUI R      &hml LSHFT S      &hml LCTRL T    &kp G               &kp M        &hmr RCTRL N      &hmr RSHFT E           &hmr RGUI I    &hmr RALT O
-   &APOS_O      &kp X            &kp C             &lt NAV_MOM D   &kp V               &kp K        &kp H             &kp SLASH              &kp DOT        &kp COMMA
-                &sk LSHFT        &lt NAV_MOM BSPC  &lt SYM_MOM TAB                                  &lt NUM_MOM ENTER &kp SPC                &sk RSHFT
+   &kp  Q       &kp  W           &kp F             &kp P           &kp B               &kp J         &kp  L            &kp  U                 &kp  Y         &kp  Z
+   &hml LALT A  &hml LGUI R      &hml LSHFT S      &hml LCTRL T    &kp G               &kp M         &hmr RCTRL N      &hmr RSHFT E           &hmr RGUI I    &hmr RALT O
+   &APOS_O      &kp X            &kp C             &lt NAV_MOM D   &kp V               &kp K         &kp H             &kp SLASH              &kp DOT        &kp COMMA
+                &sk LSHFT        &lt NAV_MOM BSPC  &lt SYM_MOM TAB                                   &lt NUM_MOM ENTER &kp SPC                &sk RSHFT
                         >;
                 };
 
                 sym_mom_layer {
                         label = "SYM_MOM";
                         bindings = <
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-                  &trans         &trans            &trans                                           &trans            &trans                 &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+                  &trans         &trans            &trans                                            &trans            &trans                 &trans
                         >;
                 };
 
                 sym_lck_layer {
                         label = "SYM_LCK";
                         bindings = <
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-                  &trans         &trans            &trans                                           &trans            &trans                 &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+                  &trans         &trans            &trans                                            &trans            &trans                 &trans
                         >;
                 };
 
@@ -722,34 +722,34 @@ behaviors {
                         label = "SYM";
 // --------------------------- SYM Layer ---------------------------
 // |  &  |  %  |  #  |  !  |  ?  |  *  |  +  |  @  |  $  |  ^  |
-// |  (  |  [  |  ]  |  )  | DEL | BSPC|  \  |  :  |  -  |  &  |
-// |  '  |  {  |  }  |  "  |  `  |  ~  |  =  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  | DEL | BSPC|  \  |  :  |  -  |  ;  |
+// |  '  |  {  |  }  |  "  |  `  |  &  |  =  |  /  |  .  |  ,  |
 //             |     | SPC |     |     | SPC |     |
                         bindings = <
-   &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp QMARK           &kp STAR     &kp  PLUS         &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
-   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL BSLH   &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT AMPERSAND
-   &trans         &kp LBRC       &kp RBRC          &lt NAV_MOM DQT &kp GRAVE           &kp TILDE    &kp  EQUAL        &trans                 &trans          &trans
-                  &trans         &kp SPACE         &trans                                           &trans            &kp SPACE              &trans
+   &kp  AMPERSAND &kp  PERCENT   &kp  HASH         &kp  EXCL       &kp QMARK           &kp STAR      &kp  PLUS         &kp  AT_SIGN           &kp  DOLLAR     &kp  CARET
+   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC      &hmr RCTRL BSLH   &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT SEMI
+   &trans         &kp LBRC       &kp RBRC          &lt NAV_MOM DQT &kp GRAVE           &kp AMPERSAND &kp  EQUAL        &trans                 &trans          &trans
+                  &trans         &kp SPACE         &trans                                            &trans            &kp SPACE              &trans
                         >;
                 };
 
                 num_mom_layer {
                         label = "NUM_MOM";
                         bindings = <
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
-                  &trans         &trans            &trans                                           &trans            &trans                 &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans          &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans          &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans          &trans
+                  &trans         &trans            &trans                                            &trans            &trans                 &trans
                         >;
                 };
 
                 num_lck_layer {
                         label = "NUM_LCK";
                         bindings = <
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans          &trans
-                  &trans         &trans            &trans                                           &trans            &trans                 &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans          &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans          &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans          &trans
+                  &trans         &trans            &trans                                            &trans            &trans                 &trans
                         >;
                 };
 
@@ -757,34 +757,34 @@ behaviors {
                         label = "NUM";
 // -----------------------------------------------------------------------------------------
 // |  7  |  5  |  3  |  1  |  9  |  8  |  0  |  2  |  4  |  6  |
-// |  (  |  [  |  ]  |  )  | DEL | BSPC|  \  |  :  |  -  |  &  |
-// |  '  |  {  |  }  |  "  |  `  |  ~  |  =  |  /  |  .  |  ,  |
+// |  (  |  [  |  ]  |  )  | DEL | BSPC|  \  |  :  |  -  |  ;  |
+// |  '  |  {  |  }  |  "  |  `  |  &  |  =  |  /  |  .  |  ,  |
 //             |     | SPC |     |     | SPC |     |
                         bindings = <
-   &kp N7         &kp  N5        &kp  N3           &kp  N1         &kp N9              &kp N8       &kp N0            &kp  N2                &kp  N4         &kp  N6
-   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC     &hmr RCTRL BSLH   &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT AMPERSAND
-   &trans         &kp LBRC       &kp RBRC          &lt NAV_MOM DQT &kp GRAVE           &kp TILDE    &kp  EQUAL        &trans                 &trans          &trans
-                  &trans         &kp SPACE         &trans                                           &trans            &kp SPACE              &trans
+   &kp N7         &kp  N5        &kp  N3           &kp  N1         &kp N9              &kp N8        &kp N0            &kp  N2                &kp  N4         &kp  N6
+   &hml LALT LPAR &hml LGUI LBKT &hml LSHFT RBKT   &hml LCTRL RPAR &kp DEL             &kp BSPC      &hmr RCTRL BSLH   &hmr RSHFT COLON       &hmr RGUI MINUS &hmr RALT SEMI
+   &trans         &kp LBRC       &kp RBRC          &lt NAV_MOM DQT &kp GRAVE           &kp AMPERSAND &kp  EQUAL        &trans                 &trans          &trans
+                  &trans         &kp SPACE         &trans                                            &trans            &kp SPACE              &trans
                           >;
                 };
 
                 nav_mom_layer {
                         label = "NAV_MOM";
                         bindings = <
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-                  &trans         &trans            &trans                                           &trans            &trans                 &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+                  &trans         &trans            &trans                                            &trans            &trans                 &trans
                         >;
                 };
 
                 nav_lck_layer {
                         label = "NAV_LCK";
                         bindings = <
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-   &trans         &trans         &trans            &trans          &trans              &trans       &trans            &trans                 &trans         &trans
-                  &trans         &trans            &trans                                           &trans            &trans                 &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+   &trans         &trans         &trans            &trans          &trans              &trans        &trans            &trans                 &trans         &trans
+                  &trans         &trans            &trans                                            &trans            &trans                 &trans
                         >;
                 };
 
@@ -796,10 +796,10 @@ behaviors {
 // | UNDO| CUT | COPY|PASTE|PASTE  | CTRL-K|    =  |      |      |      |
 //             |     | SPC |       |       |UTL/SPC|      |
                         bindings = <
-   &kp HOME       &kp  PG_UP     &kp  PG_DN        &kp  END        &kp F11             &kp F12      &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
-   &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &kp DEL             &kp BSPC     &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
-   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(V)           &kp LC(K)    &kp EQUAL         &trans                 &trans         &trans
-                  &trans         &kp SPACE         &trans                                           &trans            &lt UTL SPACE          &trans
+   &kp HOME       &kp  PG_UP     &kp  PG_DN        &kp  END        &kp F11             &kp F12       &kp HOME          &kp PG_UP              &kp PG_DN      &kp  END
+   &hm LALT INS   &hm  LGUI RET  &hm  LSHFT TAB    &hm  LCTRL ESC  &kp DEL             &kp BSPC      &kp LEFT          &kp UP                 &kp DOWN       &kp RIGHT
+   &kp LC(Z)      &kp  LC(X)     &kp  LC(C)        &kp  LC(V)      &kp LC(V)           &kp LC(K)     &kp EQUAL         &trans                 &trans         &trans
+                  &trans         &kp SPACE         &trans                                            &trans            &lt UTL SPACE          &trans
                         >;
                 };
 
@@ -811,10 +811,10 @@ behaviors {
 // | BACK| DOWN| UP  | FWD  | ??? | BTCLR|  BT0 |  BT1 |  BT2 |  BT3 |
 //             |     |      |     |      |      |      |
                         bindings = <
-   &kp  C_MUTE    &kp  C_PREV       &kp  C_NEXT     &kp  C_PP      &kp F11             &kp F12      &kp  LG(L)        &kp  C_VOL_UP          &kp  C_VOL_DN  &kp  CAPSLOCK
-   &hml LALT F7   &hml LGUI F5      &hml LSHFT F3   &hml LCTRL F1  &lt NAV_MOM F9      &kp F8       &hmr RCTRL F10    &hmr RSHFT F2          &hmr RGUI F4   &hmr RALT F6
-   &kp  K_BACK    &kp K_SCROLL_DOWN &kp K_SCROLL_UP &kp K_FORWARD  &kp C_AC_SEARCH     &bt BT_CLR   &bt  BT_SEL 0     &bt  BT_SEL 1          &bt  BT_SEL 2  &bt  BT_SEL 3
-                  &trans            &trans          &trans                                          &trans            &trans                 &trans
+   &kp  C_MUTE    &kp  C_PREV       &kp  C_NEXT     &kp  C_PP      &kp F11             &kp F12       &kp  LG(L)        &kp  C_VOL_UP          &kp  C_VOL_DN  &kp  CAPSLOCK
+   &hml LALT F7   &hml LGUI F5      &hml LSHFT F3   &hml LCTRL F1  &lt NAV_MOM F9      &kp F8        &hmr RCTRL F10    &hmr RSHFT F2          &hmr RGUI F4   &hmr RALT F6
+   &kp  K_BACK    &kp K_SCROLL_DOWN &kp K_SCROLL_UP &kp K_FORWARD  &kp C_AC_SEARCH     &bt BT_CLR    &bt  BT_SEL 0     &bt  BT_SEL 1          &bt  BT_SEL 2  &bt  BT_SEL 3
+                  &trans            &trans          &trans                                           &trans            &trans                 &trans
                         >;
                 };
                 
