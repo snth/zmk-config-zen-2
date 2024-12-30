@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -13,7 +19,6 @@
 #define NAV_LCK  8
 #define NAV      9
 #define UTL      10
-
 
 / {
   chosen {
@@ -62,6 +67,7 @@ behaviors {
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
   };
+
   /* left-hand HRMs */
   hml: homerow_mods_lhs {
       compatible = "zmk,behavior-hold-tap";
@@ -75,6 +81,7 @@ behaviors {
       hold-trigger-key-positions = <5 6 7 8 9  15 16 17 18 19  25 26 27 28 29  33 34 35>;
       hold-trigger-on-release;             // delay positional check until key-release
   };
+
   /* right-hand HRMs */
   hmr: homerow_mods_rhs {
       compatible = "zmk,behavior-hold-tap";
@@ -172,7 +179,6 @@ behaviors {
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
-
   combos {
     compatible = "zmk,combos";
   
@@ -183,6 +189,10 @@ behaviors {
   //    (     [     ]     )     ~    LCK    \     :     >     <
   // |#####|  {  |  }  |  "  |  `  |  &  |  =  |  >  |  <  |#####|
   
+
+    // LHS Combos
+    // ----------------------------------------------------------------------------------------------------------------------------
+
     // LHS Vertical 2-key combos
     combo2_7_vert {
         timeout-ms = <50>;
